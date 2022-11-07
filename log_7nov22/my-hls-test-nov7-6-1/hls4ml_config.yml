@@ -1,0 +1,15 @@
+Backend: SymbolicExpression
+ClockPeriod: 5
+Compiler: vivado
+HLSConfig:
+  Model:
+    Precision: ap_fixed<6,1>
+    ReuseFactor: 1
+IOType: io_parallel
+InputData: null
+NSymbols: 16
+OutputDir: my-hls-test-nov7-6-1
+OutputPredictions: null
+Part: xcvu9p-flga2577-2-e
+ProjectName: myproject
+Stamp: d3dCAf51

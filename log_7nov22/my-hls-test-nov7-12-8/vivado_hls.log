@@ -1,0 +1,83 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /data/tools/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/data/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'htsoi' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Mon Nov 07 15:41:03 EST 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/work/h/htsoi/sr/my-hls-test-nov7-12-8'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-10] Creating and opening project '/afs/cern.ch/work/h/htsoi/sr/my-hls-test-nov7-12-8/myproject_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Creating and opening solution '/afs/cern.ch/work/h/htsoi/sr/my-hls-test-nov7-12-8/myproject_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+***** C/RTL SYNTHESIS *****
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 4516 ; free virtual = 74541
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 4516 ; free virtual = 74542
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 4442 ; free virtual = 74466
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 4387 ; free virtual = 74420
+INFO: [XFORM 203-131] Reshaping array 'x.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'y.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 4302 ; free virtual = 74352
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 4281 ; free virtual = 74337
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 82.16 seconds; current allocated memory: 319.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 320.002 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_2_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_3_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_4_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'myproject_am_addmul_12s_14s_12s_20_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_am_submul_14s_12s_12s_20_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_mul_sub_12s_24s_24ns_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_12s_24s_24ns_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_12s_20_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_12s_24_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_13s_20_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_13s_25_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_14s_20_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_15s_20_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_24s_24_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_6ns_12s_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 321.199 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 279.76 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:19 ; elapsed = 00:01:30 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 4258 ; free virtual = 74320
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
+***** C/RTL SYNTHESIS COMPLETED IN 0h1m27s *****
+INFO: [HLS 200-112] Total elapsed time: 90.11 seconds; peak allocated memory: 321.199 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Mon Nov  7 15:42:33 2022...

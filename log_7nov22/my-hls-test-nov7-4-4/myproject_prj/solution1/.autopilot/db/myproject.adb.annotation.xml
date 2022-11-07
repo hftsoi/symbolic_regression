@@ -1,0 +1,6 @@
+<annotationInfo>
+<item  id="18" filename="firmware/myproject.cpp" linenumber="50" name="p_Val2_s" contextFuncName="myproject" moduleName="myproject" rtlName="p_Val2_s_fu_93_p4" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/afs/cern.ch/work/h/htsoi/sr/my-hls-test-nov7-4-4"><\/item>
+<item  id="21" filename="firmware/myproject.cpp" linenumber="52" name="tmp_1" contextFuncName="myproject" moduleName="myproject" rtlName="tmp_1_fu_103_p4" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/afs/cern.ch/work/h/htsoi/sr/my-hls-test-nov7-4-4"><\/item>
+<item  id="22" filename="firmware/myproject.cpp" linenumber="52" name="xor_ln703" contextFuncName="myproject" moduleName="myproject" rtlName="xor_ln703_fu_113_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="4" fileDirectory="/afs/cern.ch/work/h/htsoi/sr/my-hls-test-nov7-4-4"><\/item>
+<item  id="23" filename="firmware/myproject.cpp" linenumber="52" name="add_ln703" contextFuncName="myproject" moduleName="myproject" rtlName="y_2_V" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="/afs/cern.ch/work/h/htsoi/sr/my-hls-test-nov7-4-4"><\/item>
+</annotationInfo>

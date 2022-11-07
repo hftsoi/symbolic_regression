@@ -1,0 +1,63 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>x_V</name>
+<CType>
+<TypeName>ap_fixed 12 4 5 3 0</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>192</PhysicalWidth>
+</CType>
+<CFractionWidth>8</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>y_0_V</name>
+<CType>
+<TypeName>ap_fixed 12 4 5 3 0</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</CType>
+<CFractionWidth>8</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>y_1_V</name>
+<CType>
+<TypeName>ap_fixed 12 4 5 3 0</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</CType>
+<CFractionWidth>8</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>y_2_V</name>
+<CType>
+<TypeName>ap_fixed 12 4 5 3 0</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</CType>
+<CFractionWidth>8</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>y_3_V</name>
+<CType>
+<TypeName>ap_fixed 12 4 5 3 0</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</CType>
+<CFractionWidth>8</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>y_4_V</name>
+<CType>
+<TypeName>ap_fixed 12 4 5 3 0</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</CType>
+<CFractionWidth>8</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+
