@@ -1,0 +1,92 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 50447 ; free virtual = 83652
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 50448 ; free virtual = 83653
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::sincos_lut<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' into 'nnet::sin_lut<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' (firmware/nnet_utils/nnet_math.h:187).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 50230 ; free virtual = 83470
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] firmware/nnet_utils/nnet_math.h:161: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:14 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 50169 ; free virtual = 83404
+INFO: [XFORM 203-131] Reshaping array 'x.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'y.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_math.h:186:22) to (firmware/nnet_utils/nnet_math.h:166:22) in function 'nnet::sin_lut<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >'... converting 27 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 50007 ; free virtual = 83273
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'nnet::sin_lut<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' (firmware/myproject.cpp:54:49) in function 'myproject' and propagating its result(s) since all actual argument(s) to the function are constants.
+WARNING: [XFORM 203-631] Renaming function 'nnet::sin_lut<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'sin_lut<ap_fixed<8, 6, 5, 3, 0> >' (firmware/nnet_utils/nnet_math.h:93:22)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 49983 ; free virtual = 83232
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'sin_lut<ap_fixed<8, 6, 5, 3, 0> >' to 'sin_lut_ap_fixed_8_6_5_3_0_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_lut_ap_fixed_8_6_5_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sin_lut<ap_fixed<8, 6, 5, 3, 0> >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 83.57 seconds; current allocated memory: 541.068 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 541.374 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.51 seconds; current allocated memory: 542.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.16 seconds; current allocated memory: 543.022 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_lut_ap_fixed_8_6_5_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_dcmp_64ns_64ns_1_2_0': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_15ns_8s_23_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_lut_ap_fixed_8_6_5_3_0_s'.
+INFO: [HLS 200-111]  Elapsed time: 1.59 seconds; current allocated memory: 544.373 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_2_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_3_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_4_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'myproject_am_addmul_3s_4s_10s_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_am_addmul_3s_4s_5s_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_am_submul_4s_4s_8s_13_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_4s_13s_9s_14_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_4s_15s_11s_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_4s_4s_11s_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_4s_4s_3s_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_7ns_8s_12ns_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_8ns_8s_12s_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_8s_12s_12ns_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_8s_8s_5s_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_11s_11s_16_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.8 seconds; current allocated memory: 547.659 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 230.47 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:21 ; elapsed = 00:01:38 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 49957 ; free virtual = 83219
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject.

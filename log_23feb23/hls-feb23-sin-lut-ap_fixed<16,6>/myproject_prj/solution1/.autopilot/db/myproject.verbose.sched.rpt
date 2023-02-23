@@ -1,0 +1,464 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject'
+================================================================
+* Date:           Thu Feb 23 14:42:19 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.339 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        8|        8| 40.000 ns | 40.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.37>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_V_read = call i256 @_ssdm_op_Read.ap_vld.i256P(i256* %x_V)" [firmware/myproject.cpp:50]   --->   Operation 10 'read' 'x_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_Val2_s = call i16 @_ssdm_op_PartSelect.i16.i256.i32.i32(i256 %x_V_read, i32 32, i32 47)" [firmware/myproject.cpp:50]   --->   Operation 11 'partselect' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_Val2_11 = call i16 @_ssdm_op_PartSelect.i16.i256.i32.i32(i256 %x_V_read, i32 48, i32 63)" [firmware/myproject.cpp:50]   --->   Operation 12 'partselect' 'p_Val2_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln728 = sext i16 %p_Val2_11 to i26" [firmware/myproject.cpp:53]   --->   Operation 13 'sext' 'sext_ln728' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_Val2_1 = call i16 @_ssdm_op_PartSelect.i16.i256.i32.i32(i256 %x_V_read, i32 224, i32 239)" [firmware/myproject.cpp:50]   --->   Operation 14 'partselect' 'p_Val2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln727 = sext i16 %p_Val2_1 to i26" [firmware/myproject.cpp:50]   --->   Operation 15 'sext' 'sext_ln727' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%lhs_V_1 = call i26 @_ssdm_op_BitConcatenate.i26.i16.i10(i16 %p_Val2_1, i10 0)" [firmware/myproject.cpp:50]   --->   Operation 16 'bitconcatenate' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.49ns) (grouped into DSP with root node ret_V_32)   --->   "%mul_ln1193 = mul i26 %sext_ln728, -639" [firmware/myproject.cpp:50]   --->   Operation 17 'mul' 'mul_ln1193' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 18 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_32 = add i26 %lhs_V_1, %mul_ln1193" [firmware/myproject.cpp:50]   --->   Operation 18 'add' 'ret_V_32' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %ret_V_32, i32 10, i32 25)" [firmware/myproject.cpp:50]   --->   Operation 19 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_Val2_2 = call i16 @_ssdm_op_PartSelect.i16.i256.i32.i32(i256 %x_V_read, i32 64, i32 79)" [firmware/myproject.cpp:50]   --->   Operation 20 'partselect' 'p_Val2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_Val2_3 = call i16 @_ssdm_op_PartSelect.i16.i256.i32.i32(i256 %x_V_read, i32 240, i32 255)" [firmware/myproject.cpp:50]   --->   Operation 21 'partselect' 'p_Val2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%sext_ln728_1 = sext i16 %p_Val2_s to i26" [firmware/myproject.cpp:52]   --->   Operation 22 'sext' 'sext_ln728_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln1192_4 = mul i26 %sext_ln728_1, %sext_ln728_1" [firmware/myproject.cpp:51]   --->   Operation 23 'mul' 'mul_ln1192_4' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_8 = call i15 @_ssdm_op_PartSelect.i15.i256.i32.i32(i256 %x_V_read, i32 48, i32 62)" [firmware/myproject.cpp:51]   --->   Operation 24 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln1118_1 = call i26 @_ssdm_op_BitConcatenate.i26.i15.i11(i15 %tmp_8, i11 0)" [firmware/myproject.cpp:51]   --->   Operation 25 'bitconcatenate' 'trunc_ln1118_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.84ns)   --->   "%add_ln1192_7 = add i26 %trunc_ln1118_1, -216064" [firmware/myproject.cpp:51]   --->   Operation 26 'add' 'add_ln1192_7' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln708_5 = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %add_ln1192_7, i32 10, i32 25)" [firmware/myproject.cpp:51]   --->   Operation 27 'partselect' 'trunc_ln708_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [4/4] (2.53ns)   --->   "%p_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_5)" [firmware/myproject.cpp:51]   --->   Operation 28 'call' 'p_5' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%r_V_8 = sext i16 %p_Val2_1 to i32" [firmware/myproject.cpp:52]   --->   Operation 29 'sext' 'r_V_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_9 = mul nsw i32 %r_V_8, %r_V_8" [firmware/myproject.cpp:53]   --->   Operation 30 'mul' 'r_V_9' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 31 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln1192_30 = add i26 %trunc_ln1118_1, -1774592" [firmware/myproject.cpp:54]   --->   Operation 31 'add' 'add_ln1192_30' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 32 [1/1] (0.71ns) (root node of TernaryAdder)   --->   "%add_ln1192_28 = add i26 %add_ln1192_30, %lhs_V_1" [firmware/myproject.cpp:54]   --->   Operation 32 'add' 'add_ln1192_28' <Predicate = true> <Delay = 0.71> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln708_12 = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %add_ln1192_28, i32 10, i32 25)" [firmware/myproject.cpp:54]   --->   Operation 33 'partselect' 'trunc_ln708_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [4/4] (2.53ns)   --->   "%p_2 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_12)" [firmware/myproject.cpp:54]   --->   Operation 34 'call' 'p_2' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 35 [1/1] (0.49ns) (grouped into DSP with root node ret_V_27)   --->   "%mul_ln703_1 = mul i26 %sext_ln727, 955" [firmware/myproject.cpp:54]   --->   Operation 35 'mul' 'mul_ln703_1' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 36 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_27 = add i26 %mul_ln703_1, 1048576" [firmware/myproject.cpp:54]   --->   Operation 36 'add' 'ret_V_27' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 4.33>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%sext_ln1265 = sext i16 %p_Val2_11 to i17" [firmware/myproject.cpp:50]   --->   Operation 37 'sext' 'sext_ln1265' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [4/4] (2.53ns)   --->   "%p_s = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln)" [firmware/myproject.cpp:50]   --->   Operation 38 'call' 'p_s' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%r_V = sext i16 %p_Val2_2 to i32" [firmware/myproject.cpp:50]   --->   Operation 39 'sext' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_1 = mul nsw i32 %r_V, %r_V" [firmware/myproject.cpp:50]   --->   Operation 40 'mul' 'r_V_1' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 41 [4/4] (2.53ns)   --->   "%p_Val2_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_s)" [firmware/myproject.cpp:51]   --->   Operation 41 'call' 'p_Val2_6' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%lhs_V_3 = call i26 @_ssdm_op_BitConcatenate.i26.i16.i10(i16 %p_Val2_3, i10 0)" [firmware/myproject.cpp:51]   --->   Operation 42 'bitconcatenate' 'lhs_V_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.84ns)   --->   "%add_ln1192_8 = add i26 %lhs_V_3, %mul_ln1192_4" [firmware/myproject.cpp:51]   --->   Operation 43 'add' 'add_ln1192_8' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%rhs_V_1 = call i26 @_ssdm_op_BitConcatenate.i26.i16.i10(i16 %p_Val2_11, i10 0)" [firmware/myproject.cpp:51]   --->   Operation 44 'bitconcatenate' 'rhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1192 = sub i26 %add_ln1192_8, %rhs_V_1" [firmware/myproject.cpp:51]   --->   Operation 45 'sub' 'sub_ln1192' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 46 [1/1] (0.71ns) (root node of TernaryAdder)   --->   "%ret_V_37 = add i26 %sub_ln1192, -1630208" [firmware/myproject.cpp:51]   --->   Operation 46 'add' 'ret_V_37' <Predicate = true> <Delay = 0.71> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%trunc_ln708_4 = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %ret_V_37, i32 10, i32 25)" [firmware/myproject.cpp:51]   --->   Operation 47 'partselect' 'trunc_ln708_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [4/4] (2.53ns)   --->   "%p_Val2_s_28 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_4)" [firmware/myproject.cpp:51]   --->   Operation 48 'call' 'p_Val2_s_28' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 49 [3/4] (4.33ns)   --->   "%p_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_5)" [firmware/myproject.cpp:51]   --->   Operation 49 'call' 'p_5' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 50 [1/1] (0.84ns)   --->   "%ret_V_40 = add i26 %mul_ln1192_4, -1156096" [firmware/myproject.cpp:52]   --->   Operation 50 'add' 'ret_V_40' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%trunc_ln708_7 = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %ret_V_40, i32 10, i32 25)" [firmware/myproject.cpp:52]   --->   Operation 51 'partselect' 'trunc_ln708_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [4/4] (2.53ns)   --->   "%p_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_7)" [firmware/myproject.cpp:52]   --->   Operation 52 'call' 'p_7' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%lhs_V_5 = sext i16 %p_Val2_1 to i17" [firmware/myproject.cpp:52]   --->   Operation 53 'sext' 'lhs_V_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns) (grouped into DSP with root node ret_V_17)   --->   "%sub_ln1193_2 = sub i17 %lhs_V_5, %sext_ln1265" [firmware/myproject.cpp:52]   --->   Operation 54 'sub' 'sub_ln1193_2' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 55 [1/1] (0.00ns) (grouped into DSP with root node ret_V_17)   --->   "%sext_ln1193_1 = sext i17 %sub_ln1193_2 to i27" [firmware/myproject.cpp:52]   --->   Operation 55 'sext' 'sext_ln1193_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.49ns) (grouped into DSP with root node ret_V_17)   --->   "%ret_V_41 = mul i27 %sext_ln1193_1, 653" [firmware/myproject.cpp:52]   --->   Operation 56 'mul' 'ret_V_41' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 57 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_17 = add i27 %ret_V_41, 1048576" [firmware/myproject.cpp:52]   --->   Operation 57 'add' 'ret_V_17' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%sext_ln700_3 = sext i32 %r_V_9 to i36" [firmware/myproject.cpp:53]   --->   Operation 58 'sext' 'sext_ln700_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (3.17ns)   --->   "%mul_ln700_2 = mul i36 %sext_ln700_3, 3360" [firmware/myproject.cpp:53]   --->   Operation 59 'mul' 'mul_ln700_2' <Predicate = true> <Delay = 3.17> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln700_3 = mul i26 %sext_ln727, 3360" [firmware/myproject.cpp:53]   --->   Operation 60 'mul' 'mul_ln700_3' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%shl_ln1 = call i36 @_ssdm_op_BitConcatenate.i36.i26.i10(i26 %mul_ln700_3, i10 0)" [firmware/myproject.cpp:53]   --->   Operation 61 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700 = add i36 %shl_ln1, %mul_ln700_2" [firmware/myproject.cpp:53]   --->   Operation 62 'add' 'add_ln700' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 63 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln728_4 = mul i26 %sext_ln728, 6720" [firmware/myproject.cpp:53]   --->   Operation 63 'mul' 'mul_ln728_4' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%rhs_V_5 = call i36 @_ssdm_op_BitConcatenate.i36.i26.i10(i26 %mul_ln728_4, i10 0)" [firmware/myproject.cpp:53]   --->   Operation 64 'bitconcatenate' 'rhs_V_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.74ns) (root node of TernaryAdder)   --->   "%ret_V_43 = add i36 %rhs_V_5, %add_ln700" [firmware/myproject.cpp:53]   --->   Operation 65 'add' 'ret_V_43' <Predicate = true> <Delay = 0.74> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%trunc_ln708_s = call i16 @_ssdm_op_PartSelect.i16.i36.i32.i32(i36 %ret_V_43, i32 20, i32 35)" [firmware/myproject.cpp:53]   --->   Operation 66 'partselect' 'trunc_ln708_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [3/4] (4.33ns)   --->   "%p_2 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_12)" [firmware/myproject.cpp:54]   --->   Operation 67 'call' 'p_2' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%sext_ln1116_6 = sext i26 %ret_V_27 to i51" [firmware/myproject.cpp:54]   --->   Operation 68 'sext' 'sext_ln1116_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (2.73ns)   --->   "%r_V_14 = mul i51 %sext_ln1116_6, %sext_ln1116_6" [firmware/myproject.cpp:54]   --->   Operation 69 'mul' 'r_V_14' <Predicate = true> <Delay = 2.73> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.49ns) (grouped into DSP with root node ret_V_48)   --->   "%mul_ln1192_8 = mul i26 %sext_ln728, %sext_ln728" [firmware/myproject.cpp:54]   --->   Operation 70 'mul' 'mul_ln1192_8' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 71 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_48 = add i26 %mul_ln1192_8, -539648" [firmware/myproject.cpp:54]   --->   Operation 71 'add' 'ret_V_48' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%trunc_ln708_14 = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %ret_V_48, i32 10, i32 25)" [firmware/myproject.cpp:54]   --->   Operation 72 'partselect' 'trunc_ln708_14' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.33>
+ST_3 : Operation 73 [3/4] (4.33ns)   --->   "%p_s = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln)" [firmware/myproject.cpp:50]   --->   Operation 73 'call' 'p_s' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%sext_ln1192 = sext i16 %p_Val2_s to i36" [firmware/myproject.cpp:50]   --->   Operation 74 'sext' 'sext_ln1192' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln1192_1 = sext i32 %r_V_1 to i36" [firmware/myproject.cpp:50]   --->   Operation 75 'sext' 'sext_ln1192_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (3.17ns)   --->   "%mul_ln1192 = mul i36 %sext_ln1192_1, %sext_ln1192" [firmware/myproject.cpp:50]   --->   Operation 76 'mul' 'mul_ln1192' <Predicate = true> <Delay = 3.17> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%lhs_V_2 = call i36 @_ssdm_op_BitConcatenate.i36.i16.i20(i16 %p_Val2_3, i20 0)" [firmware/myproject.cpp:50]   --->   Operation 77 'bitconcatenate' 'lhs_V_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.92ns)   --->   "%ret_V_33 = add i36 %lhs_V_2, %mul_ln1192" [firmware/myproject.cpp:50]   --->   Operation 78 'add' 'ret_V_33' <Predicate = true> <Delay = 0.92> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%trunc_ln708_1 = call i16 @_ssdm_op_PartSelect.i16.i36.i32.i32(i36 %ret_V_33, i32 20, i32 35)" [firmware/myproject.cpp:50]   --->   Operation 79 'partselect' 'trunc_ln708_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [3/4] (4.33ns)   --->   "%p_Val2_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_s)" [firmware/myproject.cpp:51]   --->   Operation 80 'call' 'p_Val2_6' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 81 [3/4] (4.33ns)   --->   "%p_Val2_s_28 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_4)" [firmware/myproject.cpp:51]   --->   Operation 81 'call' 'p_Val2_s_28' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%sext_ln1118_4 = sext i16 %p_Val2_3 to i25" [firmware/myproject.cpp:51]   --->   Operation 82 'sext' 'sext_ln1118_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [2/4] (4.33ns)   --->   "%p_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_5)" [firmware/myproject.cpp:51]   --->   Operation 83 'call' 'p_5' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 84 [4/4] (2.53ns)   --->   "%p_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_1)" [firmware/myproject.cpp:51]   --->   Operation 84 'call' 'p_6' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 85 [3/4] (4.33ns)   --->   "%p_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_7)" [firmware/myproject.cpp:52]   --->   Operation 85 'call' 'p_7' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%sext_ln1116_3 = sext i27 %ret_V_17 to i52" [firmware/myproject.cpp:52]   --->   Operation 86 'sext' 'sext_ln1116_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (2.80ns)   --->   "%r_V_6 = mul i52 %sext_ln1116_3, %sext_ln1116_3" [firmware/myproject.cpp:52]   --->   Operation 87 'mul' 'r_V_6' <Predicate = true> <Delay = 2.80> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 88 [1/1] (0.78ns)   --->   "%add_ln703 = add i16 %p_Val2_11, -714" [firmware/myproject.cpp:53]   --->   Operation 88 'add' 'add_ln703' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 89 [4/4] (2.53ns)   --->   "%p_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703)" [firmware/myproject.cpp:53]   --->   Operation 89 'call' 'p_9' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 90 [4/4] (2.53ns)   --->   "%p_1 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_s)" [firmware/myproject.cpp:53]   --->   Operation 90 'call' 'p_1' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 91 [1/1] (0.78ns)   --->   "%add_ln703_1 = add i16 %p_Val2_11, %p_Val2_3" [firmware/myproject.cpp:53]   --->   Operation 91 'add' 'add_ln703_1' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [4/4] (2.53ns)   --->   "%p_Val2_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_1)" [firmware/myproject.cpp:53]   --->   Operation 92 'call' 'p_Val2_8' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 93 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_21 = mul i25 %sext_ln1118_4, 241" [firmware/myproject.cpp:54]   --->   Operation 93 'mul' 'r_V_21' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%trunc_ln708_11 = call i15 @_ssdm_op_PartSelect.i15.i25.i32.i32(i25 %r_V_21, i32 10, i32 24)" [firmware/myproject.cpp:54]   --->   Operation 94 'partselect' 'trunc_ln708_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [2/4] (4.33ns)   --->   "%p_2 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_12)" [firmware/myproject.cpp:54]   --->   Operation 95 'call' 'p_2' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%sext_ln1118_17 = sext i51 %r_V_14 to i56" [firmware/myproject.cpp:54]   --->   Operation 96 'sext' 'sext_ln1118_17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (3.74ns)   --->   "%r_V_24 = mul i56 %sext_ln1118_17, 4701" [firmware/myproject.cpp:54]   --->   Operation 97 'mul' 'r_V_24' <Predicate = true> <Delay = 3.74> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%trunc_ln708_13 = call i16 @_ssdm_op_PartSelect.i16.i56.i32.i32(i56 %r_V_24, i32 40, i32 55)" [firmware/myproject.cpp:54]   --->   Operation 98 'partselect' 'trunc_ln708_13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [4/4] (2.53ns)   --->   "%p_Val2_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_14)" [firmware/myproject.cpp:54]   --->   Operation 99 'call' 'p_Val2_7' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 4.33>
+ST_4 : Operation 100 [2/4] (4.33ns)   --->   "%p_s = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln)" [firmware/myproject.cpp:50]   --->   Operation 100 'call' 'p_s' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 101 [4/4] (2.53ns)   --->   "%p_Val2_4 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_1)" [firmware/myproject.cpp:50]   --->   Operation 101 'call' 'p_Val2_4' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "%sext_ln1192_4 = sext i16 %p_Val2_3 to i26" [firmware/myproject.cpp:50]   --->   Operation 102 'sext' 'sext_ln1192_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 103 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln1192_1 = mul i26 %sext_ln1192_4, -798" [firmware/myproject.cpp:50]   --->   Operation 103 'mul' 'mul_ln1192_1' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 104 [2/4] (4.33ns)   --->   "%p_Val2_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_s)" [firmware/myproject.cpp:51]   --->   Operation 104 'call' 'p_Val2_6' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 105 [2/4] (4.33ns)   --->   "%p_Val2_s_28 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_4)" [firmware/myproject.cpp:51]   --->   Operation 105 'call' 'p_Val2_s_28' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 106 [1/4] (2.85ns)   --->   "%p_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_5)" [firmware/myproject.cpp:51]   --->   Operation 106 'call' 'p_5' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 107 [3/4] (4.33ns)   --->   "%p_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_1)" [firmware/myproject.cpp:51]   --->   Operation 107 'call' 'p_6' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 108 [2/4] (4.33ns)   --->   "%p_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_7)" [firmware/myproject.cpp:52]   --->   Operation 108 'call' 'p_7' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%sext_ln1118_14 = sext i52 %r_V_6 to i56" [firmware/myproject.cpp:52]   --->   Operation 109 'sext' 'sext_ln1118_14' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 110 [1/1] (3.75ns)   --->   "%r_V_19 = mul i56 %sext_ln1118_14, 2510" [firmware/myproject.cpp:52]   --->   Operation 110 'mul' 'r_V_19' <Predicate = true> <Delay = 3.75> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%trunc_ln708_8 = call i16 @_ssdm_op_PartSelect.i16.i56.i32.i32(i56 %r_V_19, i32 40, i32 55)" [firmware/myproject.cpp:52]   --->   Operation 111 'partselect' 'trunc_ln708_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 112 [3/4] (4.33ns)   --->   "%p_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703)" [firmware/myproject.cpp:53]   --->   Operation 112 'call' 'p_9' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 113 [3/4] (4.33ns)   --->   "%p_1 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_s)" [firmware/myproject.cpp:53]   --->   Operation 113 'call' 'p_1' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 114 [3/4] (4.33ns)   --->   "%p_Val2_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_1)" [firmware/myproject.cpp:53]   --->   Operation 114 'call' 'p_Val2_8' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%sext_ln708 = sext i15 %trunc_ln708_11 to i16" [firmware/myproject.cpp:54]   --->   Operation 115 'sext' 'sext_ln708' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 116 [4/4] (2.53ns)   --->   "%p_Val2_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %sext_ln708)" [firmware/myproject.cpp:54]   --->   Operation 116 'call' 'p_Val2_9' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 117 [1/4] (2.85ns)   --->   "%p_2 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_12)" [firmware/myproject.cpp:54]   --->   Operation 117 'call' 'p_2' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 118 [4/4] (2.53ns)   --->   "%p_Val2_10 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_13)" [firmware/myproject.cpp:54]   --->   Operation 118 'call' 'p_Val2_10' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 119 [3/4] (4.33ns)   --->   "%p_Val2_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_14)" [firmware/myproject.cpp:54]   --->   Operation 119 'call' 'p_Val2_7' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 4.33>
+ST_5 : Operation 120 [1/4] (2.85ns)   --->   "%p_s = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln)" [firmware/myproject.cpp:50]   --->   Operation 120 'call' 'p_s' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 121 [3/4] (4.33ns)   --->   "%p_Val2_4 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_1)" [firmware/myproject.cpp:50]   --->   Operation 121 'call' 'p_Val2_4' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 122 [1/1] (0.49ns) (grouped into DSP with root node add_ln1192_4)   --->   "%mul_ln1192_2 = mul i26 %sext_ln728_1, 798" [firmware/myproject.cpp:50]   --->   Operation 122 'mul' 'mul_ln1192_2' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 123 [1/1] (2.03ns) (root node of the DSP)   --->   "%add_ln1192_4 = add i26 %mul_ln1192_1, %mul_ln1192_2" [firmware/myproject.cpp:50]   --->   Operation 123 'add' 'add_ln1192_4' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 124 [1/1] (0.84ns)   --->   "%ret_V_35 = add i26 %add_ln1192_4, 809984" [firmware/myproject.cpp:50]   --->   Operation 124 'add' 'ret_V_35' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%trunc_ln708_2 = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %ret_V_35, i32 10, i32 25)" [firmware/myproject.cpp:50]   --->   Operation 125 'partselect' 'trunc_ln708_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 126 [1/4] (2.85ns)   --->   "%p_Val2_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_s)" [firmware/myproject.cpp:51]   --->   Operation 126 'call' 'p_Val2_6' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 127 [1/4] (2.85ns)   --->   "%p_Val2_s_28 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_4)" [firmware/myproject.cpp:51]   --->   Operation 127 'call' 'p_Val2_s_28' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 128 [2/4] (4.33ns)   --->   "%p_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_1)" [firmware/myproject.cpp:51]   --->   Operation 128 'call' 'p_6' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 129 [1/4] (2.85ns)   --->   "%p_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_7)" [firmware/myproject.cpp:52]   --->   Operation 129 'call' 'p_7' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 130 [4/4] (2.53ns)   --->   "%p_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_8)" [firmware/myproject.cpp:52]   --->   Operation 130 'call' 'p_8' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 131 [2/4] (4.33ns)   --->   "%p_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703)" [firmware/myproject.cpp:53]   --->   Operation 131 'call' 'p_9' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 132 [2/4] (4.33ns)   --->   "%p_1 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_s)" [firmware/myproject.cpp:53]   --->   Operation 132 'call' 'p_1' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 133 [2/4] (4.33ns)   --->   "%p_Val2_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_1)" [firmware/myproject.cpp:53]   --->   Operation 133 'call' 'p_Val2_8' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 134 [3/4] (4.33ns)   --->   "%p_Val2_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %sext_ln708)" [firmware/myproject.cpp:54]   --->   Operation 134 'call' 'p_Val2_9' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 135 [3/4] (4.33ns)   --->   "%p_Val2_10 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_13)" [firmware/myproject.cpp:54]   --->   Operation 135 'call' 'p_Val2_10' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 136 [2/4] (4.33ns)   --->   "%p_Val2_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_14)" [firmware/myproject.cpp:54]   --->   Operation 136 'call' 'p_Val2_7' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 137 [1/1] (0.78ns)   --->   "%add_ln703_2 = add i16 %p_Val2_1, 1508" [firmware/myproject.cpp:54]   --->   Operation 137 'add' 'add_ln703_2' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 138 [4/4] (2.53ns)   --->   "%p_0 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_2)" [firmware/myproject.cpp:54]   --->   Operation 138 'call' 'p_0' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 4.33>
+ST_6 : Operation 139 [1/1] (0.00ns)   --->   "%lhs_V = sext i16 %p_Val2_s to i17" [firmware/myproject.cpp:50]   --->   Operation 139 'sext' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 140 [1/1] (0.78ns)   --->   "%ret_V = add nsw i17 %lhs_V, -941" [firmware/myproject.cpp:50]   --->   Operation 140 'add' 'ret_V' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 141 [1/1] (0.00ns)   --->   "%sext_ln1118_1 = sext i17 %ret_V to i32" [firmware/myproject.cpp:50]   --->   Operation 141 'sext' 'sext_ln1118_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 142 [1/1] (0.00ns)   --->   "%sext_ln1118_2 = sext i17 %ret_V to i32" [firmware/myproject.cpp:50]   --->   Operation 142 'sext' 'sext_ln1118_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 143 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln1118 = mul i32 %sext_ln1118_1, %sext_ln1118_2" [firmware/myproject.cpp:50]   --->   Operation 143 'mul' 'mul_ln1118' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 144 [1/1] (0.00ns)   --->   "%sext_ln1116 = sext i12 %p_s to i24" [firmware/myproject.cpp:50]   --->   Operation 144 'sext' 'sext_ln1116' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 145 [1/1] (0.49ns) (grouped into DSP with root node ret_V_3)   --->   "%r_V_17 = mul i24 %sext_ln1116, %sext_ln1116" [firmware/myproject.cpp:50]   --->   Operation 145 'mul' 'r_V_17' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 146 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_3 = add i24 %r_V_17, -135168" [firmware/myproject.cpp:50]   --->   Operation 146 'add' 'ret_V_3' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 147 [2/4] (4.33ns)   --->   "%p_Val2_4 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_1)" [firmware/myproject.cpp:50]   --->   Operation 147 'call' 'p_Val2_4' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 148 [4/4] (2.53ns)   --->   "%p_Val2_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_2)" [firmware/myproject.cpp:50]   --->   Operation 148 'call' 'p_Val2_5' <Predicate = true> <Delay = 2.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 149 [1/1] (0.00ns)   --->   "%sext_ln703 = sext i12 %p_Val2_6 to i13" [firmware/myproject.cpp:51]   --->   Operation 149 'sext' 'sext_ln703' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 150 [1/1] (0.74ns)   --->   "%ret_V_8 = add i13 %sext_ln703, -1406" [firmware/myproject.cpp:51]   --->   Operation 150 'add' 'ret_V_8' <Predicate = true> <Delay = 0.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 151 [1/1] (0.00ns)   --->   "%sext_ln703_1 = sext i12 %p_Val2_s_28 to i13" [firmware/myproject.cpp:51]   --->   Operation 151 'sext' 'sext_ln703_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 152 [1/1] (0.00ns) (grouped into DSP with root node r_V_2)   --->   "%ret_V_10 = add i13 %sext_ln703_1, -947" [firmware/myproject.cpp:51]   --->   Operation 152 'add' 'ret_V_10' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 153 [1/1] (0.00ns)   --->   "%sext_ln1116_2 = sext i13 %ret_V_8 to i26" [firmware/myproject.cpp:51]   --->   Operation 153 'sext' 'sext_ln1116_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 154 [1/1] (0.00ns) (grouped into DSP with root node r_V_2)   --->   "%sext_ln1118_3 = sext i13 %ret_V_10 to i26" [firmware/myproject.cpp:51]   --->   Operation 154 'sext' 'sext_ln1118_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 155 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_2 = mul i26 %sext_ln1118_3, %sext_ln1116_2" [firmware/myproject.cpp:51]   --->   Operation 155 'mul' 'r_V_2' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 156 [1/1] (0.00ns)   --->   "%rhs_V_6 = sext i16 %p_Val2_3 to i17" [firmware/myproject.cpp:51]   --->   Operation 156 'sext' 'rhs_V_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 157 [1/1] (0.00ns)   --->   "%sext_ln1118_6 = sext i16 %p_Val2_3 to i27" [firmware/myproject.cpp:51]   --->   Operation 157 'sext' 'sext_ln1118_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 158 [1/1] (0.00ns)   --->   "%sext_ln1118_7 = sext i16 %p_Val2_3 to i22" [firmware/myproject.cpp:51]   --->   Operation 158 'sext' 'sext_ln1118_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 159 [1/1] (0.00ns)   --->   "%shl_ln1118_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %p_Val2_3, i5 0)" [firmware/myproject.cpp:51]   --->   Operation 159 'bitconcatenate' 'shl_ln1118_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 160 [1/1] (0.00ns)   --->   "%sext_ln1118_8 = sext i21 %shl_ln1118_2 to i22" [firmware/myproject.cpp:51]   --->   Operation 160 'sext' 'sext_ln1118_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 161 [1/1] (0.81ns)   --->   "%r_V_18 = add i22 %sext_ln1118_8, %sext_ln1118_7" [firmware/myproject.cpp:51]   --->   Operation 161 'add' 'r_V_18' <Predicate = true> <Delay = 0.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 162 [1/1] (0.00ns)   --->   "%sext_ln703_3 = sext i12 %p_5 to i22" [firmware/myproject.cpp:51]   --->   Operation 162 'sext' 'sext_ln703_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 163 [1/1] (0.49ns) (grouped into DSP with root node ret_V_38)   --->   "%mul_ln703 = mul i22 %sext_ln703_3, 311" [firmware/myproject.cpp:51]   --->   Operation 163 'mul' 'mul_ln703' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 164 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_38 = add i22 %mul_ln703, %r_V_18" [firmware/myproject.cpp:51]   --->   Operation 164 'add' 'ret_V_38' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 165 [1/4] (2.85ns)   --->   "%p_6 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %p_Val2_1)" [firmware/myproject.cpp:51]   --->   Operation 165 'call' 'p_6' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 166 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_5 = mul i27 %sext_ln1118_6, 551" [firmware/myproject.cpp:52]   --->   Operation 166 'mul' 'r_V_5' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 167 [1/1] (0.00ns)   --->   "%sext_ln1192_7 = sext i12 %p_7 to i17" [firmware/myproject.cpp:52]   --->   Operation 167 'sext' 'sext_ln1192_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 168 [1/1] (0.00ns) (grouped into DSP with root node ret_V_15)   --->   "%add_ln1192_15 = add i17 %sext_ln1192_7, %rhs_V_6" [firmware/myproject.cpp:52]   --->   Operation 168 'add' 'add_ln1192_15' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 169 [1/1] (0.00ns) (grouped into DSP with root node ret_V_15)   --->   "%sext_ln1192_14 = sext i17 %add_ln1192_15 to i24" [firmware/myproject.cpp:52]   --->   Operation 169 'sext' 'sext_ln1192_14' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 170 [1/1] (2.53ns) (root node of the DSP)   --->   "%ret_V_15 = mul i24 %sext_ln1192_14, 98" [firmware/myproject.cpp:52]   --->   Operation 170 'mul' 'ret_V_15' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 171 [3/4] (4.33ns)   --->   "%p_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_8)" [firmware/myproject.cpp:52]   --->   Operation 171 'call' 'p_8' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 172 [1/4] (2.85ns)   --->   "%p_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703)" [firmware/myproject.cpp:53]   --->   Operation 172 'call' 'p_9' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 173 [1/4] (2.85ns)   --->   "%p_1 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_s)" [firmware/myproject.cpp:53]   --->   Operation 173 'call' 'p_1' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 174 [1/1] (0.78ns)   --->   "%ret_V_44 = add nsw i17 %rhs_V_6, %lhs_V_5" [firmware/myproject.cpp:53]   --->   Operation 174 'add' 'ret_V_44' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 175 [1/4] (2.85ns)   --->   "%p_Val2_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_1)" [firmware/myproject.cpp:53]   --->   Operation 175 'call' 'p_Val2_8' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 176 [2/4] (4.33ns)   --->   "%p_Val2_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %sext_ln708)" [firmware/myproject.cpp:54]   --->   Operation 176 'call' 'p_Val2_9' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 177 [2/4] (4.33ns)   --->   "%p_Val2_10 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_13)" [firmware/myproject.cpp:54]   --->   Operation 177 'call' 'p_Val2_10' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 178 [1/4] (2.85ns)   --->   "%p_Val2_7 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_14)" [firmware/myproject.cpp:54]   --->   Operation 178 'call' 'p_Val2_7' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 179 [3/4] (4.33ns)   --->   "%p_0 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_2)" [firmware/myproject.cpp:54]   --->   Operation 179 'call' 'p_0' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 4.33>
+ST_7 : Operation 180 [1/1] (0.00ns)   --->   "%shl_ln = call i39 @_ssdm_op_BitConcatenate.i39.i32.i7(i32 %mul_ln1118, i7 0)" [firmware/myproject.cpp:50]   --->   Operation 180 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 181 [1/1] (0.00ns)   --->   "%shl_ln1118_1 = call i33 @_ssdm_op_BitConcatenate.i33.i32.i1(i32 %mul_ln1118, i1 false)" [firmware/myproject.cpp:50]   --->   Operation 181 'bitconcatenate' 'shl_ln1118_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 182 [1/1] (0.00ns)   --->   "%sext_ln1118 = sext i33 %shl_ln1118_1 to i39" [firmware/myproject.cpp:50]   --->   Operation 182 'sext' 'sext_ln1118' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 183 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1193 = sub i39 %sext_ln1118, %shl_ln" [firmware/myproject.cpp:50]   --->   Operation 183 'sub' 'sub_ln1193' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 184 [1/1] (0.75ns) (root node of TernaryAdder)   --->   "%ret_V_1 = add i39 %sub_ln1193, 465567744" [firmware/myproject.cpp:50]   --->   Operation 184 'add' 'ret_V_1' <Predicate = true> <Delay = 0.75> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 185 [1/1] (0.00ns)   --->   "%sext_ln700 = sext i39 %ret_V_1 to i62" [firmware/myproject.cpp:50]   --->   Operation 185 'sext' 'sext_ln700' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 186 [1/1] (0.00ns)   --->   "%sext_ln700_1 = sext i24 %ret_V_3 to i62" [firmware/myproject.cpp:50]   --->   Operation 186 'sext' 'sext_ln700_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 187 [1/1] (3.31ns)   --->   "%mul_ln700 = mul i62 %sext_ln700, %sext_ln700_1" [firmware/myproject.cpp:50]   --->   Operation 187 'mul' 'mul_ln700' <Predicate = true> <Delay = 3.31> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 188 [1/4] (2.85ns)   --->   "%p_Val2_4 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_1)" [firmware/myproject.cpp:50]   --->   Operation 188 'call' 'p_Val2_4' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 189 [1/1] (0.00ns)   --->   "%sext_ln1192_2 = sext i16 %p_Val2_2 to i17" [firmware/myproject.cpp:50]   --->   Operation 189 'sext' 'sext_ln1192_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 190 [1/1] (0.00ns)   --->   "%sext_ln1192_3 = sext i12 %p_Val2_4 to i17" [firmware/myproject.cpp:50]   --->   Operation 190 'sext' 'sext_ln1192_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 191 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%ret_V_34 = sub i17 %sext_ln1192_3, %sext_ln1192_2" [firmware/myproject.cpp:50]   --->   Operation 191 'sub' 'ret_V_34' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 192 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%add_ln1192 = add i17 %ret_V_34, 4005" [firmware/myproject.cpp:50]   --->   Operation 192 'add' 'add_ln1192' <Predicate = true> <Delay = 0.67> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 193 [3/4] (4.33ns)   --->   "%p_Val2_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_2)" [firmware/myproject.cpp:50]   --->   Operation 193 'call' 'p_Val2_5' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 194 [1/1] (0.82ns)   --->   "%ret_V_12 = add i22 %ret_V_38, -84992" [firmware/myproject.cpp:51]   --->   Operation 194 'add' 'ret_V_12' <Predicate = true> <Delay = 0.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 195 [1/1] (0.00ns)   --->   "%sext_ln1118_9 = sext i26 %r_V_2 to i50" [firmware/myproject.cpp:51]   --->   Operation 195 'sext' 'sext_ln1118_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 196 [1/1] (0.00ns)   --->   "%sext_ln1118_11 = sext i22 %ret_V_12 to i50" [firmware/myproject.cpp:51]   --->   Operation 196 'sext' 'sext_ln1118_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 197 [1/1] (2.73ns)   --->   "%r_V_4 = mul i50 %sext_ln1118_11, %sext_ln1118_9" [firmware/myproject.cpp:51]   --->   Operation 197 'mul' 'r_V_4' <Predicate = true> <Delay = 2.73> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 198 [1/1] (0.00ns)   --->   "%sext_ln1118_10 = sext i16 %p_Val2_1 to i25" [firmware/myproject.cpp:52]   --->   Operation 198 'sext' 'sext_ln1118_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 199 [1/1] (0.00ns)   --->   "%sext_ln1192_8 = sext i27 %r_V_5 to i46" [firmware/myproject.cpp:52]   --->   Operation 199 'sext' 'sext_ln1192_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 200 [1/1] (0.00ns)   --->   "%sext_ln1192_9 = sext i24 %ret_V_15 to i46" [firmware/myproject.cpp:52]   --->   Operation 200 'sext' 'sext_ln1192_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 201 [1/1] (2.80ns)   --->   "%mul_ln1192_5 = mul i46 %sext_ln1192_9, %sext_ln1192_8" [firmware/myproject.cpp:52]   --->   Operation 201 'mul' 'mul_ln1192_5' <Predicate = true> <Delay = 2.80> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 202 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln728 = mul i25 %sext_ln1118_10, -282" [firmware/myproject.cpp:52]   --->   Operation 202 'mul' 'mul_ln728' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 203 [1/1] (0.00ns)   --->   "%lhs_V_4 = call i45 @_ssdm_op_BitConcatenate.i45.i25.i20(i25 %mul_ln728, i20 0)" [firmware/myproject.cpp:52]   --->   Operation 203 'bitconcatenate' 'lhs_V_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 204 [1/1] (0.00ns)   --->   "%sext_ln1192_10 = sext i45 %lhs_V_4 to i46" [firmware/myproject.cpp:52]   --->   Operation 204 'sext' 'sext_ln1192_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 205 [1/1] (0.95ns)   --->   "%sub_ln1192_1 = sub i46 %sext_ln1192_10, %mul_ln1192_5" [firmware/myproject.cpp:52]   --->   Operation 205 'sub' 'sub_ln1192_1' <Predicate = true> <Delay = 0.95> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 206 [1/1] (0.00ns)   --->   "%sext_ln1118_12 = sext i12 %p_6 to i24" [firmware/myproject.cpp:52]   --->   Operation 206 'sext' 'sext_ln1118_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 207 [2/4] (4.33ns)   --->   "%p_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_8)" [firmware/myproject.cpp:52]   --->   Operation 207 'call' 'p_8' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 208 [1/1] (0.00ns)   --->   "%sext_ln1116_4 = sext i12 %p_9 to i13" [firmware/myproject.cpp:53]   --->   Operation 208 'sext' 'sext_ln1116_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 209 [1/1] (0.00ns)   --->   "%sext_ln1192_15 = sext i12 %p_1 to i13" [firmware/myproject.cpp:53]   --->   Operation 209 'sext' 'sext_ln1192_15' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 210 [1/1] (0.00ns) (grouped into DSP with root node ret_V_20)   --->   "%add_ln1192_22 = add i13 %sext_ln1192_15, %sext_ln1116_4" [firmware/myproject.cpp:53]   --->   Operation 210 'add' 'add_ln1192_22' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 211 [1/1] (0.00ns) (grouped into DSP with root node ret_V_20)   --->   "%sext_ln1192_16 = sext i13 %add_ln1192_22 to i21" [firmware/myproject.cpp:53]   --->   Operation 211 'sext' 'sext_ln1192_16' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 212 [1/1] (0.49ns) (grouped into DSP with root node ret_V_20)   --->   "%mul_ln1192_10 = mul i21 %sext_ln1192_16, 183" [firmware/myproject.cpp:53]   --->   Operation 212 'mul' 'mul_ln1192_10' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 213 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_20 = add i21 %mul_ln1192_10, -19456" [firmware/myproject.cpp:53]   --->   Operation 213 'add' 'ret_V_20' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 214 [1/1] (0.49ns) (grouped into DSP with root node ret_V_45)   --->   "%r_V_20 = mul i24 %sext_ln1118_12, %sext_ln1118_12" [firmware/myproject.cpp:53]   --->   Operation 214 'mul' 'r_V_20' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 215 [1/1] (0.00ns) (grouped into DSP with root node ret_V_45)   --->   "%sext_ln1118_15 = sext i24 %r_V_20 to i28" [firmware/myproject.cpp:53]   --->   Operation 215 'sext' 'sext_ln1118_15' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 216 [1/1] (0.00ns)   --->   "%lhs_V_6 = call i27 @_ssdm_op_BitConcatenate.i27.i17.i10(i17 %ret_V_44, i10 0)" [firmware/myproject.cpp:53]   --->   Operation 216 'bitconcatenate' 'lhs_V_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 217 [1/1] (0.00ns)   --->   "%sext_ln728_7 = sext i27 %lhs_V_6 to i28" [firmware/myproject.cpp:53]   --->   Operation 217 'sext' 'sext_ln728_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 218 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_45 = add i28 %sext_ln728_7, %sext_ln1118_15" [firmware/myproject.cpp:53]   --->   Operation 218 'add' 'ret_V_45' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 219 [1/1] (0.00ns)   --->   "%tmp_9 = call i22 @_ssdm_op_BitConcatenate.i22.i12.i10(i12 %p_Val2_8, i10 0)" [firmware/myproject.cpp:53]   --->   Operation 219 'bitconcatenate' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 220 [1/1] (0.00ns)   --->   "%sext_ln1192_17 = sext i22 %tmp_9 to i28" [firmware/myproject.cpp:53]   --->   Operation 220 'sext' 'sext_ln1192_17' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 221 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%ret_V_46 = add i28 %sext_ln1192_17, %ret_V_45" [firmware/myproject.cpp:53]   --->   Operation 221 'add' 'ret_V_46' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 222 [1/1] (0.71ns) (root node of TernaryAdder)   --->   "%ret_V_24 = add i28 %ret_V_46, -3897344" [firmware/myproject.cpp:53]   --->   Operation 222 'add' 'ret_V_24' <Predicate = true> <Delay = 0.71> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 223 [1/4] (2.85ns)   --->   "%p_Val2_9 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %sext_ln708)" [firmware/myproject.cpp:54]   --->   Operation 223 'call' 'p_Val2_9' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 224 [1/1] (0.00ns)   --->   "%sext_ln1116_5 = sext i12 %p_2 to i24" [firmware/myproject.cpp:54]   --->   Operation 224 'sext' 'sext_ln1116_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 225 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_23 = mul i24 %sext_ln1116_5, %sext_ln1116_5" [firmware/myproject.cpp:54]   --->   Operation 225 'mul' 'r_V_23' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 226 [1/4] (2.85ns)   --->   "%p_Val2_10 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_13)" [firmware/myproject.cpp:54]   --->   Operation 226 'call' 'p_Val2_10' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 227 [1/1] (0.00ns)   --->   "%sext_ln703_4 = sext i12 %p_Val2_10 to i13" [firmware/myproject.cpp:54]   --->   Operation 227 'sext' 'sext_ln703_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 228 [1/1] (0.00ns)   --->   "%sext_ln703_5 = sext i12 %p_Val2_7 to i13" [firmware/myproject.cpp:54]   --->   Operation 228 'sext' 'sext_ln703_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 229 [1/1] (0.74ns)   --->   "%ret_V_49 = sub i13 %sext_ln703_4, %sext_ln703_5" [firmware/myproject.cpp:54]   --->   Operation 229 'sub' 'ret_V_49' <Predicate = true> <Delay = 0.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 230 [2/4] (4.33ns)   --->   "%p_0 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_2)" [firmware/myproject.cpp:54]   --->   Operation 230 'call' 'p_0' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 4.33>
+ST_8 : Operation 231 [1/1] (0.00ns)   --->   "%sext_ln700_4 = sext i62 %mul_ln700 to i66" [firmware/myproject.cpp:50]   --->   Operation 231 'sext' 'sext_ln700_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 232 [1/1] (0.00ns)   --->   "%sext_ln700_2 = sext i17 %add_ln1192 to i66" [firmware/myproject.cpp:50]   --->   Operation 232 'sext' 'sext_ln700_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 233 [1/1] (4.14ns)   --->   "%mul_ln700_1 = mul i66 %sext_ln700_4, %sext_ln700_2" [firmware/myproject.cpp:50]   --->   Operation 233 'mul' 'mul_ln700_1' <Predicate = true> <Delay = 4.14> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 234 [2/4] (4.33ns)   --->   "%p_Val2_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_2)" [firmware/myproject.cpp:50]   --->   Operation 234 'call' 'p_Val2_5' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 235 [1/1] (0.00ns)   --->   "%sext_ln1192_5 = sext i50 %r_V_4 to i56" [firmware/myproject.cpp:51]   --->   Operation 235 'sext' 'sext_ln1192_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 236 [1/1] (0.00ns)   --->   "%sext_ln1192_6 = sext i12 %p_6 to i56" [firmware/myproject.cpp:51]   --->   Operation 236 'sext' 'sext_ln1192_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 237 [1/1] (3.74ns)   --->   "%mul_ln1192_3 = mul i56 %sext_ln1192_5, %sext_ln1192_6" [firmware/myproject.cpp:51]   --->   Operation 237 'mul' 'mul_ln1192_3' <Predicate = true> <Delay = 3.74> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 238 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln728_1 = mul i26 %sext_ln728_1, 564" [firmware/myproject.cpp:52]   --->   Operation 238 'mul' 'mul_ln728_1' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 239 [1/1] (0.00ns)   --->   "%rhs_V_2 = call i46 @_ssdm_op_BitConcatenate.i46.i26.i20(i26 %mul_ln728_1, i20 0)" [firmware/myproject.cpp:52]   --->   Operation 239 'bitconcatenate' 'rhs_V_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 240 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln1192_16 = add i46 %rhs_V_2, %sub_ln1192_1" [firmware/myproject.cpp:52]   --->   Operation 240 'add' 'add_ln1192_16' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 241 [1/1] (0.00ns)   --->   "%sext_ln728_3 = sext i12 %p_6 to i23" [firmware/myproject.cpp:52]   --->   Operation 241 'sext' 'sext_ln728_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 242 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln728_2 = mul i23 %sext_ln728_3, 552" [firmware/myproject.cpp:52]   --->   Operation 242 'mul' 'mul_ln728_2' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 243 [1/1] (0.00ns)   --->   "%tmp = call i43 @_ssdm_op_BitConcatenate.i43.i23.i20(i23 %mul_ln728_2, i20 0)" [firmware/myproject.cpp:52]   --->   Operation 243 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 244 [1/1] (0.00ns)   --->   "%rhs_V_3 = sext i43 %tmp to i46" [firmware/myproject.cpp:52]   --->   Operation 244 'sext' 'rhs_V_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 245 [1/1] (0.77ns) (root node of TernaryAdder)   --->   "%add_ln1192_17 = add i46 %rhs_V_3, %add_ln1192_16" [firmware/myproject.cpp:52]   --->   Operation 245 'add' 'add_ln1192_17' <Predicate = true> <Delay = 0.77> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 246 [1/4] (2.85ns)   --->   "%p_8 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_8)" [firmware/myproject.cpp:52]   --->   Operation 246 'call' 'p_8' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 247 [1/1] (0.00ns)   --->   "%sext_ln1192_11 = sext i21 %ret_V_20 to i46" [firmware/myproject.cpp:53]   --->   Operation 247 'sext' 'sext_ln1192_11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 248 [1/1] (0.00ns)   --->   "%sext_ln1192_12 = sext i28 %ret_V_24 to i46" [firmware/myproject.cpp:53]   --->   Operation 248 'sext' 'sext_ln1192_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 249 [1/1] (2.87ns)   --->   "%mul_ln1192_7 = mul i46 %sext_ln1192_12, %sext_ln1192_11" [firmware/myproject.cpp:53]   --->   Operation 249 'mul' 'mul_ln1192_7' <Predicate = true> <Delay = 2.87> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 250 [1/1] (0.95ns)   --->   "%ret_V_47 = add i46 %mul_ln1192_7, -1042603311104" [firmware/myproject.cpp:53]   --->   Operation 250 'add' 'ret_V_47' <Predicate = true> <Delay = 0.95> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 251 [1/1] (0.00ns)   --->   "%trunc_ln708_10 = call i16 @_ssdm_op_PartSelect.i16.i46.i32.i32(i46 %ret_V_47, i32 30, i32 45)" [firmware/myproject.cpp:53]   --->   Operation 251 'partselect' 'trunc_ln708_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 252 [1/1] (0.00ns)   --->   "%sext_ln1253 = sext i12 %p_Val2_9 to i13" [firmware/myproject.cpp:54]   --->   Operation 252 'sext' 'sext_ln1253' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 253 [1/1] (0.74ns)   --->   "%r_V_22 = sub i13 0, %sext_ln1253" [firmware/myproject.cpp:54]   --->   Operation 253 'sub' 'r_V_22' <Predicate = true> <Delay = 0.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 254 [1/1] (0.00ns)   --->   "%sext_ln1118_16 = sext i24 %r_V_23 to i25" [firmware/myproject.cpp:54]   --->   Operation 254 'sext' 'sext_ln1118_16' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 255 [1/1] (0.00ns)   --->   "%tmp_11 = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %r_V_22, i10 0)" [firmware/myproject.cpp:54]   --->   Operation 255 'bitconcatenate' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 256 [1/1] (0.00ns)   --->   "%sext_ln700_5 = sext i23 %tmp_11 to i25" [firmware/myproject.cpp:54]   --->   Operation 256 'sext' 'sext_ln700_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 257 [1/1] (0.00ns) (grouped into DSP with root node r_V_16)   --->   "%ret_V_26 = add i25 %sext_ln700_5, %sext_ln1118_16" [firmware/myproject.cpp:54]   --->   Operation 257 'add' 'ret_V_26' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 258 [1/1] (0.00ns)   --->   "%sext_ln703_6 = sext i13 %ret_V_49 to i14" [firmware/myproject.cpp:54]   --->   Operation 258 'sext' 'sext_ln703_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 259 [1/1] (0.75ns)   --->   "%ret_V_30 = add i14 %sext_ln703_6, 232" [firmware/myproject.cpp:54]   --->   Operation 259 'add' 'ret_V_30' <Predicate = true> <Delay = 0.75> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 260 [1/1] (0.00ns) (grouped into DSP with root node r_V_16)   --->   "%sext_ln1118_18 = sext i25 %ret_V_26 to i39" [firmware/myproject.cpp:54]   --->   Operation 260 'sext' 'sext_ln1118_18' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 261 [1/1] (0.00ns)   --->   "%sext_ln1118_19 = sext i14 %ret_V_30 to i39" [firmware/myproject.cpp:54]   --->   Operation 261 'sext' 'sext_ln1118_19' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 262 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_16 = mul i39 %sext_ln1118_18, %sext_ln1118_19" [firmware/myproject.cpp:54]   --->   Operation 262 'mul' 'r_V_16' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 263 [1/4] (2.85ns)   --->   "%p_0 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %add_ln703_2)" [firmware/myproject.cpp:54]   --->   Operation 263 'call' 'p_0' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 4.26>
+ST_9 : Operation 264 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %y_4_V), !map !197"   --->   Operation 264 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 265 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %y_3_V), !map !203"   --->   Operation 265 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 266 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %y_2_V), !map !209"   --->   Operation 266 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 267 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %y_1_V), !map !215"   --->   Operation 267 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 268 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %y_0_V), !map !221"   --->   Operation 268 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 269 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i256* %x_V), !map !227"   --->   Operation 269 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 270 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @myproject_str) nounwind"   --->   Operation 270 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 271 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i256* %x_V, [7 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind"   --->   Operation 271 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 272 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %y_0_V, i16* %y_1_V, i16* %y_2_V, i16* %y_3_V, i16* %y_4_V, [7 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [firmware/myproject.cpp:32]   --->   Operation 272 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 273 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [firmware/myproject.cpp:33]   --->   Operation 273 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 274 [1/4] (2.85ns)   --->   "%p_Val2_5 = call fastcc i12 @"sin_lut<ap_fixed<16, 6, 5, 3, 0> >"(i16 %trunc_ln708_2)" [firmware/myproject.cpp:50]   --->   Operation 274 'call' 'p_Val2_5' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 275 [1/1] (0.00ns)   --->   "%tmp_4 = call i62 @_ssdm_op_BitConcatenate.i62.i12.i50(i12 %p_Val2_5, i50 0)" [firmware/myproject.cpp:50]   --->   Operation 275 'bitconcatenate' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 276 [1/1] (0.00ns)   --->   "%rhs_V = sext i62 %tmp_4 to i66" [firmware/myproject.cpp:50]   --->   Operation 276 'sext' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 277 [1/1] (1.15ns)   --->   "%ret_V_36 = sub i66 %mul_ln700_1, %rhs_V" [firmware/myproject.cpp:50]   --->   Operation 277 'sub' 'ret_V_36' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 278 [1/1] (0.00ns)   --->   "%trunc_ln708_3 = call i16 @_ssdm_op_PartSelect.i16.i66.i32.i32(i66 %ret_V_36, i32 50, i32 65)" [firmware/myproject.cpp:50]   --->   Operation 278 'partselect' 'trunc_ln708_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 279 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_vld.i16P(i16* %y_0_V, i16 %trunc_ln708_3)" [firmware/myproject.cpp:50]   --->   Operation 279 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 280 [1/1] (1.03ns)   --->   "%ret_V_39 = add i56 %mul_ln1192_3, -951077558026240" [firmware/myproject.cpp:51]   --->   Operation 280 'add' 'ret_V_39' <Predicate = true> <Delay = 1.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 281 [1/1] (0.00ns)   --->   "%trunc_ln708_6 = call i16 @_ssdm_op_PartSelect.i16.i56.i32.i32(i56 %ret_V_39, i32 40, i32 55)" [firmware/myproject.cpp:51]   --->   Operation 281 'partselect' 'trunc_ln708_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 282 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_vld.i16P(i16* %y_1_V, i16 %trunc_ln708_6)" [firmware/myproject.cpp:51]   --->   Operation 282 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 283 [1/1] (0.00ns)   --->   "%sext_ln728_5 = sext i12 %p_8 to i23" [firmware/myproject.cpp:52]   --->   Operation 283 'sext' 'sext_ln728_5' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 284 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln728_3 = mul i23 %sext_ln728_5, 552" [firmware/myproject.cpp:52]   --->   Operation 284 'mul' 'mul_ln728_3' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 285 [1/1] (0.00ns)   --->   "%tmp_10 = call i43 @_ssdm_op_BitConcatenate.i43.i23.i20(i23 %mul_ln728_3, i20 0)" [firmware/myproject.cpp:52]   --->   Operation 285 'bitconcatenate' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 286 [1/1] (0.00ns)   --->   "%rhs_V_4 = sext i43 %tmp_10 to i46" [firmware/myproject.cpp:52]   --->   Operation 286 'sext' 'rhs_V_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 287 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln1192_19 = add i46 %rhs_V_4, %add_ln1192_17" [firmware/myproject.cpp:52]   --->   Operation 287 'add' 'add_ln1192_19' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 288 [1/1] (0.77ns) (root node of TernaryAdder)   --->   "%ret_V_42 = add i46 %add_ln1192_19, -721554505728" [firmware/myproject.cpp:52]   --->   Operation 288 'add' 'ret_V_42' <Predicate = true> <Delay = 0.77> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.35> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 289 [1/1] (0.00ns)   --->   "%trunc_ln708_9 = call i16 @_ssdm_op_PartSelect.i16.i46.i32.i32(i46 %ret_V_42, i32 30, i32 45)" [firmware/myproject.cpp:52]   --->   Operation 289 'partselect' 'trunc_ln708_9' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 290 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_vld.i16P(i16* %y_2_V, i16 %trunc_ln708_9)" [firmware/myproject.cpp:52]   --->   Operation 290 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 291 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_vld.i16P(i16* %y_3_V, i16 %trunc_ln708_10)" [firmware/myproject.cpp:53]   --->   Operation 291 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 292 [1/1] (0.00ns)   --->   "%sext_ln1118_20 = sext i39 %r_V_16 to i46" [firmware/myproject.cpp:54]   --->   Operation 292 'sext' 'sext_ln1118_20' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 293 [1/1] (0.00ns)   --->   "%sext_ln1192_13 = sext i12 %p_0 to i46" [firmware/myproject.cpp:54]   --->   Operation 293 'sext' 'sext_ln1192_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 294 [1/1] (3.31ns)   --->   "%mul_ln1192_9 = mul i46 %sext_ln1118_20, %sext_ln1192_13" [firmware/myproject.cpp:54]   --->   Operation 294 'mul' 'mul_ln1192_9' <Predicate = true> <Delay = 3.31> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.31> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 295 [1/1] (0.95ns)   --->   "%ret_V_50 = add i46 %mul_ln1192_9, -936302870528" [firmware/myproject.cpp:54]   --->   Operation 295 'add' 'ret_V_50' <Predicate = true> <Delay = 0.95> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 296 [1/1] (0.00ns)   --->   "%trunc_ln708_15 = call i16 @_ssdm_op_PartSelect.i16.i46.i32.i32(i46 %ret_V_50, i32 30, i32 45)" [firmware/myproject.cpp:54]   --->   Operation 296 'partselect' 'trunc_ln708_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 297 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_vld.i16P(i16* %y_4_V, i16 %trunc_ln708_15)" [firmware/myproject.cpp:54]   --->   Operation 297 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 298 [1/1] (0.00ns)   --->   "ret void" [firmware/myproject.cpp:56]   --->   Operation 298 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.38ns
+The critical path consists of the following:
+	wire read on port 'x_V' (firmware/myproject.cpp:50) [21]  (0 ns)
+	'add' operation ('add_ln1192_7', firmware/myproject.cpp:51) [105]  (0.844 ns)
+	'call' operation ('p_5', firmware/myproject.cpp:51) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [107]  (2.53 ns)
+
+ <State 2>: 4.34ns
+The critical path consists of the following:
+	'call' operation ('p_5', firmware/myproject.cpp:51) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [107]  (4.34 ns)
+
+ <State 3>: 4.34ns
+The critical path consists of the following:
+	'call' operation ('p_s', firmware/myproject.cpp:50) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [42]  (4.34 ns)
+
+ <State 4>: 4.34ns
+The critical path consists of the following:
+	'call' operation ('p_s', firmware/myproject.cpp:50) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [42]  (4.34 ns)
+
+ <State 5>: 4.34ns
+The critical path consists of the following:
+	'call' operation ('p_Val2_4', firmware/myproject.cpp:50) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [60]  (4.34 ns)
+
+ <State 6>: 4.34ns
+The critical path consists of the following:
+	'call' operation ('p_Val2_4', firmware/myproject.cpp:50) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [60]  (4.34 ns)
+
+ <State 7>: 4.34ns
+The critical path consists of the following:
+	'call' operation ('p_Val2_5', firmware/myproject.cpp:50) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [74]  (4.34 ns)
+
+ <State 8>: 4.34ns
+The critical path consists of the following:
+	'call' operation ('p_Val2_5', firmware/myproject.cpp:50) to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' [74]  (4.34 ns)
+
+ <State 9>: 4.27ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1192_9', firmware/myproject.cpp:54) [244]  (3.31 ns)
+	'add' operation ('ret.V', firmware/myproject.cpp:54) [245]  (0.96 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

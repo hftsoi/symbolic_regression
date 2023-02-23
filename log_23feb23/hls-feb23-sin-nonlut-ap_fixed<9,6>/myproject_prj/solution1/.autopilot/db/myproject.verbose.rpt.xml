@@ -1,0 +1,282 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject'" level="0">
+<item name = "Date">Thu Feb 23 14:22:00 2023
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2577-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.307 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">11, 11, 55.000 ns, 55.000 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_generic_sincos_9_6_s_fu_237">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_242">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_247">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_252">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_257">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_262">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_267">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_272">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_277">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_282">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_287">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_292">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_297">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_302">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_307">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_312">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_317">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, 17, -, -, -</column>
+<column name="Expression">-, 0, 0, 910, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 34, 5644, 23545, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 36, -</column>
+<column name="Register">0, -, 925, 192, -</column>
+<specialColumn name="Available SLR">1440, 2280, 788160, 394080, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 2, ~0, 6, 0</specialColumn>
+<specialColumn name="Available">4320, 6840, 2364480, 1182240, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_generic_sincos_9_6_s_fu_237">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_242">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_247">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_252">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_257">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_262">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_267">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_272">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_277">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_282">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_287">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_292">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_297">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_302">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_307">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_312">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+<column name="grp_generic_sincos_9_6_s_fu_317">generic_sincos_9_6_s, 0, 2, 332, 1385, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="myproject_am_addmul_4s_6s_12s_19_1_1_U20">myproject_am_addmul_4s_6s_12s_19_1_1, (i0 + i1) * i2</column>
+<column name="myproject_am_addmul_5s_5s_6s_12_1_1_U18">myproject_am_addmul_5s_5s_6s_12_1_1, (i0 + i1) * i2</column>
+<column name="myproject_ama_submul_sub_17s_15s_10s_20s_24_1_1_U17">myproject_ama_submul_sub_17s_15s_10s_20s_24_1_1, i0 * (i1 - i2) - i3</column>
+<column name="myproject_mac_muladd_10ns_9s_15s_15_1_1_U14">myproject_mac_muladd_10ns_9s_15s_15_1_1, i0 + i1 * i2</column>
+<column name="myproject_mac_muladd_5s_17s_13s_18_1_1_U19">myproject_mac_muladd_5s_17s_13s_18_1_1, i0 + i1 * i2</column>
+<column name="myproject_mac_muladd_5s_19s_16s_20_1_1_U22">myproject_mac_muladd_5s_19s_16s_20_1_1, i0 + i1 * i2</column>
+<column name="myproject_mac_muladd_5s_5s_13s_14_1_1_U21">myproject_mac_muladd_5s_5s_13s_14_1_1, i0 * i0 + i1</column>
+<column name="myproject_mac_muladd_5s_5s_5s_9_1_1_U15">myproject_mac_muladd_5s_5s_5s_9_1_1, i0 + i1 * i2</column>
+<column name="myproject_mac_muladd_5s_5s_9s_10_1_1_U16">myproject_mac_muladd_5s_5s_9s_10_1_1, i0 * i0 + i1</column>
+<column name="myproject_mac_muladd_7s_14s_13s_18_1_1_U23">myproject_mac_muladd_7s_14s_13s_18_1_1, i0 + i1 * i2</column>
+<column name="myproject_mac_muladd_9ns_9s_15s_15_1_1_U13">myproject_mac_muladd_9ns_9s_15s_15_1_1, i0 + i1 * i2</column>
+<column name="myproject_mac_muladd_9s_15s_15ns_15_1_1_U7">myproject_mac_muladd_9s_15s_15ns_15_1_1, i0 * i1 + i2</column>
+<column name="myproject_mac_muladd_9s_9s_7s_12_1_1_U11">myproject_mac_muladd_9s_9s_7s_12_1_1, i0 + i1 * i1</column>
+<column name="myproject_mul_mul_13s_13s_21_1_1_U8">myproject_mul_mul_13s_13s_21_1_1, i0 * i0</column>
+<column name="myproject_mul_mul_13s_13s_21_1_1_U10">myproject_mul_mul_13s_13s_21_1_1, i0 * i0</column>
+<column name="myproject_mul_mul_6ns_15s_15_1_1_U9">myproject_mul_mul_6ns_15s_15_1_1, i0 * i1</column>
+<column name="myproject_mul_mul_6ns_21s_21_1_1_U12">myproject_mul_mul_6ns_21s_21_1_1, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="grp_fu_1195_p1">*, 0, 0, 49, 9, 9</column>
+<column name="mul_ln1192_5_fu_1062_p2">*, 0, 0, 62, 7, 10</column>
+<column name="mul_ln1192_7_fu_522_p2">*, 0, 0, 49, 9, 9</column>
+<column name="mul_ln700_2_fu_1210_p1">*, 0, 0, 49, 9, 9</column>
+<column name="add_ln1192_13_fu_665_p2">+, 0, 0, 19, 7, 13</column>
+<column name="add_ln1192_15_fu_1022_p2">+, 0, 0, 19, 18, 18</column>
+<column name="add_ln1192_18_fu_1106_p2">+, 0, 0, 15, 6, 6</column>
+<column name="add_ln1192_19_fu_1172_p2">+, 0, 0, 15, 5, 7</column>
+<column name="add_ln1192_25_fu_696_p2">+, 0, 0, 19, 8, 12</column>
+<column name="add_ln1192_26_fu_702_p2">+, 0, 0, 19, 12, 12</column>
+<column name="add_ln1192_28_fu_729_p2">+, 0, 0, 19, 7, 13</column>
+<column name="add_ln1192_2_fu_496_p2">+, 0, 0, 19, 12, 12</column>
+<column name="add_ln1192_5_fu_528_p2">+, 0, 0, 19, 12, 12</column>
+<column name="add_ln1192_7_fu_582_p2">+, 0, 0, 19, 6, 12</column>
+<column name="add_ln1192_fu_831_p2">+, 0, 0, 19, 5, 10</column>
+<column name="grp_generic_sincos_9_6_s_fu_292_in_V">+, 0, 0, 16, 4, 9</column>
+<column name="grp_generic_sincos_9_6_s_fu_307_in_V">+, 0, 0, 16, 4, 9</column>
+<column name="grp_generic_sincos_9_6_s_fu_317_in_V">+, 0, 0, 16, 9, 9</column>
+<column name="r_V_19_fu_639_p2">+, 0, 0, 19, 12, 12</column>
+<column name="r_V_20_fu_645_p2">+, 0, 0, 19, 12, 12</column>
+<column name="r_V_26_fu_749_p2">+, 0, 0, 28, 21, 21</column>
+<column name="ret_V_14_fu_1143_p2">+, 0, 0, 19, 9, 14</column>
+<column name="ret_V_19_fu_879_p2">+, 0, 0, 15, 1, 7</column>
+<column name="ret_V_24_fu_502_p2">+, 0, 0, 19, 6, 12</column>
+<column name="ret_V_26_fu_548_p2">+, 0, 0, 19, 8, 12</column>
+<column name="ret_V_28_fu_599_p2">+, 0, 0, 19, 8, 12</column>
+<column name="ret_V_29_fu_986_p2">+, 0, 0, 19, 18, 18</column>
+<column name="ret_V_2_fu_936_p2">+, 0, 0, 15, 5, 6</column>
+<column name="ret_V_30_fu_1004_p2">+, 0, 0, 19, 18, 18</column>
+<column name="ret_V_32_fu_1028_p2">+, 0, 0, 19, 13, 18</column>
+<column name="ret_V_34_fu_1050_p2">+, 0, 0, 17, 10, 10</column>
+<column name="ret_V_36_fu_1138_p2">+, 0, 0, 19, 14, 14</column>
+<column name="r_V_18_fu_957_p2">-, 0, 0, 18, 1, 11</column>
+<column name="r_V_23_fu_840_p2">-, 0, 0, 15, 1, 6</column>
+<column name="r_V_25_fu_723_p2">-, 0, 0, 19, 13, 13</column>
+<column name="ret_V_21_fu_366_p2">-, 0, 0, 19, 12, 12</column>
+<column name="ret_V_23_fu_825_p2">-, 0, 0, 19, 10, 10</column>
+<column name="ret_V_31_fu_659_p2">-, 0, 0, 19, 13, 13</column>
+<column name="ret_V_39_fu_869_p2">-, 0, 0, 15, 6, 6</column>
+<column name="sub_ln1192_1_fu_490_p2">-, 0, 0, 19, 12, 12</column>
+<column name="sub_ln1192_2_fu_542_p2">-, 0, 0, 19, 12, 12</column>
+<column name="sub_ln1192_fu_464_p2">-, 0, 0, 19, 12, 12</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="x_V_ap_vld_in_sig">9, 2, 1, 2</column>
+<column name="x_V_ap_vld_preg">9, 2, 1, 2</column>
+<column name="x_V_blk_n">9, 2, 1, 2</column>
+<column name="x_V_in_sig">9, 2, 144, 288</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln1118_reg_1480">9, 0, 9, 0</column>
+<column name="add_ln1192_18_reg_1557">6, 0, 6, 0</column>
+<column name="add_ln1192_reg_1486">10, 0, 10, 0</column>
+<column name="add_ln700_reg_1434">15, 0, 15, 0</column>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
+<column name="mul_ln1118_reg_1399">21, 0, 21, 0</column>
+<column name="mul_ln700_2_reg_1404">15, 0, 15, 0</column>
+<column name="outsin_V_12_reg_1475">5, 0, 5, 0</column>
+<column name="outsin_V_15_reg_1516">5, 0, 5, 0</column>
+<column name="outsin_V_17_reg_1491">5, 0, 5, 0</column>
+<column name="outsin_V_18_reg_1496">5, 0, 5, 0</column>
+<column name="outsin_V_19_reg_1501">5, 0, 5, 0</column>
+<column name="outsin_V_21_reg_1470">5, 0, 5, 0</column>
+<column name="outsin_V_5_reg_1465">5, 0, 5, 0</column>
+<column name="outsin_V_6_reg_1531">5, 0, 5, 0</column>
+<column name="outsin_V_6_reg_1531_pp0_iter10_reg">5, 0, 5, 0</column>
+<column name="outsin_V_reg_1459">5, 0, 5, 0</column>
+<column name="p_Val2_12_reg_1332">9, 0, 9, 0</column>
+<column name="p_Val2_3_reg_1352">9, 0, 9, 0</column>
+<column name="p_Val2_4_reg_1363">9, 0, 9, 0</column>
+<column name="p_Val2_s_reg_1339">9, 0, 9, 0</column>
+<column name="r_V_1_reg_1526">12, 0, 12, 0</column>
+<column name="r_V_3_reg_1552">19, 0, 19, 0</column>
+<column name="ret_V_14_reg_1562">14, 0, 14, 0</column>
+<column name="ret_V_16_reg_1506">10, 0, 10, 0</column>
+<column name="ret_V_19_reg_1511">7, 0, 7, 0</column>
+<column name="ret_V_34_reg_1542">10, 0, 10, 0</column>
+<column name="sext_ln1118_10_reg_1394">15, 0, 15, 0</column>
+<column name="tmp_3_reg_1357">9, 0, 9, 0</column>
+<column name="trunc_ln708_12_reg_1419">9, 0, 9, 0</column>
+<column name="trunc_ln708_13_reg_1424">9, 0, 9, 0</column>
+<column name="trunc_ln708_14_reg_1547">9, 0, 9, 0</column>
+<column name="trunc_ln708_14_reg_1547_pp0_iter10_reg">9, 0, 9, 0</column>
+<column name="trunc_ln708_1_reg_1369">9, 0, 9, 0</column>
+<column name="trunc_ln708_2_reg_1374">9, 0, 9, 0</column>
+<column name="trunc_ln708_3_reg_1521">9, 0, 9, 0</column>
+<column name="trunc_ln708_3_reg_1521_pp0_iter10_reg">9, 0, 9, 0</column>
+<column name="trunc_ln708_4_reg_1379">9, 0, 9, 0</column>
+<column name="trunc_ln708_7_reg_1389">9, 0, 9, 0</column>
+<column name="trunc_ln708_8_reg_1429">9, 0, 9, 0</column>
+<column name="trunc_ln708_9_reg_1537">9, 0, 9, 0</column>
+<column name="trunc_ln708_9_reg_1537_pp0_iter10_reg">9, 0, 9, 0</column>
+<column name="trunc_ln708_s_reg_1444">9, 0, 9, 0</column>
+<column name="x_V_ap_vld_preg">1, 0, 1, 0</column>
+<column name="x_V_preg">144, 0, 144, 0</column>
+<column name="outsin_V_5_reg_1465">64, 32, 5, 0</column>
+<column name="p_Val2_12_reg_1332">64, 32, 9, 0</column>
+<column name="p_Val2_3_reg_1352">64, 32, 9, 0</column>
+<column name="p_Val2_4_reg_1363">64, 32, 9, 0</column>
+<column name="p_Val2_s_reg_1339">64, 32, 9, 0</column>
+<column name="tmp_3_reg_1357">64, 32, 9, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="x_V_ap_vld">in, 1, ap_vld, x_V, pointer</column>
+<column name="x_V">in, 144, ap_vld, x_V, pointer</column>
+<column name="y_0_V">out, 9, ap_vld, y_0_V, pointer</column>
+<column name="y_0_V_ap_vld">out, 1, ap_vld, y_0_V, pointer</column>
+<column name="y_1_V">out, 9, ap_vld, y_1_V, pointer</column>
+<column name="y_1_V_ap_vld">out, 1, ap_vld, y_1_V, pointer</column>
+<column name="y_2_V">out, 9, ap_vld, y_2_V, pointer</column>
+<column name="y_2_V_ap_vld">out, 1, ap_vld, y_2_V, pointer</column>
+<column name="y_3_V">out, 9, ap_vld, y_3_V, pointer</column>
+<column name="y_3_V_ap_vld">out, 1, ap_vld, y_3_V, pointer</column>
+<column name="y_4_V">out, 9, ap_vld, y_4_V, pointer</column>
+<column name="y_4_V_ap_vld">out, 1, ap_vld, y_4_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="myproject.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_myproject_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity">
+         <obj_property name="label">AESL_inst_myproject_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_myproject_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_myproject_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/grp_operator_s_fu_277_activity">
+            <obj_property name="label">grp_operator_s_fu_277_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_277_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_277_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/grp_operator_s_fu_277_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/grp_operator_s_fu_277_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/grp_operator_s_fu_277_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/grp_operator_s_fu_284_activity">
+            <obj_property name="label">grp_operator_s_fu_284_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_284_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_284_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/grp_operator_s_fu_284_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/grp_operator_s_fu_284_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/grp_operator_s_fu_284_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/grp_operator_s_fu_291_activity">
+            <obj_property name="label">grp_operator_s_fu_291_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_291_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_291_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/grp_operator_s_fu_291_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/grp_operator_s_fu_291_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/grp_operator_s_fu_291_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/grp_operator_s_fu_298_activity">
+            <obj_property name="label">grp_operator_s_fu_298_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_298_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_298_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/grp_operator_s_fu_298_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/grp_operator_s_fu_298_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/grp_operator_s_fu_298_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/grp_operator_s_fu_305_activity">
+            <obj_property name="label">grp_operator_s_fu_305_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_305_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_305_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/grp_operator_s_fu_305_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/grp_operator_s_fu_305_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/grp_operator_s_fu_305_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/grp_operator_s_fu_312_activity">
+            <obj_property name="label">grp_operator_s_fu_312_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_312_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_312_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/grp_operator_s_fu_312_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/grp_operator_s_fu_312_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/grp_operator_s_fu_312_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/grp_operator_s_fu_319_activity">
+            <obj_property name="label">grp_operator_s_fu_319_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_319_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_319_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/grp_operator_s_fu_319_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/grp_operator_s_fu_319_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/grp_operator_s_fu_319_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/grp_operator_s_fu_326_activity">
+            <obj_property name="label">grp_operator_s_fu_326_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_326_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_326_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/grp_operator_s_fu_326_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/grp_operator_s_fu_326_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/grp_operator_s_fu_326_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/grp_operator_s_fu_333_activity">
+            <obj_property name="label">grp_operator_s_fu_333_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_333_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_333_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/grp_operator_s_fu_333_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/grp_operator_s_fu_333_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/grp_operator_s_fu_333_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/grp_operator_s_fu_340_activity">
+            <obj_property name="label">grp_operator_s_fu_340_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_340_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_340_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/grp_operator_s_fu_340_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/grp_operator_s_fu_340_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/grp_operator_s_fu_340_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/grp_operator_s_fu_347_activity">
+            <obj_property name="label">grp_operator_s_fu_347_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_347_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_347_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/grp_operator_s_fu_347_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/grp_operator_s_fu_347_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/grp_operator_s_fu_347_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/grp_operator_s_fu_354_activity">
+            <obj_property name="label">grp_operator_s_fu_354_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_354_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_354_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/grp_operator_s_fu_354_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/grp_operator_s_fu_354_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/grp_operator_s_fu_354_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/grp_operator_s_fu_361_activity">
+            <obj_property name="label">grp_operator_s_fu_361_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_361_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_361_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/grp_operator_s_fu_361_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/grp_operator_s_fu_361_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/grp_operator_s_fu_361_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/grp_operator_s_fu_368_activity">
+            <obj_property name="label">grp_operator_s_fu_368_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_368_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_368_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/grp_operator_s_fu_368_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/grp_operator_s_fu_368_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/grp_operator_s_fu_368_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/grp_operator_s_fu_375_activity">
+            <obj_property name="label">grp_operator_s_fu_375_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_375_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_375_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/grp_operator_s_fu_375_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/grp_operator_s_fu_375_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/grp_operator_s_fu_375_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/grp_operator_s_fu_382_activity">
+            <obj_property name="label">grp_operator_s_fu_382_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_382_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_382_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/grp_operator_s_fu_382_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/grp_operator_s_fu_382_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/grp_operator_s_fu_382_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/grp_operator_s_fu_389_activity">
+            <obj_property name="label">grp_operator_s_fu_389_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_operator_s_fu_389_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_operator_s_fu_389_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/grp_operator_s_fu_389_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/grp_operator_s_fu_389_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/grp_operator_s_fu_389_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity">
+      <obj_property name="ElementShortName">AESL_inst_myproject_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_myproject_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_myproject_group">
+      <obj_property name="label">AESL_inst_myproject</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/grp_operator_s_fu_277_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_277_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_277_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/grp_operator_s_fu_284_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_284_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_284_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/grp_operator_s_fu_291_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_291_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_291_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/grp_operator_s_fu_298_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_298_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_298_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/grp_operator_s_fu_305_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_305_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_305_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/grp_operator_s_fu_312_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_312_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_312_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/grp_operator_s_fu_319_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_319_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_319_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/grp_operator_s_fu_326_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_326_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_326_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/grp_operator_s_fu_333_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_333_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_333_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/grp_operator_s_fu_340_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_340_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_340_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/grp_operator_s_fu_347_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_347_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_347_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/grp_operator_s_fu_354_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_354_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_354_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/grp_operator_s_fu_361_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_361_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_361_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/grp_operator_s_fu_368_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_368_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_368_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/grp_operator_s_fu_375_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_375_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_375_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/grp_operator_s_fu_382_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_382_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_382_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/grp_operator_s_fu_389_activity">
+         <obj_property name="ElementShortName">grp_operator_s_fu_389_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_operator_s_fu_389_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_myproject_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_277_group">
+         <obj_property name="label">grp_operator_s_fu_277</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_277_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_277/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_284_group">
+         <obj_property name="label">grp_operator_s_fu_284</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_284_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_284/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_291_group">
+         <obj_property name="label">grp_operator_s_fu_291</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_291_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_291/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_298_group">
+         <obj_property name="label">grp_operator_s_fu_298</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_298_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_298/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_305_group">
+         <obj_property name="label">grp_operator_s_fu_305</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_305_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_305/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_312_group">
+         <obj_property name="label">grp_operator_s_fu_312</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_312_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_312/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_319_group">
+         <obj_property name="label">grp_operator_s_fu_319</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_319_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_319/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_326_group">
+         <obj_property name="label">grp_operator_s_fu_326</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_326_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_326/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_333_group">
+         <obj_property name="label">grp_operator_s_fu_333</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_333_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_333/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_340_group">
+         <obj_property name="label">grp_operator_s_fu_340</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_340_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_340/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_347_group">
+         <obj_property name="label">grp_operator_s_fu_347</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_347_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_347/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_354_group">
+         <obj_property name="label">grp_operator_s_fu_354</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_354_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_354/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_361_group">
+         <obj_property name="label">grp_operator_s_fu_361</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_361_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_361/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_368_group">
+         <obj_property name="label">grp_operator_s_fu_368</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_368_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_368/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_375_group">
+         <obj_property name="label">grp_operator_s_fu_375</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_375_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_375/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_382_group">
+         <obj_property name="label">grp_operator_s_fu_382</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_382_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_382/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_operator_s_fu_389_group">
+         <obj_property name="label">grp_operator_s_fu_389</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_operator_s_fu_389_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/grp_operator_s_fu_389/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

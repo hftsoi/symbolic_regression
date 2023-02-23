@@ -1,0 +1,62 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject'" level="0">
+<item name = "Date">Thu Feb 23 14:21:56 2023
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2577-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.307 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">11, 11, 55.000 ns, 55.000 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_generic_sincos_9_6_s_fu_237">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_242">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_247">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_252">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_257">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_262">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_267">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_272">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_277">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_282">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_287">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_292">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_297">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_302">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_307">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_312">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_generic_sincos_9_6_s_fu_317">generic_sincos_9_6_s, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
