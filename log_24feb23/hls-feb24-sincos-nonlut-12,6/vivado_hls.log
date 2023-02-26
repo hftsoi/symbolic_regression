@@ -6,7 +6,7 @@
 
 source /data/tools/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/data/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'htsoi' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Sun Feb 26 11:09:05 EST 2023
+INFO: [HLS 200-10] For user 'htsoi' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Sun Feb 26 15:34:55 EST 2023
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
 INFO: [HLS 200-10] In directory '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6'
 Sourcing Tcl script 'build_prj.tcl'
@@ -24,16 +24,16 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 ***** C/RTL SYNTHESIS *****
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39562 ; free virtual = 82998
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39562 ; free virtual = 82999
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37989 ; free virtual = 84098
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37989 ; free virtual = 84098
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39436 ; free virtual = 82908
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37861 ; free virtual = 84006
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'cordic_apfixed::circ_range_redux<12, 6, 13>' into 'cordic_apfixed::generic_sincos<12, 6>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sin<12, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::cos<12, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39370 ; free virtual = 82855
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'cordic_apfixed::cordic_circ_apfixed<14, 3, 0>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:79).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37823 ; free virtual = 83953
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'cordic_apfixed::cordic_circ_apfixed<14, 3, 0>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:78).
 WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:87) because its parent loop or function is pipelined.
 INFO: [HLS 200-489] Unrolling loop 'Loop-1' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:87) in function 'cordic_apfixed::cordic_circ_apfixed<14, 3, 0>' completely with a factor of 14.
 INFO: [XFORM 203-131] Reshaping array 'x.V' (firmware/myproject.cpp:25) in dimension 1 completely.
@@ -43,10 +43,10 @@ INFO: [XFORM 203-602] Inlining function 'hls::sin<12, 6>' into 'myproject' (firm
 INFO: [XFORM 203-602] Inlining function 'hls::cos<12, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:230:25) to (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:293:3) in function 'cordic_apfixed::generic_sincos<12, 6>'... converting 11 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'cordic_apfixed::cordic_circ_apfixed<14, 3, 0>'... converting 40 basic blocks.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39296 ; free virtual = 82774
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37724 ; free virtual = 83874
 WARNING: [XFORM 203-631] Renaming function 'cordic_apfixed::generic_sincos<12, 6>' to 'generic_sincos<12, 6>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:64:3)
 WARNING: [XFORM 203-631] Renaming function 'cordic_apfixed::cordic_circ_apfixed<14, 3, 0>' to 'cordic_circ_apfixed<14, 3, 0>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:79)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39256 ; free virtual = 82740
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37683 ; free virtual = 83841
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'cordic_circ_apfixed<14, 3, 0>' to 'cordic_circ_apfixed_14_3_0_s'.
@@ -58,13 +58,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'cordic_circ_apfixed<14, 3, 0>'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 80.78 seconds; current allocated memory: 385.940 MB.
+INFO: [HLS 200-111]  Elapsed time: 81.44 seconds; current allocated memory: 385.932 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 386.709 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 386.701 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'generic_sincos_12_6_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -72,13 +72,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'generic_sincos<12, 6>'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 387.007 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.83 seconds; current allocated memory: 387.000 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 387.262 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 387.254 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -86,25 +86,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'myproject'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 15.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.98 seconds; current allocated memory: 388.376 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.33 seconds; current allocated memory: 388.366 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.68 seconds; current allocated memory: 390.345 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.23 seconds; current allocated memory: 390.337 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'cordic_circ_apfixed_14_3_0_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'cordic_circ_apfixed_14_3_0_s'.
-INFO: [HLS 200-111]  Elapsed time: 3.97 seconds; current allocated memory: 393.974 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.14 seconds; current allocated memory: 393.968 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'generic_sincos_12_6_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_20ns_12ns_31_1_0': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_sincos_12_6_s'.
-INFO: [HLS 200-111]  Elapsed time: 1.14 seconds; current allocated memory: 397.821 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.05 seconds; current allocated memory: 397.815 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -134,11 +134,1191 @@ INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_18s_34_1_1':
 INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_20s_36_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_24s_40_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
-INFO: [HLS 200-111]  Elapsed time: 1.04 seconds; current allocated memory: 401.804 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.95 seconds; current allocated memory: 401.801 MB.
 INFO: [HLS 200-789] **** Estimated Fmax: 228.94 MHz
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:26 ; elapsed = 00:01:58 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39209 ; free virtual = 82713
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:27 ; elapsed = 00:01:54 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37664 ; free virtual = 83814
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
-***** C/RTL SYNTHESIS COMPLETED IN 0h1m55s *****
-INFO: [HLS 200-112] Total elapsed time: 118.25 seconds; peak allocated memory: 401.804 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Sun Feb 26 11:11:03 2023...
+***** C/RTL SYNTHESIS COMPLETED IN 0h1m51s *****
+***** VIVADO SYNTHESIS *****
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source vivado_synth.tcl
+# set tcldir [file dirname [info script]]
+# source [file join $tcldir project.tcl]
+## variable project_name
+## set project_name "myproject"
+## variable backend
+## set backend "vivado"
+## variable part
+## set part "xcvu9p-flga2577-2-e"
+## variable clock_period
+## set clock_period 5
+# add_files ${project_name}_prj/solution1/syn/vhdl
+# synth_design -top ${project_name} -part $part
+Command: synth_design -top myproject -part xcvu9p-flga2577-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Common 17-1540] The version limit for your license is '2021.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1832908
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2142.480 ; gain = 0.000 ; free physical = 37027 ; free virtual = 83172
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myproject' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:35]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_227' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1116]
+INFO: [Synth 8-638] synthesizing module 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:23]
+INFO: [Synth 8-3491] module 'cordic_circ_apfixed_14_3_0_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/cordic_circ_apfixed_14_3_0_s.vhd:12' bound to instance 'grp_cordic_circ_apfixed_14_3_0_s_fu_70' of component 'cordic_circ_apfixed_14_3_0_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'cordic_circ_apfixed_14_3_0_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/cordic_circ_apfixed_14_3_0_s.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'cordic_circ_apfixed_14_3_0_s' (1#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/cordic_circ_apfixed_14_3_0_s.vhd:23]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 20 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_20ns_12ns_31_1_0' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_20ns_12ns_31_1_0.vhd:31' bound to instance 'myproject_mul_mul_20ns_12ns_31_1_0_U2' of component 'myproject_mul_mul_20ns_12ns_31_1_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_20ns_12ns_31_1_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_20ns_12ns_31_1_0.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 20 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_20ns_12ns_31_1_0.vhd:6' bound to instance 'myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U' of component 'myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_20ns_12ns_31_1_0.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_20ns_12ns_31_1_0.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0' (2#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_20ns_12ns_31_1_0.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_20ns_12ns_31_1_0' (3#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_20ns_12ns_31_1_0.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0.vhd:38' bound to instance 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3' of component 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:212]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0.vhd:9' bound to instance 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U' of component 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1' (4#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_mulsub_15ns_6ns_19ns_21_1_0' (5#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'generic_sincos_12_6_s' (6#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:23]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_232' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1125]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_237' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1134]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_242' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1143]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_247' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1152]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_252' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1161]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_257' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1170]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_262' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1179]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_267' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1188]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_272' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1197]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_277' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1206]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_282' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1215]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_287' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1224]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_292' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1233]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_297' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1242]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_302' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1251]
+INFO: [Synth 8-3491] module 'generic_sincos_12_6_s' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/generic_sincos_12_6_s.vhd:12' bound to instance 'grp_generic_sincos_12_6_s_fu_307' of component 'generic_sincos_12_6_s' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1260]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_7ns_18_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7ns_18_1_1.vhd:31' bound to instance 'myproject_mul_mul_12s_7ns_18_1_1_U7' of component 'myproject_mul_mul_12s_7ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1269]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_7ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7ns_18_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_7ns_18_1_1_DSP48_2' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7ns_18_1_1.vhd:6' bound to instance 'myproject_mul_mul_12s_7ns_18_1_1_DSP48_2_U' of component 'myproject_mul_mul_12s_7ns_18_1_1_DSP48_2' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7ns_18_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_7ns_18_1_1_DSP48_2' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7ns_18_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_7ns_18_1_1_DSP48_2' (7#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7ns_18_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_7ns_18_1_1' (8#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7ns_18_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_10ns_18ns_18_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_10ns_18ns_18_1_1.vhd:38' bound to instance 'myproject_mac_muladd_12s_10ns_18ns_18_1_1_U8' of component 'myproject_mac_muladd_12s_10ns_18ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1281]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_10ns_18ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_10ns_18ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_10ns_18ns_18_1_1.vhd:9' bound to instance 'myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3_U' of component 'myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_10ns_18ns_18_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_10ns_18ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3' (9#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_10ns_18ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_10ns_18ns_18_1_1' (10#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_10ns_18ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_7s_18s_18_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_7s_18s_18_1_1.vhd:38' bound to instance 'myproject_mac_muladd_12s_7s_18s_18_1_1_U9' of component 'myproject_mac_muladd_12s_7s_18s_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_7s_18s_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_7s_18s_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_7s_18s_18_1_1.vhd:9' bound to instance 'myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U' of component 'myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_7s_18s_18_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_7s_18s_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4' (11#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_7s_18s_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_7s_18s_18_1_1' (12#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_7s_18s_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 13 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_9ns_13ns_18_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_13ns_18_1_1.vhd:38' bound to instance 'myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10' of component 'myproject_mac_muladd_12s_9ns_13ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1309]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_9ns_13ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_13ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 13 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_13ns_18_1_1.vhd:9' bound to instance 'myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U' of component 'myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_13ns_18_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_13ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5' (13#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_13ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_9ns_13ns_18_1_1' (14#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_13ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_9ns_16ns_20_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_16ns_20_1_1.vhd:38' bound to instance 'myproject_mac_muladd_12s_9ns_16ns_20_1_1_U11' of component 'myproject_mac_muladd_12s_9ns_16ns_20_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1323]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_9ns_16ns_20_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_16ns_20_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_9ns_16ns_20_1_1_DSP48_6' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_16ns_20_1_1.vhd:9' bound to instance 'myproject_mac_muladd_12s_9ns_16ns_20_1_1_DSP48_6_U' of component 'myproject_mac_muladd_12s_9ns_16ns_20_1_1_DSP48_6' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_16ns_20_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_9ns_16ns_20_1_1_DSP48_6' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_16ns_20_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_9ns_16ns_20_1_1_DSP48_6' (15#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_16ns_20_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_9ns_16ns_20_1_1' (16#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_16ns_20_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_9ns_11ns_18_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_11ns_18_1_1.vhd:38' bound to instance 'myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12' of component 'myproject_mac_muladd_12s_9ns_11ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1337]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_9ns_11ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_11ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 11 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_11ns_18_1_1.vhd:9' bound to instance 'myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U' of component 'myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_11ns_18_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_11ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7' (17#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_11ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_9ns_11ns_18_1_1' (18#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_9ns_11ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 14 - type: integer 
+	Parameter din1_WIDTH bound to: 14 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_mulsub_14s_14s_18ns_18_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_14s_14s_18ns_18_1_1.vhd:38' bound to instance 'myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13' of component 'myproject_mac_mulsub_14s_14s_18ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1351]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_mulsub_14s_14s_18ns_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_14s_14s_18ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 14 - type: integer 
+	Parameter din1_WIDTH bound to: 14 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_14s_14s_18ns_18_1_1.vhd:9' bound to instance 'myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U' of component 'myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_14s_14s_18ns_18_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_14s_14s_18ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8' (19#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_14s_14s_18ns_18_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_mulsub_14s_14s_18ns_18_1_1' (20#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mulsub_14s_14s_18ns_18_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 20 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_20s_24ns_24_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_20s_24ns_24_1_1.vhd:38' bound to instance 'myproject_mac_muladd_12s_20s_24ns_24_1_1_U14' of component 'myproject_mac_muladd_12s_20s_24ns_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1365]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_20s_24ns_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_20s_24ns_24_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 20 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_20s_24ns_24_1_1.vhd:9' bound to instance 'myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U' of component 'myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_20s_24ns_24_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_20s_24ns_24_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9' (21#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_20s_24ns_24_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_12s_20s_24ns_24_1_1' (22#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_12s_20s_24ns_24_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_12s_24_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:31' bound to instance 'myproject_mul_mul_12s_12s_24_1_1_U15' of component 'myproject_mul_mul_12s_12s_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1379]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_12s_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_12s_24_1_1_DSP48_10' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:6' bound to instance 'myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U' of component 'myproject_mul_mul_12s_12s_24_1_1_DSP48_10' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_12s_24_1_1_DSP48_10' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_12s_24_1_1_DSP48_10' (23#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_12s_24_1_1' (24#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 14 - type: integer 
+	Parameter din1_WIDTH bound to: 14 - type: integer 
+	Parameter dout_WIDTH bound to: 28 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_14s_14s_28_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_14s_14s_28_1_1.vhd:31' bound to instance 'myproject_mul_mul_14s_14s_28_1_1_U16' of component 'myproject_mul_mul_14s_14s_28_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1391]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_14s_14s_28_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_14s_14s_28_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 14 - type: integer 
+	Parameter din1_WIDTH bound to: 14 - type: integer 
+	Parameter dout_WIDTH bound to: 28 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_14s_14s_28_1_1_DSP48_11' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_14s_14s_28_1_1.vhd:6' bound to instance 'myproject_mul_mul_14s_14s_28_1_1_DSP48_11_U' of component 'myproject_mul_mul_14s_14s_28_1_1_DSP48_11' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_14s_14s_28_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_14s_14s_28_1_1_DSP48_11' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_14s_14s_28_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_14s_14s_28_1_1_DSP48_11' (25#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_14s_14s_28_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_14s_14s_28_1_1' (26#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_14s_14s_28_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_7s_18_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7s_18_1_1.vhd:31' bound to instance 'myproject_mul_mul_12s_7s_18_1_1_U17' of component 'myproject_mul_mul_12s_7s_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1403]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_7s_18_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7s_18_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_7s_18_1_1_DSP48_12' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7s_18_1_1.vhd:6' bound to instance 'myproject_mul_mul_12s_7s_18_1_1_DSP48_12_U' of component 'myproject_mul_mul_12s_7s_18_1_1_DSP48_12' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7s_18_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_7s_18_1_1_DSP48_12' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7s_18_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_7s_18_1_1_DSP48_12' (27#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7s_18_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_7s_18_1_1' (28#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_7s_18_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 13 - type: integer 
+	Parameter din2_WIDTH bound to: 14 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_mul_sub_8s_13s_14s_20_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mul_sub_8s_13s_14s_20_1_1.vhd:38' bound to instance 'myproject_mac_mul_sub_8s_13s_14s_20_1_1_U18' of component 'myproject_mac_mul_sub_8s_13s_14s_20_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1415]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_mul_sub_8s_13s_14s_20_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mul_sub_8s_13s_14s_20_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 13 - type: integer 
+	Parameter din2_WIDTH bound to: 14 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_mul_sub_8s_13s_14s_20_1_1_DSP48_13' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mul_sub_8s_13s_14s_20_1_1.vhd:9' bound to instance 'myproject_mac_mul_sub_8s_13s_14s_20_1_1_DSP48_13_U' of component 'myproject_mac_mul_sub_8s_13s_14s_20_1_1_DSP48_13' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mul_sub_8s_13s_14s_20_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_mul_sub_8s_13s_14s_20_1_1_DSP48_13' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mul_sub_8s_13s_14s_20_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_mul_sub_8s_13s_14s_20_1_1_DSP48_13' (29#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mul_sub_8s_13s_14s_20_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_mul_sub_8s_13s_14s_20_1_1' (30#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_mul_sub_8s_13s_14s_20_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_12s_24_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:31' bound to instance 'myproject_mul_mul_12s_12s_24_1_1_U19' of component 'myproject_mul_mul_12s_12s_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1429]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_12s_24_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_12s_24_1_1.vhd:31' bound to instance 'myproject_mul_mul_12s_12s_24_1_1_U20' of component 'myproject_mul_mul_12s_12s_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1441]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_8s_12s_18s_20_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_8s_12s_18s_20_1_1.vhd:38' bound to instance 'myproject_mac_muladd_8s_12s_18s_20_1_1_U21' of component 'myproject_mac_muladd_8s_12s_18s_20_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1453]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_8s_12s_18s_20_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_8s_12s_18s_20_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_8s_12s_18s_20_1_1.vhd:9' bound to instance 'myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U' of component 'myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_8s_12s_18s_20_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_8s_12s_18s_20_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14' (31#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_8s_12s_18s_20_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_8s_12s_18s_20_1_1' (32#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_8s_12s_18s_20_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 18 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_18s_7s_24ns_24_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_18s_7s_24ns_24_1_1.vhd:38' bound to instance 'myproject_mac_muladd_18s_7s_24ns_24_1_1_U22' of component 'myproject_mac_muladd_18s_7s_24ns_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1467]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_18s_7s_24ns_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_18s_7s_24ns_24_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 18 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mac_muladd_18s_7s_24ns_24_1_1_DSP48_15' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_18s_7s_24ns_24_1_1.vhd:9' bound to instance 'myproject_mac_muladd_18s_7s_24ns_24_1_1_DSP48_15_U' of component 'myproject_mac_muladd_18s_7s_24ns_24_1_1_DSP48_15' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_18s_7s_24ns_24_1_1.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'myproject_mac_muladd_18s_7s_24ns_24_1_1_DSP48_15' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_18s_7s_24ns_24_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_18s_7s_24ns_24_1_1_DSP48_15' (33#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_18s_7s_24ns_24_1_1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mac_muladd_18s_7s_24ns_24_1_1' (34#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mac_muladd_18s_7s_24ns_24_1_1.vhd:53]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 20 - type: integer 
+	Parameter dout_WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_16s_20s_36_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_20s_36_1_1.vhd:31' bound to instance 'myproject_mul_mul_16s_20s_36_1_1_U23' of component 'myproject_mul_mul_16s_20s_36_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_16s_20s_36_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_20s_36_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 20 - type: integer 
+	Parameter dout_WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_16s_20s_36_1_1_DSP48_16' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_20s_36_1_1.vhd:6' bound to instance 'myproject_mul_mul_16s_20s_36_1_1_DSP48_16_U' of component 'myproject_mul_mul_16s_20s_36_1_1_DSP48_16' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_20s_36_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_16s_20s_36_1_1_DSP48_16' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_20s_36_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_16s_20s_36_1_1_DSP48_16' (35#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_20s_36_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_16s_20s_36_1_1' (36#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_20s_36_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_16s_24s_40_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_24s_40_1_1.vhd:31' bound to instance 'myproject_mul_mul_16s_24s_40_1_1_U24' of component 'myproject_mul_mul_16s_24s_40_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1493]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_16s_24s_40_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_24s_40_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_16s_24s_40_1_1_DSP48_17' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_24s_40_1_1.vhd:6' bound to instance 'myproject_mul_mul_16s_24s_40_1_1_DSP48_17_U' of component 'myproject_mul_mul_16s_24s_40_1_1_DSP48_17' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_24s_40_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_16s_24s_40_1_1_DSP48_17' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_24s_40_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_16s_24s_40_1_1_DSP48_17' (37#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_24s_40_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_16s_24s_40_1_1' (38#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_24s_40_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_16s_18s_34_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_18s_34_1_1.vhd:31' bound to instance 'myproject_mul_mul_16s_18s_34_1_1_U25' of component 'myproject_mul_mul_16s_18s_34_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1505]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_16s_18s_34_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_18s_34_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_16s_18s_34_1_1_DSP48_18' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_18s_34_1_1.vhd:6' bound to instance 'myproject_mul_mul_16s_18s_34_1_1_DSP48_18_U' of component 'myproject_mul_mul_16s_18s_34_1_1_DSP48_18' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_18s_34_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_16s_18s_34_1_1_DSP48_18' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_18s_34_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_16s_18s_34_1_1_DSP48_18' (39#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_18s_34_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_16s_18s_34_1_1' (40#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_16s_18s_34_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 14 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter din3_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1.vhd:43' bound to instance 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26' of component 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:1517]
+INFO: [Synth 8-638] synthesizing module 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1.vhd:60]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 14 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter din3_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1.vhd:9' bound to instance 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U' of component 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19' (41#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1' (42#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'myproject' (43#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-12,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:35]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2142.480 ; gain = 0.000 ; free physical = 37048 ; free virtual = 83194
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2142.480 ; gain = 0.000 ; free physical = 37049 ; free virtual = 83196
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcvu9p-flga2577-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xcvu9p-flga2577-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2150.445 ; gain = 7.965 ; free physical = 37048 ; free virtual = 83195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 2150.449 ; gain = 7.969 ; free physical = 36995 ; free virtual = 83144
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   60 Bit       Adders := 1     
+	   2 Input   54 Bit       Adders := 1     
+	   2 Input   48 Bit       Adders := 1     
+	   4 Input   48 Bit       Adders := 1     
+	   3 Input   36 Bit       Adders := 1     
+	   3 Input   26 Bit       Adders := 2     
+	   2 Input   24 Bit       Adders := 2     
+	   4 Input   24 Bit       Adders := 1     
+	   5 Input   18 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
+	   3 Input   18 Bit       Adders := 1     
+	   3 Input   15 Bit       Adders := 1     
+	   5 Input   15 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 36    
+	   3 Input   14 Bit       Adders := 204   
+	   4 Input   14 Bit       Adders := 51    
+	   5 Input   14 Bit       Adders := 51    
+	   6 Input   14 Bit       Adders := 17    
+	   3 Input   13 Bit       Adders := 241   
+	   3 Input   12 Bit       Adders := 19    
+	   2 Input   12 Bit       Adders := 20    
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 17    
++---XORs : 
+	   2 Input      1 Bit         XORs := 34    
++---Registers : 
+	              192 Bit    Registers := 1     
+	               60 Bit    Registers := 1     
+	               54 Bit    Registers := 1     
+	               52 Bit    Registers := 1     
+	               50 Bit    Registers := 1     
+	               48 Bit    Registers := 4     
+	               44 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               36 Bit    Registers := 2     
+	               34 Bit    Registers := 1     
+	               24 Bit    Registers := 3     
+	               20 Bit    Registers := 2     
+	               18 Bit    Registers := 5     
+	               15 Bit    Registers := 2     
+	               14 Bit    Registers := 75    
+	               13 Bit    Registers := 137   
+	               12 Bit    Registers := 92    
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 103   
+	                6 Bit    Registers := 34    
+	                5 Bit    Registers := 17    
+	                3 Bit    Registers := 18    
+	                2 Bit    Registers := 136   
+	                1 Bit    Registers := 305   
++---Multipliers : 
+	              16x52  Multipliers := 1     
+	              16x50  Multipliers := 1     
+	              16x40  Multipliers := 1     
+	              16x34  Multipliers := 1     
+	               8x44  Multipliers := 1     
+	               8x48  Multipliers := 1     
+	              16x48  Multipliers := 1     
+	               8x36  Multipliers := 1     
++---Muxes : 
+	   2 Input  192 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 306   
+	   2 Input   13 Bit        Muxes := 460   
+	   4 Input   12 Bit        Muxes := 17    
+	   2 Input   12 Bit        Muxes := 58    
+	   4 Input   11 Bit        Muxes := 17    
+	   2 Input    8 Bit        Muxes := 136   
+	   2 Input    1 Bit        Muxes := 87    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 6840 (col length:120)
+BRAMs: 4320 (col length: RAMB18 360 RAMB36 180)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP myproject_mul_mul_20ns_12ns_31_1_0_U2/myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U/p_cvt, operation Mode is: (A:0x517cc)*B.
+DSP Report: operator myproject_mul_mul_20ns_12ns_31_1_0_U2/myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U/p_cvt is absorbed into DSP myproject_mul_mul_20ns_12ns_31_1_0_U2/myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U/p_cvt.
+DSP Report: Generating DSP myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p, operation Mode is: C'-(A:0x3243)*B2.
+DSP Report: register myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p is absorbed into DSP myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p.
+DSP Report: register myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p is absorbed into DSP myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p.
+DSP Report: operator myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p is absorbed into DSP myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p.
+DSP Report: operator myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/m is absorbed into DSP myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3/myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U/p.
+DSP Report: Generating DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p, operation Mode is: C'+((D:0x7ffec80)+A'')*B2.
+DSP Report: register outsin_V_1_reg_1817_reg is absorbed into DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p.
+DSP Report: register ret_V_32_reg_1751_reg is absorbed into DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p.
+DSP Report: register ret_V_32_reg_1751_pp0_iter10_reg_reg is absorbed into DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p.
+DSP Report: register myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p is absorbed into DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p.
+DSP Report: operator myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p is absorbed into DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p.
+DSP Report: operator myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/m is absorbed into DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p.
+DSP Report: operator myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/ad is absorbed into DSP myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p.
+DSP Report: Generating DSP ret_V_8_reg_1756_reg, operation Mode is: (-C'+A*B2+1-1)'.
+DSP Report: register outcos_V_2_reg_1708_reg is absorbed into DSP ret_V_8_reg_1756_reg.
+DSP Report: register ret_V_8_reg_1756_reg is absorbed into DSP ret_V_8_reg_1756_reg.
+DSP Report: register ret_V_8_reg_1756_reg is absorbed into DSP ret_V_8_reg_1756_reg.
+DSP Report: operator myproject_mac_mul_sub_8s_13s_14s_20_1_1_U18/myproject_mac_mul_sub_8s_13s_14s_20_1_1_DSP48_13_U/p is absorbed into DSP ret_V_8_reg_1756_reg.
+DSP Report: operator myproject_mac_mul_sub_8s_13s_14s_20_1_1_U18/myproject_mac_mul_sub_8s_13s_14s_20_1_1_DSP48_13_U/m is absorbed into DSP ret_V_8_reg_1756_reg.
+DSP Report: Generating DSP r_V_12_reg_1827_reg, operation Mode is: (A*B)'.
+DSP Report: register r_V_12_reg_1827_reg is absorbed into DSP r_V_12_reg_1827_reg.
+DSP Report: operator myproject_mul_mul_16s_20s_36_1_1_U23/myproject_mul_mul_16s_20s_36_1_1_DSP48_16_U/p_cvt is absorbed into DSP r_V_12_reg_1827_reg.
+DSP Report: Generating DSP r_V_13_fu_1193_p2, operation Mode is: A*B2.
+DSP Report: register outsin_V_5_reg_1832_reg is absorbed into DSP r_V_13_fu_1193_p2.
+DSP Report: operator r_V_13_fu_1193_p2 is absorbed into DSP r_V_13_fu_1193_p2.
+DSP Report: operator r_V_13_fu_1193_p2 is absorbed into DSP r_V_13_fu_1193_p2.
+DSP Report: Generating DSP r_V_14_fu_1305_p2, operation Mode is: A2*B2.
+DSP Report: register outsin_V_6_reg_1877_reg is absorbed into DSP r_V_14_fu_1305_p2.
+DSP Report: register r_V_14_fu_1305_p2 is absorbed into DSP r_V_14_fu_1305_p2.
+DSP Report: operator r_V_14_fu_1305_p2 is absorbed into DSP r_V_14_fu_1305_p2.
+DSP Report: operator r_V_14_fu_1305_p2 is absorbed into DSP r_V_14_fu_1305_p2.
+DSP Report: Generating DSP r_V_13_reg_1872_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register outsin_V_5_reg_1832_reg is absorbed into DSP r_V_13_reg_1872_reg.
+DSP Report: register r_V_13_reg_1872_reg is absorbed into DSP r_V_13_reg_1872_reg.
+DSP Report: operator r_V_13_fu_1193_p2 is absorbed into DSP r_V_13_reg_1872_reg.
+DSP Report: operator r_V_13_fu_1193_p2 is absorbed into DSP r_V_13_reg_1872_reg.
+DSP Report: Generating DSP r_V_14_reg_1907_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register outsin_V_6_reg_1877_reg is absorbed into DSP r_V_14_reg_1907_reg.
+DSP Report: register r_V_14_reg_1907_reg is absorbed into DSP r_V_14_reg_1907_reg.
+DSP Report: operator r_V_14_fu_1305_p2 is absorbed into DSP r_V_14_reg_1907_reg.
+DSP Report: operator r_V_14_fu_1305_p2 is absorbed into DSP r_V_14_reg_1907_reg.
+DSP Report: Generating DSP mul_ln1192_2_reg_1922_reg, operation Mode is: (A*B'')'.
+DSP Report: register outcos_V_4_reg_1724_pp0_iter11_reg_reg is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: register outcos_V_4_reg_1724_pp0_iter12_reg_reg is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: register mul_ln1192_2_reg_1922_reg is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: operator mul_ln1192_2_fu_1338_p2 is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: operator mul_ln1192_2_fu_1338_p2 is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: Generating DSP mul_ln1192_2_fu_1338_p2, operation Mode is: A2*BCIN2.
+DSP Report: register mul_ln1192_2_fu_1338_p2 is absorbed into DSP mul_ln1192_2_fu_1338_p2.
+DSP Report: register outcos_V_4_reg_1724_pp0_iter12_reg_reg is absorbed into DSP mul_ln1192_2_fu_1338_p2.
+DSP Report: operator mul_ln1192_2_fu_1338_p2 is absorbed into DSP mul_ln1192_2_fu_1338_p2.
+DSP Report: operator mul_ln1192_2_fu_1338_p2 is absorbed into DSP mul_ln1192_2_fu_1338_p2.
+DSP Report: Generating DSP mul_ln1192_2_reg_1922_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register outcos_V_4_reg_1724_pp0_iter11_reg_reg is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: register outcos_V_4_reg_1724_pp0_iter12_reg_reg is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: register mul_ln1192_2_reg_1922_reg is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: operator mul_ln1192_2_fu_1338_p2 is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: operator mul_ln1192_2_fu_1338_p2 is absorbed into DSP mul_ln1192_2_reg_1922_reg.
+DSP Report: Generating DSP r_V_24_reg_1730_reg, operation Mode is: (A''*B'')'.
+DSP Report: register p_Val2_21_reg_1599_pp0_iter6_reg_reg is absorbed into DSP r_V_24_reg_1730_reg.
+DSP Report: register p_Val2_21_reg_1599_pp0_iter7_reg_reg is absorbed into DSP r_V_24_reg_1730_reg.
+DSP Report: register p_Val2_21_reg_1599_pp0_iter6_reg_reg is absorbed into DSP r_V_24_reg_1730_reg.
+DSP Report: register p_Val2_21_reg_1599_pp0_iter7_reg_reg is absorbed into DSP r_V_24_reg_1730_reg.
+DSP Report: register r_V_24_reg_1730_reg is absorbed into DSP r_V_24_reg_1730_reg.
+DSP Report: operator myproject_mul_mul_12s_12s_24_1_1_U15/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt is absorbed into DSP r_V_24_reg_1730_reg.
+DSP Report: Generating DSP myproject_mul_mul_14s_14s_28_1_1_U16/myproject_mul_mul_14s_14s_28_1_1_DSP48_11_U/p_cvt, operation Mode is: (D+(A:0x23))*(D+(A:0x23)).
+DSP Report: operator myproject_mul_mul_14s_14s_28_1_1_U16/myproject_mul_mul_14s_14s_28_1_1_DSP48_11_U/p_cvt is absorbed into DSP myproject_mul_mul_14s_14s_28_1_1_U16/myproject_mul_mul_14s_14s_28_1_1_DSP48_11_U/p_cvt.
+DSP Report: operator ret_V_13_fu_680_p2 is absorbed into DSP myproject_mul_mul_14s_14s_28_1_1_U16/myproject_mul_mul_14s_14s_28_1_1_DSP48_11_U/p_cvt.
+DSP Report: Generating DSP mul_ln700_2_fu_943_p2, operation Mode is: A*B2.
+DSP Report: register mul_ln700_2_fu_943_p2 is absorbed into DSP mul_ln700_2_fu_943_p2.
+DSP Report: operator mul_ln700_2_fu_943_p2 is absorbed into DSP mul_ln700_2_fu_943_p2.
+DSP Report: operator mul_ln700_2_fu_943_p2 is absorbed into DSP mul_ln700_2_fu_943_p2.
+DSP Report: Generating DSP mul_ln700_2_reg_1787_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register r_V_27_reg_1736_reg is absorbed into DSP mul_ln700_2_reg_1787_reg.
+DSP Report: register mul_ln700_2_reg_1787_reg is absorbed into DSP mul_ln700_2_reg_1787_reg.
+DSP Report: operator mul_ln700_2_fu_943_p2 is absorbed into DSP mul_ln700_2_reg_1787_reg.
+DSP Report: operator mul_ln700_2_fu_943_p2 is absorbed into DSP mul_ln700_2_reg_1787_reg.
+DSP Report: Generating DSP mul_ln700_3_reg_1842_reg, operation Mode is: (A2*B)'.
+DSP Report: register r_V_29_reg_1792_reg is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: register mul_ln700_3_reg_1842_reg is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: operator mul_ln700_3_fu_1063_p2 is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: operator mul_ln700_3_fu_1063_p2 is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: Generating DSP mul_ln700_3_fu_1063_p2, operation Mode is: A2*B2.
+DSP Report: register r_V_29_reg_1792_reg is absorbed into DSP mul_ln700_3_fu_1063_p2.
+DSP Report: register mul_ln700_3_fu_1063_p2 is absorbed into DSP mul_ln700_3_fu_1063_p2.
+DSP Report: operator mul_ln700_3_fu_1063_p2 is absorbed into DSP mul_ln700_3_fu_1063_p2.
+DSP Report: operator mul_ln700_3_fu_1063_p2 is absorbed into DSP mul_ln700_3_fu_1063_p2.
+DSP Report: Generating DSP mul_ln700_3_reg_1842_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register r_V_29_reg_1792_reg is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: register mul_ln700_3_reg_1842_reg is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: operator mul_ln700_3_fu_1063_p2 is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: operator mul_ln700_3_fu_1063_p2 is absorbed into DSP mul_ln700_3_reg_1842_reg.
+DSP Report: Generating DSP myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt, operation Mode is: A''*B''.
+DSP Report: register p_Val2_2_reg_1571_pp0_iter7_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: register p_Val2_2_reg_1571_pp0_iter8_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: register p_Val2_2_reg_1571_pp0_iter7_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: register p_Val2_2_reg_1571_pp0_iter8_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: operator myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: Generating DSP myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p, operation Mode is: C'+A''*B2.
+DSP Report: register outcos_V_4_reg_1724_reg is absorbed into DSP myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p.
+DSP Report: register p_Val2_4_reg_1551_pp0_iter7_reg_reg is absorbed into DSP myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p.
+DSP Report: register p_Val2_4_reg_1551_pp0_iter8_reg_reg is absorbed into DSP myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p.
+DSP Report: register myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p is absorbed into DSP myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p.
+DSP Report: operator myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p is absorbed into DSP myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p.
+DSP Report: operator myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/m is absorbed into DSP myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p.
+DSP Report: Generating DSP mul_ln700_1_fu_1041_p2, operation Mode is: A2*B2.
+DSP Report: register mul_ln700_1_fu_1041_p2 is absorbed into DSP mul_ln700_1_fu_1041_p2.
+DSP Report: register r_V_20_reg_1772_reg is absorbed into DSP mul_ln700_1_fu_1041_p2.
+DSP Report: operator mul_ln700_1_fu_1041_p2 is absorbed into DSP mul_ln700_1_fu_1041_p2.
+DSP Report: operator mul_ln700_1_fu_1041_p2 is absorbed into DSP mul_ln700_1_fu_1041_p2.
+DSP Report: Generating DSP mul_ln728_reg_1741_reg, operation Mode is: (A''*(B:0x3ffd5))'.
+DSP Report: register p_Val2_3_reg_1558_pp0_iter6_reg_reg is absorbed into DSP mul_ln728_reg_1741_reg.
+DSP Report: register p_Val2_3_reg_1558_pp0_iter7_reg_reg is absorbed into DSP mul_ln728_reg_1741_reg.
+DSP Report: register mul_ln728_reg_1741_reg is absorbed into DSP mul_ln728_reg_1741_reg.
+DSP Report: operator myproject_mul_mul_12s_7s_18_1_1_U17/myproject_mul_mul_12s_7s_18_1_1_DSP48_12_U/p_cvt is absorbed into DSP mul_ln728_reg_1741_reg.
+DSP Report: Generating DSP myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt, operation Mode is: ACIN''*B''.
+DSP Report: register p_Val2_3_reg_1558_pp0_iter7_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: register p_Val2_3_reg_1558_pp0_iter8_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: register p_Val2_3_reg_1558_pp0_iter7_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: register p_Val2_3_reg_1558_pp0_iter8_reg_reg is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: operator myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt is absorbed into DSP myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt.
+DSP Report: Generating DSP add_ln700_1_fu_914_p2, operation Mode is: PCIN+A:B+(C:0x1).
+DSP Report: operator add_ln700_1_fu_914_p2 is absorbed into DSP add_ln700_1_fu_914_p2.
+DSP Report: Generating DSP add_ln700_1_reg_1782_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register add_ln700_1_reg_1782_reg is absorbed into DSP add_ln700_1_reg_1782_reg.
+DSP Report: operator add_ln700_1_fu_914_p2 is absorbed into DSP add_ln700_1_reg_1782_reg.
+DSP Report: Generating DSP r_V_30_fu_961_p2, operation Mode is: (D+(A:0x1b))*(D+(A:0x1b)).
+DSP Report: register ret_V_18_reg_1746_reg is absorbed into DSP r_V_30_fu_961_p2.
+DSP Report: operator ret_V_18_fu_698_p2 is absorbed into DSP r_V_30_fu_961_p2.
+DSP Report: operator r_V_30_fu_961_p2 is absorbed into DSP r_V_30_fu_961_p2.
+DSP Report: Generating DSP ret_V_41_reg_1797_reg, operation Mode is: C+A*(B:0x3ffd5).
+DSP Report: register ret_V_41_reg_1797_reg is absorbed into DSP ret_V_41_reg_1797_reg.
+DSP Report: operator myproject_mac_muladd_18s_7s_24ns_24_1_1_U22/myproject_mac_muladd_18s_7s_24ns_24_1_1_DSP48_15_U/p is absorbed into DSP ret_V_41_reg_1797_reg.
+DSP Report: operator myproject_mac_muladd_18s_7s_24ns_24_1_1_U22/myproject_mac_muladd_18s_7s_24ns_24_1_1_DSP48_15_U/m is absorbed into DSP ret_V_41_reg_1797_reg.
+DSP Report: Generating DSP r_V_31_reg_1847_reg, operation Mode is: (A*B2)'.
+DSP Report: register r_V_55_reg_1766_reg is absorbed into DSP r_V_31_reg_1847_reg.
+DSP Report: register r_V_31_reg_1847_reg is absorbed into DSP r_V_31_reg_1847_reg.
+DSP Report: operator myproject_mul_mul_16s_24s_40_1_1_U24/myproject_mul_mul_16s_24s_40_1_1_DSP48_17_U/p_cvt is absorbed into DSP r_V_31_reg_1847_reg.
+DSP Report: Generating DSP r_V_34_fu_1253_p2, operation Mode is: A*B2.
+DSP Report: register r_V_33_reg_1852_reg is absorbed into DSP r_V_34_fu_1253_p2.
+DSP Report: operator r_V_34_fu_1253_p2 is absorbed into DSP r_V_34_fu_1253_p2.
+DSP Report: operator r_V_34_fu_1253_p2 is absorbed into DSP r_V_34_fu_1253_p2.
+DSP Report: Generating DSP r_V_34_reg_1887_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register r_V_33_reg_1852_reg is absorbed into DSP r_V_34_reg_1887_reg.
+DSP Report: register r_V_34_reg_1887_reg is absorbed into DSP r_V_34_reg_1887_reg.
+DSP Report: operator r_V_34_fu_1253_p2 is absorbed into DSP r_V_34_reg_1887_reg.
+DSP Report: operator r_V_34_fu_1253_p2 is absorbed into DSP r_V_34_reg_1887_reg.
+DSP Report: Generating DSP mul_ln1192_4_reg_1912_reg, operation Mode is: (A*B2)'.
+DSP Report: register r_V_36_reg_1892_reg is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: register mul_ln1192_4_reg_1912_reg is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: operator mul_ln1192_4_fu_1317_p2 is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: operator mul_ln1192_4_fu_1317_p2 is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: Generating DSP mul_ln1192_4_fu_1317_p2, operation Mode is: A2*B2.
+DSP Report: register r_V_36_reg_1892_reg is absorbed into DSP mul_ln1192_4_fu_1317_p2.
+DSP Report: register mul_ln1192_4_fu_1317_p2 is absorbed into DSP mul_ln1192_4_fu_1317_p2.
+DSP Report: operator mul_ln1192_4_fu_1317_p2 is absorbed into DSP mul_ln1192_4_fu_1317_p2.
+DSP Report: operator mul_ln1192_4_fu_1317_p2 is absorbed into DSP mul_ln1192_4_fu_1317_p2.
+DSP Report: Generating DSP mul_ln1192_4_reg_1912_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register r_V_36_reg_1892_reg is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: register mul_ln1192_4_reg_1912_reg is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: operator mul_ln1192_4_fu_1317_p2 is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: operator mul_ln1192_4_fu_1317_p2 is absorbed into DSP mul_ln1192_4_reg_1912_reg.
+DSP Report: Generating DSP r_V_37_fu_1097_p2, operation Mode is: (D'+(A:0x1e))*(D'+(A:0x1e)).
+DSP Report: register outcos_V_10_reg_1718_reg is absorbed into DSP r_V_37_fu_1097_p2.
+DSP Report: register ret_V_25_reg_1802_reg is absorbed into DSP r_V_37_fu_1097_p2.
+DSP Report: operator ret_V_25_fu_981_p2 is absorbed into DSP r_V_37_fu_1097_p2.
+DSP Report: operator r_V_37_fu_1097_p2 is absorbed into DSP r_V_37_fu_1097_p2.
+DSP Report: Generating DSP r_V_40_reg_1857_reg, operation Mode is: (A*B)'.
+DSP Report: register r_V_40_reg_1857_reg is absorbed into DSP r_V_40_reg_1857_reg.
+DSP Report: operator myproject_mul_mul_16s_18s_34_1_1_U25/myproject_mul_mul_16s_18s_34_1_1_DSP48_18_U/p_cvt is absorbed into DSP r_V_40_reg_1857_reg.
+DSP Report: Generating DSP r_V_43_fu_1279_p2, operation Mode is: A*B2.
+DSP Report: register r_V_42_reg_1862_reg is absorbed into DSP r_V_43_fu_1279_p2.
+DSP Report: operator r_V_43_fu_1279_p2 is absorbed into DSP r_V_43_fu_1279_p2.
+DSP Report: operator r_V_43_fu_1279_p2 is absorbed into DSP r_V_43_fu_1279_p2.
+DSP Report: Generating DSP r_V_43_reg_1897_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register r_V_42_reg_1862_reg is absorbed into DSP r_V_43_reg_1897_reg.
+DSP Report: register r_V_43_reg_1897_reg is absorbed into DSP r_V_43_reg_1897_reg.
+DSP Report: operator r_V_43_fu_1279_p2 is absorbed into DSP r_V_43_reg_1897_reg.
+DSP Report: operator r_V_43_fu_1279_p2 is absorbed into DSP r_V_43_reg_1897_reg.
+DSP Report: Generating DSP mul_ln1192_6_reg_1917_reg, operation Mode is: (A2*B)'.
+DSP Report: register r_V_47_reg_1902_reg is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: register mul_ln1192_6_reg_1917_reg is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: operator mul_ln1192_6_fu_1329_p2 is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: operator mul_ln1192_6_fu_1329_p2 is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: Generating DSP mul_ln1192_6_fu_1329_p2, operation Mode is: A2*B2.
+DSP Report: register r_V_47_reg_1902_reg is absorbed into DSP mul_ln1192_6_fu_1329_p2.
+DSP Report: register mul_ln1192_6_fu_1329_p2 is absorbed into DSP mul_ln1192_6_fu_1329_p2.
+DSP Report: operator mul_ln1192_6_fu_1329_p2 is absorbed into DSP mul_ln1192_6_fu_1329_p2.
+DSP Report: operator mul_ln1192_6_fu_1329_p2 is absorbed into DSP mul_ln1192_6_fu_1329_p2.
+DSP Report: Generating DSP mul_ln1192_6_reg_1917_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register r_V_47_reg_1902_reg is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: register mul_ln1192_6_reg_1917_reg is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: operator mul_ln1192_6_fu_1329_p2 is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: operator mul_ln1192_6_fu_1329_p2 is absorbed into DSP mul_ln1192_6_reg_1917_reg.
+DSP Report: Generating DSP myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p, operation Mode is: C'-(D+(A:0x2c))*(D+(A:0x2c)).
+DSP Report: register myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p is absorbed into DSP myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p.
+DSP Report: operator myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p is absorbed into DSP myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p.
+DSP Report: operator myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/m is absorbed into DSP myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p.
+DSP Report: operator ret_V_15_fu_532_p2 is absorbed into DSP myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p.
+DSP Report: Generating DSP myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p, operation Mode is: (C:0xd80)+A2*(B:0x97).
+DSP Report: register p_Val2_21_reg_1599_reg is absorbed into DSP myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p.
+DSP Report: operator myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p is absorbed into DSP myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p.
+DSP Report: operator myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/m is absorbed into DSP myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p.
+DSP Report: Generating DSP ret_V_22_reg_1646_reg, operation Mode is: (C:0x4680)+A2*(B:0x97).
+DSP Report: register p_Val2_10_reg_1542_reg is absorbed into DSP ret_V_22_reg_1646_reg.
+DSP Report: register ret_V_22_reg_1646_reg is absorbed into DSP ret_V_22_reg_1646_reg.
+DSP Report: operator myproject_mac_muladd_12s_9ns_16ns_20_1_1_U11/myproject_mac_muladd_12s_9ns_16ns_20_1_1_DSP48_6_U/p is absorbed into DSP ret_V_22_reg_1646_reg.
+DSP Report: operator myproject_mac_muladd_12s_9ns_16ns_20_1_1_U11/myproject_mac_muladd_12s_9ns_16ns_20_1_1_DSP48_6_U/m is absorbed into DSP ret_V_22_reg_1646_reg.
+DSP Report: Generating DSP myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p, operation Mode is: C'+A*B''.
+DSP Report: register p_Val2_10_reg_1542_reg is absorbed into DSP myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p.
+DSP Report: register p_Val2_10_reg_1542_pp0_iter1_reg_reg is absorbed into DSP myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p.
+DSP Report: register myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p is absorbed into DSP myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p.
+DSP Report: operator myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p is absorbed into DSP myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p.
+DSP Report: operator myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/m is absorbed into DSP myproject_mac_muladd_12s_20s_24ns_24_1_1_U14/myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U/p.
+DSP Report: Generating DSP myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12/myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U/p, operation Mode is: (C:0x2c0)+A2*(B:0xb7).
+DSP Report: register p_Val2_21_reg_1599_reg is absorbed into DSP myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12/myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U/p.
+DSP Report: operator myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12/myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U/p is absorbed into DSP myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12/myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U/p.
+DSP Report: operator myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12/myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U/m is absorbed into DSP myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12/myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U/p.
+DSP Report: Generating DSP mul_ln1192_reg_1579_reg, operation Mode is: (A*(B:0x2d))'.
+DSP Report: register mul_ln1192_reg_1579_reg is absorbed into DSP mul_ln1192_reg_1579_reg.
+DSP Report: operator myproject_mul_mul_12s_7ns_18_1_1_U7/myproject_mul_mul_12s_7ns_18_1_1_DSP48_2_U/p_cvt is absorbed into DSP mul_ln1192_reg_1579_reg.
+DSP Report: Generating DSP myproject_mac_muladd_12s_7s_18s_18_1_1_U9/myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U/p, operation Mode is: PCIN+A2*(B:0x3ffd3).
+DSP Report: register p_Val2_3_reg_1558_reg is absorbed into DSP myproject_mac_muladd_12s_7s_18s_18_1_1_U9/myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U/p.
+DSP Report: operator myproject_mac_muladd_12s_7s_18s_18_1_1_U9/myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U/p is absorbed into DSP myproject_mac_muladd_12s_7s_18s_18_1_1_U9/myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U/p.
+DSP Report: operator myproject_mac_muladd_12s_7s_18s_18_1_1_U9/myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U/m is absorbed into DSP myproject_mac_muladd_12s_7s_18s_18_1_1_U9/myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U/p.
+DSP Report: Generating DSP myproject_mac_muladd_12s_10ns_18ns_18_1_1_U8/myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3_U/p, operation Mode is: C+A*(B:0x138).
+DSP Report: operator myproject_mac_muladd_12s_10ns_18ns_18_1_1_U8/myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3_U/p is absorbed into DSP myproject_mac_muladd_12s_10ns_18ns_18_1_1_U8/myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3_U/p.
+DSP Report: operator myproject_mac_muladd_12s_10ns_18ns_18_1_1_U8/myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3_U/m is absorbed into DSP myproject_mac_muladd_12s_10ns_18ns_18_1_1_U8/myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3_U/p.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:00 . Memory (MB): peak = 2779.391 ; gain = 636.910 ; free physical = 36152 ; free virtual = 82283
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++--------------------------------------------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                       | DSP Mapping                  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------------------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0        | (A:0x517cc)*B                | 19     | 12     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|generic_sincos_12_6_s                             | C'-(A:0x3243)*B2             | 7      | 14     | 14     | -      | 14     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|myproject                                         | C'+((D:0x7ffec80)+A'')*B2    | 15     | 8      | 23     | 14     | 24     | 2    | 1    | 1    | 0    | 0     | 0    | 0    | 
+|myproject                                         | (-C'+A*B2+1-1)'              | 13     | 8      | 20     | -      | 20     | 0    | 1    | 1    | -    | -     | 0    | 1    | 
+|myproject                                         | (A*B)'                       | 20     | 16     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | A*B2                         | 18     | 8      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | A2*B2                        | 18     | 8      | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B2              | 19     | 8      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (PCIN>>17)+A*B2              | 27     | 8      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (A*B'')'                     | 14     | 8      | -      | -      | 48     | 0    | 2    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | A2*BCIN2                     | 18     | 8      | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B''             | 18     | 8      | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (A''*B'')'                   | 12     | 12     | -      | -      | 24     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|myproject_mul_mul_14s_14s_28_1_1_DSP48_11         | (D+(A:0x23))*(D+(A:0x23))    | 7      | -      | -      | 13     | 28     | 0    | -    | -    | 0    | 0     | 0    | 0    | 
+|myproject                                         | A*B2                         | 26     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B2              | 26     | 11     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (A2*B)'                      | 16     | 14     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | A2*B2                        | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B               | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | A''*B''                      | 12     | 12     | -      | -      | 24     | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | C'+A''*B2                    | 12     | 8      | 18     | -      | 20     | 2    | 1    | 1    | -    | -     | 0    | 0    | 
+|myproject                                         | A2*B2                        | 26     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (A''*(B:0x3ffd5))'           | 12     | 7      | -      | -      | 19     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | ACIN''*B''                   | 12     | 12     | -      | -      | 24     | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | PCIN+A:B+(C:0x1)             | 6      | 18     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN+A:B)'                  | 6      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (D+(A:0x1b))*(D+(A:0x1b))    | 6      | -      | -      | 8      | 18     | 0    | -    | -    | 0    | 1     | 0    | 0    | 
+|myproject                                         | C+A*(B:0x3ffd5)              | 18     | 7      | 24     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|myproject                                         | (A*B2)'                      | 24     | 16     | -      | -      | 40     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | A*B2                         | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B2              | 23     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (A*B2)'                      | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | A2*B2                        | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B2              | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (D'+(A:0x1e))*(D'+(A:0x1e))  | 6      | -      | -      | 8      | 18     | 0    | -    | -    | 1    | 1     | 0    | 0    | 
+|myproject                                         | (A*B)'                       | 18     | 16     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | A*B2                         | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B2              | 17     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | (A2*B)'                      | 16     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | A2*B2                        | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myproject                                         | (PCIN>>17)+A*B               | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|myproject                                         | C'-(D+(A:0x2c))*(D+(A:0x2c)) | 7      | -      | 18     | 13     | 18     | 0    | -    | 1    | 0    | 0     | 0    | 0    | 
+|myproject                                         | (C:0xd80)+A2*(B:0x97)        | 12     | 9      | 13     | -      | 18     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|myproject                                         | (C:0x4680)+A2*(B:0x97)       | 12     | 9      | 16     | -      | 20     | 1    | 0    | 0    | -    | -     | 0    | 1    | 
+|myproject                                         | C'+A*B''                     | 20     | 12     | 24     | -      | 24     | 0    | 2    | 1    | -    | -     | 0    | 0    | 
+|myproject                                         | (C:0x2c0)+A2*(B:0xb7)        | 12     | 9      | 11     | -      | 18     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|myproject                                         | (A*(B:0x2d))'                | 12     | 7      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|myproject                                         | PCIN+A2*(B:0x3ffd3)          | 12     | 7      | -      | -      | 18     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3 | C+A*(B:0x138)                | 12     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++--------------------------------------------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 2779.391 ; gain = 636.910 ; free physical = 36153 ; free virtual = 82285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:01:03 . Memory (MB): peak = 2785.324 ; gain = 642.844 ; free physical = 36143 ; free virtual = 82275
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:06 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36139 ; free virtual = 82271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:06 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36139 ; free virtual = 82271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:07 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36139 ; free virtual = 82271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:07 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36139 ; free virtual = 82271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:07 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36140 ; free virtual = 82272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:07 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36140 ; free virtual = 82272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|myproject   | grp_generic_sincos_12_6_s_fu_227/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_227/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_227/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_232/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_232/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_237/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_237/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_242/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_242/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_242/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_247/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_247/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_247/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_252/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_252/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_257/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_257/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_257/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_262/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_262/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_262/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_267/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_267/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_267/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_272/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_272/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_272/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_277/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_277/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_277/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_282/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_282/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_287/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_287/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_292/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_292/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_292/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_297/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_297/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_297/sign0_V_reg_381_pp0_iter6_reg_reg[0]    | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_302/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_302/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_307/k_V_reg_396_pp0_iter6_reg_reg[1]        | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|myproject   | grp_generic_sincos_12_6_s_fu_307/icmp_ln879_reg_404_pp0_iter6_reg_reg[0] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|myproject   | p_Val2_4_reg_1551_pp0_iter6_reg_reg[11]                                  | 6      | 12    | NO           | NO                 | YES               | 12     | 0       | 
+|myproject   | lhs_V_3_reg_1656_pp0_iter7_reg_reg[11]                                   | 5      | 12    | NO           | NO                 | YES               | 12     | 0       | 
+|myproject   | outcos_V_4_reg_1724_pp0_iter10_reg_reg[7]                                | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|myproject   | p_Val2_21_reg_1599_pp0_iter5_reg_reg[11]                                 | 3      | 10    | NO           | NO                 | YES               | 10     | 0       | 
+|myproject   | p_Val2_2_reg_1571_pp0_iter6_reg_reg[11]                                  | 5      | 12    | NO           | NO                 | YES               | 12     | 0       | 
+|myproject   | p_Val2_3_reg_1558_pp0_iter5_reg_reg[0]                                   | 4      | 12    | NO           | NO                 | YES               | 12     | 0       | 
++------------+--------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |CARRY8          |  1303|
+|3     |DSP48E2         |    35|
+|4     |DSP_ALU         |    46|
+|5     |DSP_A_B_DATA    |    46|
+|6     |DSP_C_DATA      |    46|
+|7     |DSP_MULTIPLIER  |    46|
+|8     |DSP_M_DATA      |    46|
+|9     |DSP_OUTPUT      |    46|
+|10    |DSP_PREADD      |    46|
+|11    |DSP_PREADD_DATA |    46|
+|12    |LUT1            |   352|
+|13    |LUT2            |  3470|
+|14    |LUT3            |  5252|
+|15    |LUT4            |  4059|
+|16    |LUT5            |   556|
+|17    |LUT6            |   635|
+|18    |SRL16E          |   127|
+|19    |FDRE            |  3587|
+|20    |IBUF            |    76|
+|21    |OBUF            |    68|
++------+----------------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------+
+|      |Instance                                                     |Module                                                                                                                |Cells |
++------+-------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------+
+|1     |top                                                          |                                                                                                                      | 19889|
+|2     |  r_V_12_reg_1827_reg                                        |r_V_12_reg_1827_reg_funnel                                                                                            |     8|
+|3     |  r_V_13_fu_1193_p2                                          |r_V_13_fu_1193_p2_funnel                                                                                              |     8|
+|4     |  r_V_14_fu_1305_p2                                          |mul_ln700_1_fu_1041_p2_funnel__1                                                                                      |     8|
+|5     |  r_V_13_reg_1872_reg                                        |r_V_13_reg_1872_reg_funnel                                                                                            |     8|
+|6     |  r_V_14_reg_1907_reg                                        |r_V_13_reg_1872_reg_funnel__5                                                                                         |     8|
+|7     |  mul_ln1192_2_reg_1922_reg                                  |mul_ln1192_2_reg_1922_reg_funnel                                                                                      |     8|
+|8     |  mul_ln1192_2_fu_1338_p2                                    |mul_ln1192_2_fu_1338_p2_funnel                                                                                        |     8|
+|9     |  mul_ln1192_2_reg_1922_reg__0                               |mul_ln1192_2_reg_1922_reg__0_funnel                                                                                   |     8|
+|10    |  r_V_24_reg_1730_reg                                        |r_V_24_reg_1730_reg_funnel                                                                                            |     8|
+|11    |  mul_ln700_2_fu_943_p2                                      |r_V_13_fu_1193_p2_funnel__2                                                                                           |     8|
+|12    |  mul_ln700_2_reg_1787_reg                                   |r_V_13_reg_1872_reg_funnel__1                                                                                         |     8|
+|13    |  mul_ln700_3_reg_1842_reg                                   |\myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p_funnel__4          |     8|
+|14    |  mul_ln700_3_fu_1063_p2                                     |mul_ln700_1_fu_1041_p2_funnel__4                                                                                      |     8|
+|15    |  mul_ln700_3_reg_1842_reg__0                                |r_V_13_reg_1872_reg_funnel__7                                                                                         |     8|
+|16    |  mul_ln700_1_fu_1041_p2                                     |mul_ln700_1_fu_1041_p2_funnel                                                                                         |     8|
+|17    |  mul_ln728_reg_1741_reg                                     |mul_ln728_reg_1741_reg_funnel                                                                                         |     8|
+|18    |  add_ln700_1_fu_914_p2                                      |add_ln700_1_fu_914_p2_funnel                                                                                          |     8|
+|19    |  add_ln700_1_reg_1782_reg                                   |add_ln700_1_reg_1782_reg_funnel                                                                                       |     8|
+|20    |  r_V_30_fu_961_p2                                           |r_V_30_fu_961_p2_funnel                                                                                               |     8|
+|21    |  ret_V_41_reg_1797_reg                                      |r_V_12_reg_1827_reg_funnel__2                                                                                         |     8|
+|22    |  r_V_31_reg_1847_reg                                        |r_V_31_reg_1847_reg_funnel                                                                                            |     8|
+|23    |  r_V_34_fu_1253_p2                                          |r_V_13_fu_1193_p2_funnel__3                                                                                           |     8|
+|24    |  r_V_34_reg_1887_reg                                        |r_V_13_reg_1872_reg_funnel__3                                                                                         |     8|
+|25    |  mul_ln1192_4_reg_1912_reg                                  |r_V_31_reg_1847_reg_funnel__1                                                                                         |     8|
+|26    |  mul_ln1192_4_fu_1317_p2                                    |mul_ln700_1_fu_1041_p2_funnel__2                                                                                      |     8|
+|27    |  mul_ln1192_4_reg_1912_reg__0                               |r_V_13_reg_1872_reg_funnel__2                                                                                         |     8|
+|28    |  r_V_37_fu_1097_p2                                          |r_V_37_fu_1097_p2_funnel                                                                                              |     8|
+|29    |  r_V_40_reg_1857_reg                                        |r_V_12_reg_1827_reg_funnel__3                                                                                         |     8|
+|30    |  r_V_43_fu_1279_p2                                          |r_V_13_fu_1193_p2_funnel__1                                                                                           |     8|
+|31    |  r_V_43_reg_1897_reg                                        |r_V_13_reg_1872_reg_funnel__6                                                                                         |     8|
+|32    |  mul_ln1192_6_reg_1917_reg                                  |\myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p_funnel__2          |     8|
+|33    |  mul_ln1192_6_fu_1329_p2                                    |mul_ln700_1_fu_1041_p2_funnel__3                                                                                      |     8|
+|34    |  mul_ln1192_6_reg_1917_reg__0                               |r_V_13_reg_1872_reg_funnel__4                                                                                         |     8|
+|35    |  ret_V_22_reg_1646_reg                                      |\myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p_funnel__3          |     8|
+|36    |  mul_ln1192_reg_1579_reg                                    |r_V_12_reg_1827_reg_funnel__1                                                                                         |     8|
+|37    |  grp_generic_sincos_12_6_s_fu_227                           |generic_sincos_12_6_s                                                                                                 |  1079|
+|38    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_93                                                                                       |   902|
+|39    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_94                                                                          |    22|
+|40    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_97                                                                  |    22|
+|41    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_95                                                                                 |     8|
+|42    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_96                                                                         |     8|
+|43    |  grp_generic_sincos_12_6_s_fu_232                           |generic_sincos_12_6_s_0                                                                                               |  1020|
+|44    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_88                                                                                       |   886|
+|45    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_89                                                                          |    22|
+|46    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_92                                                                  |    22|
+|47    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_90                                                                                 |     8|
+|48    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_91                                                                         |     8|
+|49    |  grp_generic_sincos_12_6_s_fu_237                           |generic_sincos_12_6_s_1                                                                                               |  1033|
+|50    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_83                                                                                       |   886|
+|51    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_84                                                                          |    22|
+|52    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_87                                                                  |    22|
+|53    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_85                                                                                 |     8|
+|54    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_86                                                                         |     8|
+|55    |  grp_generic_sincos_12_6_s_fu_242                           |generic_sincos_12_6_s_2                                                                                               |  1040|
+|56    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_78                                                                                       |   885|
+|57    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_79                                                                          |    22|
+|58    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_82                                                                  |    22|
+|59    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_80                                                                                 |     8|
+|60    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_81                                                                         |     8|
+|61    |  grp_generic_sincos_12_6_s_fu_247                           |generic_sincos_12_6_s_3                                                                                               |  1063|
+|62    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_73                                                                                       |   902|
+|63    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_74                                                                          |    22|
+|64    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_77                                                                  |    22|
+|65    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_75                                                                                 |     8|
+|66    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_76                                                                         |     8|
+|67    |  grp_generic_sincos_12_6_s_fu_252                           |generic_sincos_12_6_s_4                                                                                               |  1038|
+|68    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_68                                                                                       |   886|
+|69    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_69                                                                          |    22|
+|70    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_72                                                                  |    22|
+|71    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_70                                                                                 |     8|
+|72    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_71                                                                         |     8|
+|73    |  grp_generic_sincos_12_6_s_fu_257                           |generic_sincos_12_6_s_5                                                                                               |  1038|
+|74    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_63                                                                                       |   885|
+|75    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_64                                                                          |    22|
+|76    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_67                                                                  |    22|
+|77    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_65                                                                                 |     8|
+|78    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_66                                                                         |     8|
+|79    |  grp_generic_sincos_12_6_s_fu_262                           |generic_sincos_12_6_s_6                                                                                               |  1015|
+|80    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_58                                                                                       |   885|
+|81    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_59                                                                          |    22|
+|82    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_62                                                                  |    22|
+|83    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_60                                                                                 |     8|
+|84    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_61                                                                         |     8|
+|85    |  grp_generic_sincos_12_6_s_fu_267                           |generic_sincos_12_6_s_7                                                                                               |  1015|
+|86    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_53                                                                                       |   885|
+|87    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_54                                                                          |    22|
+|88    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_57                                                                  |    22|
+|89    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_55                                                                                 |     8|
+|90    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_56                                                                         |     8|
+|91    |  grp_generic_sincos_12_6_s_fu_272                           |generic_sincos_12_6_s_8                                                                                               |  1040|
+|92    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_48                                                                                       |   885|
+|93    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_49                                                                          |    22|
+|94    |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_52                                                                  |    22|
+|95    |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_50                                                                                 |     8|
+|96    |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_51                                                                         |     8|
+|97    |  grp_generic_sincos_12_6_s_fu_277                           |generic_sincos_12_6_s_9                                                                                               |  1003|
+|98    |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_43                                                                                       |   885|
+|99    |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_44                                                                          |    22|
+|100   |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_47                                                                  |    22|
+|101   |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_45                                                                                 |     8|
+|102   |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_46                                                                         |     8|
+|103   |  grp_generic_sincos_12_6_s_fu_282                           |generic_sincos_12_6_s_10                                                                                              |  1077|
+|104   |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_38                                                                                       |   886|
+|105   |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_39                                                                          |    22|
+|106   |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_42                                                                  |    22|
+|107   |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_40                                                                                 |     8|
+|108   |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_41                                                                         |     8|
+|109   |  grp_generic_sincos_12_6_s_fu_287                           |generic_sincos_12_6_s_11                                                                                              |  1077|
+|110   |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_33                                                                                       |   886|
+|111   |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_34                                                                          |    22|
+|112   |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_37                                                                  |    22|
+|113   |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_35                                                                                 |     8|
+|114   |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_36                                                                         |     8|
+|115   |  grp_generic_sincos_12_6_s_fu_292                           |generic_sincos_12_6_s_12                                                                                              |  1024|
+|116   |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_28                                                                                       |   885|
+|117   |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_29                                                                          |    22|
+|118   |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_32                                                                  |    22|
+|119   |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_30                                                                                 |     8|
+|120   |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_31                                                                         |     8|
+|121   |  grp_generic_sincos_12_6_s_fu_297                           |generic_sincos_12_6_s_13                                                                                              |  1034|
+|122   |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_23                                                                                       |   885|
+|123   |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_24                                                                          |    22|
+|124   |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_27                                                                  |    22|
+|125   |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_25                                                                                 |     8|
+|126   |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_26                                                                         |     8|
+|127   |  grp_generic_sincos_12_6_s_fu_302                           |generic_sincos_12_6_s_14                                                                                              |  1077|
+|128   |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s_18                                                                                       |   886|
+|129   |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_19                                                                          |    22|
+|130   |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_22                                                                  |    22|
+|131   |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0_20                                                                                 |     8|
+|132   |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_21                                                                         |     8|
+|133   |  grp_generic_sincos_12_6_s_fu_307                           |generic_sincos_12_6_s_15                                                                                              |  1078|
+|134   |    grp_cordic_circ_apfixed_14_3_0_s_fu_70                   |cordic_circ_apfixed_14_3_0_s                                                                                          |   886|
+|135   |    myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_U3             |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0                                                                             |    22|
+|136   |      myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1_U    |myproject_mac_mulsub_15ns_6ns_19ns_21_1_0_DSP48_1                                                                     |    22|
+|137   |    myproject_mul_mul_20ns_12ns_31_1_0_U2                    |myproject_mul_mul_20ns_12ns_31_1_0                                                                                    |     8|
+|138   |      myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0_U           |myproject_mul_mul_20ns_12ns_31_1_0_DSP48_0                                                                            |     8|
+|139   |  myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26          |myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1                                                                         |    62|
+|140   |    myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U |myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19                                                                |    62|
+|141   |      p                                                      |\myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_U26/myproject_ama_addmuladd_15s_14s_8s_23s_24_1_1_DSP48_19_U/p_funnel  |     8|
+|142   |  myproject_mac_muladd_12s_10ns_18ns_18_1_1_U8               |myproject_mac_muladd_12s_10ns_18ns_18_1_1                                                                             |    21|
+|143   |    myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3_U      |myproject_mac_muladd_12s_10ns_18ns_18_1_1_DSP48_3                                                                     |    21|
+|144   |      p                                                      |r_V_12_reg_1827_reg_funnel__4                                                                                         |     8|
+|145   |  myproject_mac_muladd_12s_20s_24ns_24_1_1_U14               |myproject_mac_muladd_12s_20s_24ns_24_1_1                                                                              |     8|
+|146   |    myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9_U       |myproject_mac_muladd_12s_20s_24ns_24_1_1_DSP48_9                                                                      |     8|
+|147   |      p                                                      |mul_ln1192_2_reg_1922_reg__0_funnel__1                                                                                |     8|
+|148   |  myproject_mac_muladd_12s_7s_18s_18_1_1_U9                  |myproject_mac_muladd_12s_7s_18s_18_1_1                                                                                |    20|
+|149   |    myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U         |myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4                                                                        |    20|
+|150   |      p                                                      |\myproject_mac_muladd_12s_7s_18s_18_1_1_U9/myproject_mac_muladd_12s_7s_18s_18_1_1_DSP48_4_U/p_funnel                  |     8|
+|151   |  myproject_mac_muladd_12s_9ns_11ns_18_1_1_U12               |myproject_mac_muladd_12s_9ns_11ns_18_1_1                                                                              |    19|
+|152   |    myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7_U       |myproject_mac_muladd_12s_9ns_11ns_18_1_1_DSP48_7                                                                      |    19|
+|153   |      p                                                      |\myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p_funnel__1          |     8|
+|154   |  myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10               |myproject_mac_muladd_12s_9ns_13ns_18_1_1                                                                              |     8|
+|155   |    myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U       |myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5                                                                      |     8|
+|156   |      p                                                      |\myproject_mac_muladd_12s_9ns_13ns_18_1_1_U10/myproject_mac_muladd_12s_9ns_13ns_18_1_1_DSP48_5_U/p_funnel             |     8|
+|157   |  myproject_mac_muladd_8s_12s_18s_20_1_1_U21                 |myproject_mac_muladd_8s_12s_18s_20_1_1                                                                                |     8|
+|158   |    myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U        |myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14                                                                       |     8|
+|159   |      p                                                      |\myproject_mac_muladd_8s_12s_18s_20_1_1_U21/myproject_mac_muladd_8s_12s_18s_20_1_1_DSP48_14_U/p_funnel                |     8|
+|160   |  myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13               |myproject_mac_mulsub_14s_14s_18ns_18_1_1                                                                              |    22|
+|161   |    myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U       |myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8                                                                      |    22|
+|162   |      p                                                      |\myproject_mac_mulsub_14s_14s_18ns_18_1_1_U13/myproject_mac_mulsub_14s_14s_18ns_18_1_1_DSP48_8_U/p_funnel             |     8|
+|163   |  myproject_mul_mul_12s_12s_24_1_1_U19                       |myproject_mul_mul_12s_12s_24_1_1                                                                                      |    30|
+|164   |    myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U              |myproject_mul_mul_12s_12s_24_1_1_DSP48_10_17                                                                          |    30|
+|165   |      p_cvt                                                  |\myproject_mul_mul_12s_12s_24_1_1_U19/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt_funnel                        |     8|
+|166   |  myproject_mul_mul_12s_12s_24_1_1_U20                       |myproject_mul_mul_12s_12s_24_1_1_16                                                                                   |    38|
+|167   |    myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U              |myproject_mul_mul_12s_12s_24_1_1_DSP48_10                                                                             |    38|
+|168   |      p_cvt                                                  |\myproject_mul_mul_12s_12s_24_1_1_U20/myproject_mul_mul_12s_12s_24_1_1_DSP48_10_U/p_cvt_funnel                        |     8|
+|169   |  myproject_mul_mul_14s_14s_28_1_1_U16                       |myproject_mul_mul_14s_14s_28_1_1                                                                                      |    22|
+|170   |    myproject_mul_mul_14s_14s_28_1_1_DSP48_11_U              |myproject_mul_mul_14s_14s_28_1_1_DSP48_11                                                                             |    22|
+|171   |      p_cvt                                                  |\myproject_mul_mul_14s_14s_28_1_1_U16/myproject_mul_mul_14s_14s_28_1_1_DSP48_11_U/p_cvt_funnel                        |     8|
++------+-------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:07 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36140 ; free virtual = 82272
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:01:07 . Memory (MB): peak = 2792.262 ; gain = 649.781 ; free physical = 36141 ; free virtual = 82273
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:07 . Memory (MB): peak = 2792.266 ; gain = 649.781 ; free physical = 36220 ; free virtual = 82352
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2804.168 ; gain = 0.000 ; free physical = 36199 ; free virtual = 82330
+INFO: [Netlist 29-17] Analyzing 1461 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2986.227 ; gain = 0.000 ; free physical = 36093 ; free virtual = 82211
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 158 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 81 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 76 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+160 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:21 . Memory (MB): peak = 2986.227 ; gain = 852.000 ; free physical = 36239 ; free virtual = 82357
+# report_utilization -file vivado_synth.rpt
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 26 15:38:22 2023...
+***** VIVADO SYNTHESIS COMPLETED IN 0h1m43s *****
+INFO: [HLS 200-112] Total elapsed time: 218.39 seconds; peak allocated memory: 401.801 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Feb 26 15:38:33 2023...

@@ -6,7 +6,7 @@
 
 source /data/tools/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/data/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'htsoi' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Sun Feb 26 11:01:48 EST 2023
+INFO: [HLS 200-10] For user 'htsoi' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Sun Feb 26 15:21:12 EST 2023
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
 INFO: [HLS 200-10] In directory '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6'
 Sourcing Tcl script 'build_prj.tcl'
@@ -24,20 +24,20 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 ***** C/RTL SYNTHESIS *****
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39839 ; free virtual = 83029
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39839 ; free virtual = 83029
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38260 ; free virtual = 84103
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38260 ; free virtual = 84103
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39664 ; free virtual = 82859
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38085 ; free virtual = 83932
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39633 ; free virtual = 82843
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38054 ; free virtual = 83916
 INFO: [XFORM 203-131] Reshaping array 'x.V' (firmware/myproject.cpp:25) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'y.V' (firmware/myproject.cpp:26) in dimension 1 completely.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_types.h:54:22) to (firmware/nnet_utils/nnet_types.h:57:9) in function 'nnet::lookup_table<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::sin<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_types.h:54:22) to (firmware/nnet_utils/nnet_types.h:57:9) in function 'nnet::lookup_table<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::cos<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()'... converting 3 basic blocks.
 INFO: [XFORM 203-602] Inlining function 'nnet::lookup_table<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::cos<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()' into 'myproject' (firmware/myproject.cpp:50) automatically.
 INFO: [XFORM 203-602] Inlining function 'nnet::lookup_table<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::sin<ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()' into 'myproject' (firmware/myproject.cpp:50) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39534 ; free virtual = 82763
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39527 ; free virtual = 82736
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37954 ; free virtual = 83836
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37947 ; free virtual = 83809
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -47,13 +47,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'myproject'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 83.09 seconds; current allocated memory: 406.650 MB.
+INFO: [HLS 200-111]  Elapsed time: 82.7 seconds; current allocated memory: 406.646 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 406.928 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 406.925 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -66,11 +66,269 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_4_V' to 'ap_vl
 INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_9ns_21_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
-INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 407.450 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 407.446 MB.
 INFO: [HLS 200-789] **** Estimated Fmax: 246.62 MHz
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:19 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39524 ; free virtual = 82737
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:18 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37943 ; free virtual = 83809
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
 ***** C/RTL SYNTHESIS COMPLETED IN 0h1m25s *****
-INFO: [HLS 200-112] Total elapsed time: 88.38 seconds; peak allocated memory: 407.450 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Sun Feb 26 11:03:16 2023...
+***** VIVADO SYNTHESIS *****
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source vivado_synth.tcl
+# set tcldir [file dirname [info script]]
+# source [file join $tcldir project.tcl]
+## variable project_name
+## set project_name "myproject"
+## variable backend
+## set backend "vivado"
+## variable part
+## set part "xcvu9p-flga2577-2-e"
+## variable clock_period
+## set clock_period 5
+# add_files ${project_name}_prj/solution1/syn/vhdl
+# synth_design -top ${project_name} -part $part
+Command: synth_design -top myproject -part xcvu9p-flga2577-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu9p'
+INFO: [Common 17-1540] The version limit for your license is '2021.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1831153
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2142.441 ; gain = 0.000 ; free physical = 37321 ; free virtual = 83166
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myproject' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_9ns_21_1_1' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_9ns_21_1_1.vhd:31' bound to instance 'myproject_mul_mul_12s_9ns_21_1_1_U1' of component 'myproject_mul_mul_12s_9ns_21_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_9ns_21_1_1' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_9ns_21_1_1.vhd:44]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-3491] module 'myproject_mul_mul_12s_9ns_21_1_1_DSP48_0' declared at '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_9ns_21_1_1.vhd:6' bound to instance 'myproject_mul_mul_12s_9ns_21_1_1_DSP48_0_U' of component 'myproject_mul_mul_12s_9ns_21_1_1_DSP48_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_9ns_21_1_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'myproject_mul_mul_12s_9ns_21_1_1_DSP48_0' [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_9ns_21_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_9ns_21_1_1_DSP48_0' (1#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_9ns_21_1_1.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'myproject_mul_mul_12s_9ns_21_1_1' (2#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject_mul_mul_12s_9ns_21_1_1.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'myproject' (3#1) [/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-10,6/myproject_prj/solution1/syn/vhdl/myproject.vhd:35]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2142.441 ; gain = 0.000 ; free physical = 37356 ; free virtual = 83203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2142.441 ; gain = 0.000 ; free physical = 37352 ; free virtual = 83198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcvu9p-flga2577-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xcvu9p-flga2577-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2150.445 ; gain = 8.004 ; free physical = 37351 ; free virtual = 83197
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2150.449 ; gain = 8.008 ; free physical = 37341 ; free virtual = 83187
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   38 Bit       Adders := 1     
+	   3 Input   34 Bit       Adders := 1     
+	   4 Input   34 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
+	   3 Input   17 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 1     
+	   3 Input   14 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 2     
++---Registers : 
+	              160 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input  160 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 6840 (col length:120)
+BRAMs: 4320 (col length: RAMB18 360 RAMB36 180)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP r_V_4_reg_487_reg, operation Mode is: (A*(B:0xf4))'.
+DSP Report: register r_V_4_reg_487_reg is absorbed into DSP r_V_4_reg_487_reg.
+DSP Report: operator myproject_mul_mul_12s_9ns_21_1_1_U1/myproject_mul_mul_12s_9ns_21_1_1_DSP48_0_U/p_cvt is absorbed into DSP r_V_4_reg_487_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:51 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36480 ; free virtual = 82303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|myproject   | (A*(B:0xf4))' | 12     | 9      | -      | -      | 21     | 0    | 0    | -    | -    | -     | 1    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:52 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36479 ; free virtual = 82302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:52 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36482 ; free virtual = 82304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36481 ; free virtual = 82304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36481 ; free virtual = 82304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36481 ; free virtual = 82304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36481 ; free virtual = 82304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36481 ; free virtual = 82304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36481 ; free virtual = 82304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |CARRY8          |    15|
+|3     |DSP_ALU         |     1|
+|4     |DSP_A_B_DATA    |     1|
+|5     |DSP_C_DATA      |     1|
+|6     |DSP_MULTIPLIER  |     1|
+|7     |DSP_M_DATA      |     1|
+|8     |DSP_OUTPUT      |     1|
+|9     |DSP_PREADD      |     1|
+|10    |DSP_PREADD_DATA |     1|
+|11    |LUT1            |     7|
+|12    |LUT2            |    40|
+|13    |LUT3            |    35|
+|14    |LUT4            |    43|
+|15    |LUT5            |    43|
+|16    |LUT6            |    59|
+|17    |FDRE            |    43|
+|18    |IBUF            |    34|
+|19    |OBUF            |    58|
++------+----------------+------+
+
+Report Instance Areas: 
++------+--------------------+-------------------------+------+
+|      |Instance            |Module                   |Cells |
++------+--------------------+-------------------------+------+
+|1     |top                 |                         |   386|
+|2     |  r_V_4_reg_487_reg |r_V_4_reg_487_reg_funnel |     8|
++------+--------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36481 ; free virtual = 82304
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36483 ; free virtual = 82306
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:54 . Memory (MB): peak = 2767.453 ; gain = 625.012 ; free physical = 36562 ; free virtual = 82384
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2778.418 ; gain = 0.000 ; free physical = 36552 ; free virtual = 82375
+INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2916.102 ; gain = 0.000 ; free physical = 36451 ; free virtual = 82273
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 36 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 34 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:01:05 . Memory (MB): peak = 2916.102 ; gain = 781.875 ; free physical = 36592 ; free virtual = 82414
+# report_utilization -file vivado_synth.rpt
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 26 15:23:56 2023...
+***** VIVADO SYNTHESIS COMPLETED IN 0h1m27s *****
+INFO: [HLS 200-112] Total elapsed time: 175.55 seconds; peak allocated memory: 407.446 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Feb 26 15:24:07 2023...

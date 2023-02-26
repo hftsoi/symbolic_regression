@@ -1,11 +1,11 @@
-INFO-FLOW: Workspace /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1 opened at Sun Feb 26 10:47:21 EST 2023
+INFO-FLOW: Workspace /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1 opened at Sun Feb 26 14:53:53 EST 2023
 Execute     config_array_partition -maximum_size 4096 
 INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
 Execute     config_compile -name_max_length 60 
 INFO: [XFORM 203-1161] The maximum of name length is set into 60.
 Execute     set_part xcvu9p-flga2577-2-e 
 Execute       ap_part_info -name xcvu9p-flga2577-2-e -data single -quiet 
-Command       ap_part_info done; 2.1 sec.
+Command       ap_part_info done; 2.14 sec.
 Execute       ap_part_info -name xcvu9p-flga2577-2-e -data info 
 Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2577:-2-e 
 Execute         get_default_platform 
@@ -57,7 +57,7 @@ Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info
 Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
 Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
 Execute         config_chip_info -quiet -speed medium 
-Command       add_library done; 0.15 sec.
+Command       add_library done; 0.16 sec.
 Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
 Execute         get_default_platform 
 Execute         open_platform DefaultPlatform 
@@ -75,7 +75,7 @@ Execute           source /data/tools/Xilinx/Vivado/2020.1/common/technology/xili
 INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
 Execute       ap_part_info -name xcvu9p-flga2577-2-e -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.39 sec.
+Command     set_part done; 2.46 sec.
 Execute     create_clock -period 5 -name default 
 Execute       config_clock -quiet -name default -period 5 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
@@ -105,14 +105,14 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute         clang  -fno-limit-debug-info -gcc-toolchain "/data/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "firmware/myproject.cpp"   -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp" 
 INFO-FLOW: exec /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E firmware/myproject.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot -I /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp
-Command         clang done; 2.49 sec.
+Command         clang done; 2.47 sec.
 Execute         tidy_31 xilinx-xfmat-array-geometry /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x 
 INFO-FLOW: exec /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 6.94 sec.
+Command         tidy_31 done; 7.02 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute         clang -syntaxcheck -src /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/data/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc" -hls  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp"  -o "/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot -I /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/useless.bc
-Command         clang done; 5.61 sec.
+Command         clang done; 5.53 sec.
 INFO-FLOW: Done: GCC PP time: 15 seconds per iteration
 Execute         source /data/tools/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute         source /data/tools/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -120,60 +120,60 @@ Execute           source /data/tools/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/t
 Execute         list_core -type functional_unit 
 Execute         tidy_31 xilinx-systemc-detector /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 6.21 sec.
+Command         tidy_31 done; 6.52 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute         tidy_31 xilinx-directive2pragma /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 6.01 sec.
+Command         tidy_31 done; 6.21 sec.
 Execute         get_config_dataflow -strict_mode 
 Execute         ap_eval exec -ignorestderr /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.diag.yml /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.out.log 2> /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.err.log 
-Command         ap_eval done; 6.79 sec.
+Command         ap_eval done; 6.81 sec.
 Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x 
 Execute           ap_eval exec -ignorestderr /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.out.log 2> /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.err.log 
-Command           ap_eval done; 11.3 sec.
+Command           ap_eval done; 11.32 sec.
 Execute           source /data/tools/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute             source /data/tools/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 Execute           ap_eval exec -ignorestderr /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.out.log 2> /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.err.log 
-Command           ap_eval done; 5.2 sec.
-Command         tidy_31 done; 17.5 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 30.3 seconds per iteration
+Command           ap_eval done; 5.34 sec.
+Command         tidy_31 done; 17.58 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 30.6 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pragma.1.cpp std=c++0x 
 INFO-FLOW: exec /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pragma.1.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 9.66 sec.
+Command         tidy_31 done; 9.44 sec.
 Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
 INFO-FLOW: Processing labels
 Execute         clang -src /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp"  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.bc" 
 INFO-FLOW: exec /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot -I /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.bc
-Command         clang done; 6.34 sec.
+Command         clang done; 6.05 sec.
 INFO-FLOW: Linking Debug ...
 Execute         llvm-ld /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.g.bc -hls-opt -except-internalize myproject -L/data/tools/Xilinx/Vivado/2020.1/lnx64/lib -lhlsm -lhlsmc++ -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g 
-Command         llvm-ld done; 1.91 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40617 ; free virtual = 83132
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40618 ; free virtual = 83132
+Command         llvm-ld done; 1.85 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38944 ; free virtual = 84147
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38945 ; free virtual = 84148
 Execute         get_config_sdx -target 
 Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute           cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute           transform -promote-dbg-pointer /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.pp.bc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.pp.0.bc -f 
-Command           transform done; 0.53 sec.
+Command           transform done; 0.55 sec.
 Execute           llvm-ld /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/data/tools/Xilinx/Vivado/2020.1/lnx64/lib -lfloatconversion -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.0 
-Command           llvm-ld done; 1.9 sec.
+Command           llvm-ld done; 1.81 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -stream-depth-lower -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top myproject -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.0.bc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command           transform done; 1.2 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40497 ; free virtual = 83044
+Command           transform done; 1.24 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38852 ; free virtual = 84062
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.1.bc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO: [XFORM 203-602] Inlining function 'cordic_apfixed::circ_range_redux<8, 6, 9>' into 'cordic_apfixed::generic_sincos<8, 6>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sin<8, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::cos<8, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
-Command           transform done; 0.45 sec.
+Command           transform done; 0.42 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute           transform -syn-check /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-Command           transform done; 0.39 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40439 ; free virtual = 82998
+Command           transform done; 0.31 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38793 ; free virtual = 84015
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.g.1.bc to /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -186,22 +186,22 @@ INFO: [XFORM 203-101] Partitioning array 'y.V' (firmware/myproject.cpp:26) in di
 INFO: [XFORM 203-602] Inlining function 'cordic_apfixed::circ_range_redux<8, 6, 9>' into 'cordic_apfixed::generic_sincos<8, 6>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sin<8, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::cos<8, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
-Command           transform done; 0.67 sec.
+Command           transform done; 0.65 sec.
 INFO-FLOW: Presyn 2...
 Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:230:25) to (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:293:3) in function 'cordic_apfixed::generic_sincos<8, 6>'... converting 11 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'cordic_apfixed::cordic_circ_apfixed<10, 3, 0>'... converting 28 basic blocks.
-Command           transform done; 0.4 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40347 ; free virtual = 82924
+Command           transform done; 0.39 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38701 ; free virtual = 83941
 INFO-FLOW: Building ssdm...
 Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.o.2.bc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [XFORM 203-631] Renaming function 'cordic_apfixed::generic_sincos<8, 6>' to 'generic_sincos<8, 6>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:64:3)
 WARNING: [XFORM 203-631] Renaming function 'cordic_apfixed::cordic_circ_apfixed<10, 3, 0>' to 'cordic_circ_apfixed<10, 3, 0>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:79)
 Command           transform done; 0.6 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40302 ; free virtual = 82886
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38657 ; free virtual = 83903
 INFO-FLOW: Finish building internal data model.
-Command         opt_and_import_c done; 6.6 sec.
-Command       elaborate done; 77.65 sec.
+Command         opt_and_import_c done; 6.38 sec.
+Command       elaborate done; 77.45 sec.
 Execute       autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -247,8 +247,8 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'cordic_circ_apfixed<10, 3, 0>'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.12 sec.
-INFO: [HLS 200-111]  Elapsed time: 80.6 seconds; current allocated memory: 366.174 MB.
+Command         schedule done; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 80.47 seconds; current allocated memory: 366.179 MB.
 Execute         syn_report -verbosereport -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s.verbose.sched.rpt 
 Execute         db_write -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s.sched.adb -f 
 INFO-FLOW: Finish scheduling cordic_circ_apfixed<10, 3, 0>.
@@ -260,11 +260,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 366.722 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 366.726 MB.
 Execute         syn_report -verbosereport -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s.verbose.bind.rpt 
 Command         syn_report done; 0.17 sec.
 Execute         db_write -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s.bind.adb -f 
-Command         db_write done; 0.24 sec.
+Command         db_write done; 0.37 sec.
 INFO-FLOW: Finish binding cordic_circ_apfixed<10, 3, 0>.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'generic_sincos_8_6_s' 
@@ -275,10 +275,9 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'generic_sincos<8, 6>'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 366.998 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 367.002 MB.
 Execute         syn_report -verbosereport -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/generic_sincos_8_6_s.verbose.sched.rpt 
 Execute         db_write -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/generic_sincos_8_6_s.sched.adb -f 
-Command         db_write done; 0.15 sec.
 INFO-FLOW: Finish scheduling generic_sincos<8, 6>.
 Execute         set_default_model generic_sincos<8, 6> 
 Execute         bind -model generic_sincos<8, 6> 
@@ -289,11 +288,10 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 Command         bind done; 0.11 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 367.257 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 367.260 MB.
 Execute         syn_report -verbosereport -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/generic_sincos_8_6_s.verbose.bind.rpt 
-Command         syn_report done; 0.24 sec.
+Command         syn_report done; 0.26 sec.
 Execute         db_write -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/generic_sincos_8_6_s.bind.adb -f 
-Command         db_write done; 0.37 sec.
 INFO-FLOW: Finish binding generic_sincos<8, 6>.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
@@ -304,12 +302,11 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'myproject'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.26 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.89 seconds; current allocated memory: 368.031 MB.
+Command         schedule done; 0.29 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 368.034 MB.
 Execute         syn_report -verbosereport -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.verbose.sched.rpt 
-Command         syn_report done; 0.11 sec.
+Command         syn_report done; 0.13 sec.
 Execute         db_write -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.sched.adb -f 
-Command         db_write done; 0.25 sec.
 INFO-FLOW: Finish scheduling myproject.
 Execute         set_default_model myproject 
 Execute         bind -model myproject 
@@ -319,12 +316,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 1.14 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.5 seconds; current allocated memory: 369.537 MB.
+Command         bind done; 1.16 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.37 seconds; current allocated memory: 369.541 MB.
 Execute         syn_report -verbosereport -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.verbose.bind.rpt 
-Command         syn_report done; 2.61 sec.
+Command         syn_report done; 2.71 sec.
 Execute         db_write -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.bind.adb -f 
-Command         db_write done; 0.15 sec.
+Command         db_write done; 0.34 sec.
 INFO-FLOW: Finish binding myproject.
 Execute         get_model_list myproject -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -339,18 +336,18 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model cordic_circ_apfixed<10, 3, 0> -vendor xilinx -mg_file /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'cordic_circ_apfixed_10_3_0_s'.
-INFO: [HLS 200-111]  Elapsed time: 2.83 seconds; current allocated memory: 372.202 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.13 seconds; current allocated memory: 372.205 MB.
 Execute         source /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl cordic_circ_apfixed<10, 3, 0> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/systemc/cordic_circ_apfixed_10_3_0_s -synmodules {cordic_circ_apfixed<10, 3, 0>} {generic_sincos<8, 6>} myproject 
 Execute         gen_rtl cordic_circ_apfixed<10, 3, 0> -style xilinx -f -lang vhdl -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/vhdl/cordic_circ_apfixed_10_3_0_s 
 Execute         gen_rtl cordic_circ_apfixed<10, 3, 0> -style xilinx -f -lang vlog -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/verilog/cordic_circ_apfixed_10_3_0_s 
 Execute         syn_report -csynth -model cordic_circ_apfixed<10, 3, 0> -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/report/cordic_circ_apfixed_10_3_0_s_csynth.rpt 
-Command         syn_report done; 0.11 sec.
+Command         syn_report done; 0.14 sec.
 Execute         syn_report -rtlxml -model cordic_circ_apfixed<10, 3, 0> -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/report/cordic_circ_apfixed_10_3_0_s_csynth.xml 
 Execute         syn_report -verbosereport -model cordic_circ_apfixed<10, 3, 0> -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s.verbose.rpt 
-Command         syn_report done; 0.2 sec.
+Command         syn_report done; 0.21 sec.
 Execute         db_write -model cordic_circ_apfixed<10, 3, 0> -f -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s.adb 
-Command         db_write done; 0.21 sec.
+Command         db_write done; 0.13 sec.
 Execute         gen_tb_info cordic_circ_apfixed<10, 3, 0> -p /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/cordic_circ_apfixed_10_3_0_s 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'generic_sincos_8_6_s' 
@@ -361,7 +358,7 @@ Execute         create_rtl_model generic_sincos<8, 6> -vendor xilinx -mg_file /a
 INFO: [RTGEN 206-100] Generating core module 'myproject_mac_mulsub_11ns_6ns_15ns_17_1_0': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16ns_8ns_23_1_0': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_sincos_8_6_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.73 seconds; current allocated memory: 375.025 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.66 seconds; current allocated memory: 375.030 MB.
 Execute         source /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl generic_sincos<8, 6> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/systemc/generic_sincos_8_6_s -synmodules {cordic_circ_apfixed<10, 3, 0>} {generic_sincos<8, 6>} myproject 
 Execute         gen_rtl generic_sincos<8, 6> -style xilinx -f -lang vhdl -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/vhdl/generic_sincos_8_6_s 
@@ -369,9 +366,9 @@ Execute         gen_rtl generic_sincos<8, 6> -style xilinx -f -lang vlog -o /afs
 Execute         syn_report -csynth -model generic_sincos<8, 6> -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/report/generic_sincos_8_6_s_csynth.rpt 
 Execute         syn_report -rtlxml -model generic_sincos<8, 6> -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/report/generic_sincos_8_6_s_csynth.xml 
 Execute         syn_report -verbosereport -model generic_sincos<8, 6> -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/generic_sincos_8_6_s.verbose.rpt 
-Command         syn_report done; 0.27 sec.
+Command         syn_report done; 0.2 sec.
 Execute         db_write -model generic_sincos<8, 6> -f -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/generic_sincos_8_6_s.adb 
-Command         db_write done; 0.2 sec.
+Command         db_write done; 0.24 sec.
 Execute         gen_tb_info generic_sincos<8, 6> -p /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/generic_sincos_8_6_s 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
@@ -398,7 +395,7 @@ INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_18s_8s_22_1_1': 
 INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_20s_8s_24_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
 Command         create_rtl_model done; 0.17 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.79 seconds; current allocated memory: 378.358 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 378.363 MB.
 Execute         source /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl myproject -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/systemc/myproject -synmodules {cordic_circ_apfixed<10, 3, 0>} {generic_sincos<8, 6>} myproject 
 Execute         gen_rtl myproject -istop -style xilinx -f -lang vhdl -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/vhdl/myproject 
@@ -407,13 +404,13 @@ Execute         gen_rtl myproject -istop -style xilinx -f -lang vlog -o /afs/cer
 Execute         syn_report -csynth -model myproject -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/report/myproject_csynth.rpt 
 Execute         syn_report -rtlxml -model myproject -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/syn/report/myproject_csynth.xml 
 Execute         syn_report -verbosereport -model myproject -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.verbose.rpt 
-Command         syn_report done; 2.8 sec.
+Command         syn_report done; 2.73 sec.
 Execute         db_write -model myproject -f -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.adb 
-Command         db_write done; 0.22 sec.
+Command         db_write done; 0.41 sec.
 Execute         gen_tb_info myproject -p /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject 
 Execute         export_constraint_db -f -tool general -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.constraint.tcl 
 Execute         syn_report -designview -model myproject -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.design.xml 
-Command         syn_report done; 0.18 sec.
+Command         syn_report done; 0.26 sec.
 Execute         get_config_rtl -disable_wave_debug 
 Execute         syn_report -wcfg -model myproject -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject_dataflow_ana.wcfg 
 Execute         syn_report -protoinst -model myproject -o /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.protoinst 
@@ -521,7 +518,7 @@ Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info 
-Command         ap_source done; 0.16 sec.
+Command         ap_source done; 0.12 sec.
 Execute         source /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/myproject.compgen.tcl 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
@@ -550,7 +547,7 @@ Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info 
-Command         ap_source done; 0.76 sec.
+Command         ap_source done; 1.1 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1
 Execute         source /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/global.setting.tcl
@@ -575,8 +572,8 @@ Execute             source /data/tools/Xilinx/Vivado/2020.1/common/technology/xi
 Execute             source /data/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
 Execute             source /data/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
 Execute             source /data/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
-Command           ap_source done; 0.16 sec.
-Command         ap_source done; 0.16 sec.
+Command           ap_source done; 0.17 sec.
+Command         ap_source done; 0.17 sec.
 Execute         source /data/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
 Execute           source /data/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=myproject xml_exists=0
@@ -622,7 +619,7 @@ Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
 Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
-Command         ap_source done; 0.25 sec.
+Command         ap_source done; 0.29 sec.
 Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
 Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
@@ -676,9 +673,9 @@ Execute         get_config_rtl -stall_sig_gen
 Execute         get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-nonlut-8,6/myproject_prj/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:23 ; elapsed = 00:01:55 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40257 ; free virtual = 82855
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:23 ; elapsed = 00:01:43 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38652 ; free virtual = 83885
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
-Command       autosyn done; 34.66 sec.
-Command     csynth_design done; 112.31 sec.
+Command       autosyn done; 22.6 sec.
+Command     csynth_design done; 100.06 sec.
 Execute     cleanup_all 

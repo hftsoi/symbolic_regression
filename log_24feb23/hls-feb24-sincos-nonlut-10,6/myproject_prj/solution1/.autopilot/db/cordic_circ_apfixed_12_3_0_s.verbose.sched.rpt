@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'cordic_circ_apfixed_12_3_0_s'
 ================================================================
-* Date:           Sun Feb 26 10:59:19 2023
+* Date:           Sun Feb 26 15:15:16 2023
 
 * Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
 * Project:        myproject_prj
@@ -255,7 +255,6 @@ Target clock period: 5ns, clock uncertainty: 0.625ns.
  <State 1>: 4.22ns
 The critical path consists of the following:
 	wire read on port 'z_V_read' [2]  (0 ns)
-	'select' operation ('select_ln101', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:101) [5]  (0 ns)
 	'add' operation ('add_ln101', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:101) [6]  (0.735 ns)
 	'select' operation ('select_ln101_1', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:101) [13]  (0.303 ns)
 	'add' operation ('add_ln101_2', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:101) [15]  (0.756 ns)

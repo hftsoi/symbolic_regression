@@ -8,20 +8,20 @@ INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39117 ; free virtual = 82985
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39117 ; free virtual = 82985
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37623 ; free virtual = 84134
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37623 ; free virtual = 84134
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:17 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38941 ; free virtual = 82814
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37419 ; free virtual = 83963
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38911 ; free virtual = 82798
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37389 ; free virtual = 83947
 INFO: [XFORM 203-131] Reshaping array 'x.V' (firmware/myproject.cpp:25) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'y.V' (firmware/myproject.cpp:26) in dimension 1 completely.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_types.h:54:22) to (firmware/nnet_utils/nnet_types.h:57:9) in function 'nnet::lookup_table<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::sin<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()'... converting 5 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_types.h:54:22) to (firmware/nnet_utils/nnet_types.h:57:9) in function 'nnet::lookup_table<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::cos<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()'... converting 5 basic blocks.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:18 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38805 ; free virtual = 82714
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37310 ; free virtual = 83863
 WARNING: [XFORM 203-631] Renaming function 'nnet::lookup_table<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::sin<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()' to 'operator()' (firmware/nnet_utils/nnet_types.h:54:9)
 WARNING: [XFORM 203-631] Renaming function 'nnet::lookup_table<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::cos<ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()' to 'operator().1' (firmware/nnet_utils/nnet_types.h:54:9)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:19 ; elapsed = 00:01:24 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38763 ; free virtual = 82679
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 37269 ; free virtual = 83828
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'operator().1' to 'operator_1'.
@@ -33,13 +33,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'operator().1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 84.31 seconds; current allocated memory: 432.019 MB.
+INFO: [HLS 200-111]  Elapsed time: 83.96 seconds; current allocated memory: 432.020 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 432.160 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 432.160 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'operator_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -47,13 +47,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'operator()'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 432.257 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 432.257 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 432.389 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 432.389 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -61,23 +61,23 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'myproject'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 433.183 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.89 seconds; current allocated memory: 433.184 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 434.211 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.62 seconds; current allocated memory: 434.210 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'operator_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 434.794 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.07 seconds; current allocated memory: 434.793 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'operator_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 435.608 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 435.607 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------

@@ -8,15 +8,15 @@ INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40025 ; free virtual = 83029
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 40026 ; free virtual = 83029
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38444 ; free virtual = 84110
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38444 ; free virtual = 84110
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39933 ; free virtual = 82942
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38351 ; free virtual = 84022
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'cordic_apfixed::circ_range_redux<10, 6, 11>' into 'cordic_apfixed::generic_sincos<10, 6>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::sin<10, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::cos<10, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39871 ; free virtual = 82892
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38289 ; free virtual = 83971
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'cordic_apfixed::cordic_circ_apfixed<12, 3, 0>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:77).
 WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:87) because its parent loop or function is pipelined.
 INFO: [HLS 200-489] Unrolling loop 'Loop-1' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:87) in function 'cordic_apfixed::cordic_circ_apfixed<12, 3, 0>' completely with a factor of 12.
@@ -27,10 +27,10 @@ INFO: [XFORM 203-602] Inlining function 'hls::sin<10, 6>' into 'myproject' (firm
 INFO: [XFORM 203-602] Inlining function 'hls::cos<10, 6>' into 'myproject' (firmware/myproject.cpp:50) automatically.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:230:25) to (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:293:3) in function 'cordic_apfixed::generic_sincos<10, 6>'... converting 11 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'cordic_apfixed::cordic_circ_apfixed<12, 3, 0>'... converting 34 basic blocks.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39778 ; free virtual = 82817
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38195 ; free virtual = 83897
 WARNING: [XFORM 203-631] Renaming function 'cordic_apfixed::generic_sincos<10, 6>' to 'generic_sincos<10, 6>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:64:3)
 WARNING: [XFORM 203-631] Renaming function 'cordic_apfixed::cordic_circ_apfixed<12, 3, 0>' to 'cordic_circ_apfixed<12, 3, 0>' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:79)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 39759 ; free virtual = 82778
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38150 ; free virtual = 83858
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'cordic_circ_apfixed<12, 3, 0>' to 'cordic_circ_apfixed_12_3_0_s'.
@@ -42,13 +42,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'cordic_circ_apfixed<12, 3, 0>'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 81.06 seconds; current allocated memory: 372.997 MB.
+INFO: [HLS 200-111]  Elapsed time: 80.64 seconds; current allocated memory: 372.995 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 373.649 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 373.645 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'generic_sincos_10_6_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -56,13 +56,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'generic_sincos<10, 6>'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.81 seconds; current allocated memory: 373.942 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 373.938 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 374.200 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 374.196 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -70,18 +70,18 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'myproject'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 375.050 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 375.046 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.9 seconds; current allocated memory: 376.729 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.58 seconds; current allocated memory: 376.727 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'cordic_circ_apfixed_12_3_0_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'cordic_circ_apfixed_12_3_0_s'.
-INFO: [HLS 200-111]  Elapsed time: 3.63 seconds; current allocated memory: 379.892 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.55 seconds; current allocated memory: 379.892 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'generic_sincos_10_6_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
