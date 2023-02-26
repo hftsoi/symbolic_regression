@@ -1,0 +1,93 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38976 ; free virtual = 82988
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38976 ; free virtual = 82988
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'nnet::sincos_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' into 'nnet::cos_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' (firmware/nnet_utils/nnet_math.h:195).
+INFO: [XFORM 203-603] Inlining function 'nnet::sincos_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' into 'nnet::sin_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' (firmware/nnet_utils/nnet_math.h:187).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38755 ; free virtual = 82805
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] firmware/nnet_utils/nnet_math.h:151: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38672 ; free virtual = 82719
+INFO: [XFORM 203-102] Partitioning array 'sincos1' in dimension 2 automatically.
+INFO: [XFORM 203-131] Reshaping array 'x.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'y.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_math.h:186:22) to (firmware/nnet_utils/nnet_math.h:155:43) in function 'nnet::sin_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >'... converting 52 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_math.h:194:22) to (firmware/nnet_utils/nnet_math.h:196:5) in function 'nnet::cos_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >'... converting 52 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::cos_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' (firmware/nnet_utils/nnet_math.h:93:5)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38503 ; free virtual = 82584
+WARNING: [XFORM 203-631] Renaming function 'nnet::sin_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' (firmware/nnet_utils/nnet_math.h:93:43)
+WARNING: [XFORM 203-631] Renaming function 'nnet::cos_lut<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >' to 'cos_lut<ap_fixed<16, 6, 5, 3, 0> >' (firmware/nnet_utils/nnet_math.h:93:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:20 ; elapsed = 00:01:27 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38472 ; free virtual = 82541
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >' to 'sin_lut_ap_fixed_16_6_5_3_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'cos_lut<ap_fixed<16, 6, 5, 3, 0> >' to 'cos_lut_ap_fixed_16_6_5_3_0_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_lut_ap_fixed_16_6_5_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sin_lut<ap_fixed<16, 6, 5, 3, 0> >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 87.56 seconds; current allocated memory: 561.562 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 562.019 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cos_lut_ap_fixed_16_6_5_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cos_lut<ap_fixed<16, 6, 5, 3, 0> >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 562.402 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.55 seconds; current allocated memory: 562.869 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.1 seconds; current allocated memory: 563.781 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.56 seconds; current allocated memory: 565.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_lut_ap_fixed_16_6_5_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_dcmp_64ns_64ns_1_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_15ns_16s_31_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_lut_ap_fixed_16_6_5_3_0_s'.
+INFO: [HLS 200-111]  Elapsed time: 2.51 seconds; current allocated memory: 567.528 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cos_lut_ap_fixed_16_6_5_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_dcmp_64ns_64ns_1_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_15ns_16s_31_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cos_lut_ap_fixed_16_6_5_3_0_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 570.413 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------

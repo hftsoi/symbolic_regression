@@ -1,0 +1,64 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject'" level="0">
+<item name = "Date">Sun Feb 26 11:06:59 2023
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2577-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.340 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">9, 9, 45.000 ns, 45.000 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_231">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_240">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_249">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_258">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_267">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_276">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_285">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_294">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_cos_lut_ap_fixed_11_6_5_3_0_s_fu_303">cos_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_312">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_321">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_330">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_339">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_348">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_357">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_366">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_375">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_384">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+<column name="grp_sin_lut_ap_fixed_11_6_5_3_0_s_fu_393">sin_lut_ap_fixed_11_6_5_3_0_s, 3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

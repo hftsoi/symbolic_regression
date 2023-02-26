@@ -1,0 +1,231 @@
+
+
+================================================================
+== Vivado HLS Report for 'generic_sincos_14_6_s'
+================================================================
+* Date:           Sun Feb 26 11:16:21 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.349 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        7|        7| 35.000 ns | 35.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.64>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%in_V_read = call i14 @_ssdm_op_Read.ap_auto.i14(i14 %in_V)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:230]   --->   Operation 9 'read' 'in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.65ns)   --->   "%sign0_V = icmp sgt i14 %in_V_read, 0" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:230]   --->   Operation 10 'icmp' 'sign0_V' <Predicate = true> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.76ns)   --->   "%inabs_V = sub i14 0, %in_V_read" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:237]   --->   Operation 11 'sub' 'inabs_V' <Predicate = true> <Delay = 0.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.34ns)   --->   "%p_Val2_s = select i1 %sign0_V, i14 %in_V_read, i14 %inabs_V" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:234]   --->   Operation 12 'select' 'p_Val2_s' <Predicate = true> <Delay = 0.34> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%r_V = zext i14 %p_Val2_s to i35" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:64->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 13 'zext' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (2.53ns) (root node of the DSP)   --->   "%r_V_61 = mul i35 1335088, %r_V" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:64->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 14 'mul' 'r_V_61' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%ret_V = call i6 @_ssdm_op_PartSelect.i6.i35.i32.i32(i35 %r_V_61, i32 29, i32 34)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:65->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 15 'partselect' 'ret_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%k_V = call i2 @_ssdm_op_PartSelect.i2.i35.i32.i32(i35 %r_V_61, i32 29, i32 30)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:67->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 16 'partselect' 'k_V' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.61>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%r_V_56 = zext i6 %ret_V to i22" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 17 'zext' 'r_V_56' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.49ns) (grouped into DSP with root node ret_V_49)   --->   "%r_V_62 = mul i22 51471, %r_V_56" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 18 'mul' 'r_V_62' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%lhs_V = call i21 @_ssdm_op_BitConcatenate.i21.i14.i7(i14 %p_Val2_s, i7 0)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 19 'bitconcatenate' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln728 = zext i21 %lhs_V to i23" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 20 'zext' 'zext_ln728' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns) (grouped into DSP with root node ret_V_49)   --->   "%rhs_V = zext i22 %r_V_62 to i23" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 21 'zext' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (2.03ns) (root node of the DSP)   --->   "%ret_V_49 = sub i23 %zext_ln728, %rhs_V" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 22 'sub' 'ret_V_49' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%p_Val2_43 = call i15 @_ssdm_op_PartSelect.i15.i23.i32.i32(i23 %ret_V_49, i32 1, i32 15)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243]   --->   Operation 23 'partselect' 'p_Val2_43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.34ns)   --->   "%icmp_ln879 = icmp eq i2 %k_V, 1" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 24 'icmp' 'icmp_ln879' <Predicate = true> <Delay = 0.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%rhs_V_8 = zext i15 %p_Val2_43 to i16" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:257]   --->   Operation 25 'zext' 'rhs_V_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns) (grouped into LUT with out node z_V_1)   --->   "%trunc_ln708_s = call i14 @_ssdm_op_PartSelect.i14.i23.i32.i32(i23 %ret_V_49, i32 2, i32 15)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:257]   --->   Operation 26 'partselect' 'trunc_ln708_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node z_V_1)   --->   "%z_V = zext i14 %trunc_ln708_s to i15" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:257]   --->   Operation 27 'zext' 'z_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.78ns)   --->   "%ret_V_50 = sub i16 25735, %rhs_V_8" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:254]   --->   Operation 28 'sub' 'ret_V_50' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node z_V_1)   --->   "%trunc_ln708_12 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %ret_V_50, i32 1, i32 15)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:254]   --->   Operation 29 'partselect' 'trunc_ln708_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.34ns)   --->   "%icmp_ln251 = icmp eq i2 %k_V, -1" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 30 'icmp' 'icmp_ln251' <Predicate = true> <Delay = 0.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node z_V_1)   --->   "%or_ln251 = or i1 %icmp_ln251, %icmp_ln879" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 31 'or' 'or_ln251' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.29ns) (out node of the LUT)   --->   "%z_V_1 = select i1 %or_ln251, i15 %trunc_ln708_12, i15 %z_V" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 32 'select' 'z_V_1' <Predicate = true> <Delay = 0.29> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 4.34>
+ST_3 : Operation 33 [5/5] (4.34ns)   --->   "%call_ret = call fastcc { i16, i16 } @"cordic_circ_apfixed<16, 3, 0>"(i15 %z_V_1)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 33 'call' 'call_ret' <Predicate = true> <Delay = 4.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 4.34>
+ST_4 : Operation 34 [4/5] (4.34ns)   --->   "%call_ret = call fastcc { i16, i16 } @"cordic_circ_apfixed<16, 3, 0>"(i15 %z_V_1)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 34 'call' 'call_ret' <Predicate = true> <Delay = 4.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 4.34>
+ST_5 : Operation 35 [3/5] (4.34ns)   --->   "%call_ret = call fastcc { i16, i16 } @"cordic_circ_apfixed<16, 3, 0>"(i15 %z_V_1)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 35 'call' 'call_ret' <Predicate = true> <Delay = 4.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 4.34>
+ST_6 : Operation 36 [2/5] (4.34ns)   --->   "%call_ret = call fastcc { i16, i16 } @"cordic_circ_apfixed<16, 3, 0>"(i15 %z_V_1)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 36 'call' 'call_ret' <Predicate = true> <Delay = 4.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 3.89>
+ST_7 : Operation 37 [1/5] (3.89ns)   --->   "%call_ret = call fastcc { i16, i16 } @"cordic_circ_apfixed<16, 3, 0>"(i15 %z_V_1)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 37 'call' 'call_ret' <Predicate = true> <Delay = 3.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%x_V = extractvalue { i16, i16 } %call_ret, 0" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 38 'extractvalue' 'x_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%y_V = extractvalue { i16, i16 } %call_ret, 1" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 39 'extractvalue' 'y_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln266 = trunc i16 %y_V to i15" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266]   --->   Operation 40 'trunc' 'trunc_ln266' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln1 = call i10 @_ssdm_op_PartSelect.i10.i16.i32.i32(i16 %y_V, i32 5, i32 14)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:275]   --->   Operation 41 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%trunc_ln1253 = trunc i16 %x_V to i15" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:280]   --->   Operation 42 'trunc' 'trunc_ln1253' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 2.40>
+ST_8 : Operation 43 [1/1] (0.34ns)   --->   "%icmp_ln879_1 = icmp eq i2 %k_V, 0" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:274]   --->   Operation 43 'icmp' 'icmp_ln879_1' <Predicate = true> <Delay = 0.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 44 [1/1] (0.77ns)   --->   "%r_V_63 = sub i15 0, %trunc_ln1253" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:280]   --->   Operation 44 'sub' 'r_V_63' <Predicate = true> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln708_13 = call i10 @_ssdm_op_PartSelect.i10.i15.i32.i32(i15 %r_V_63, i32 5, i32 14)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:280]   --->   Operation 45 'partselect' 'trunc_ln708_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 46 [1/1] (0.34ns)   --->   "%icmp_ln879_2 = icmp eq i2 %k_V, -2" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:282]   --->   Operation 46 'icmp' 'icmp_ln879_2' <Predicate = true> <Delay = 0.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 47 [1/1] (0.77ns)   --->   "%r_V_64 = sub i15 0, %trunc_ln266" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:283]   --->   Operation 47 'sub' 'r_V_64' <Predicate = true> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 48 [1/1] (0.00ns)   --->   "%trunc_ln708_14 = call i10 @_ssdm_op_PartSelect.i10.i15.i32.i32(i15 %r_V_64, i32 5, i32 14)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:283]   --->   Operation 48 'partselect' 'trunc_ln708_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node select_ln879_1)   --->   "%select_ln879 = select i1 %icmp_ln879_1, i10 %trunc_ln1, i10 %trunc_ln708_14" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:274]   --->   Operation 49 'select' 'select_ln879' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node and_ln879)   --->   "%xor_ln879 = xor i1 %icmp_ln879_1, true" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:274]   --->   Operation 50 'xor' 'xor_ln879' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 51 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln879 = and i1 %icmp_ln879, %xor_ln879" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 51 'and' 'and_ln879' <Predicate = true> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 52 [1/1] (0.30ns) (out node of the LUT)   --->   "%select_ln879_1 = select i1 %and_ln879, i10 %trunc_ln1, i10 %select_ln879" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 52 'select' 'select_ln879_1' <Predicate = true> <Delay = 0.30> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node and_ln879_1)   --->   "%or_ln879 = or i1 %icmp_ln879_1, %icmp_ln879" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 53 'or' 'or_ln879' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node and_ln879_1)   --->   "%xor_ln879_1 = xor i1 %or_ln879, true" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 54 'xor' 'xor_ln879_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 55 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln879_1 = and i1 %icmp_ln879_2, %xor_ln879_1" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:282]   --->   Operation 55 'and' 'and_ln879_1' <Predicate = true> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 56 [1/1] (0.30ns) (out node of the LUT)   --->   "%p_Val2_49 = select i1 %and_ln879_1, i10 %trunc_ln708_14, i10 %select_ln879_1" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:282]   --->   Operation 56 'select' 'p_Val2_49' <Predicate = true> <Delay = 0.30> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node select_ln879_4)   --->   "%trunc_ln3 = call i10 @_ssdm_op_PartSelect.i10.i16.i32.i32(i16 %x_V, i32 5, i32 14)" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:274]   --->   Operation 57 'partselect' 'trunc_ln3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node select_ln879_4)   --->   "%select_ln879_3 = select i1 %and_ln879, i10 %trunc_ln708_13, i10 %trunc_ln3" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251]   --->   Operation 58 'select' 'select_ln879_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 59 [1/1] (0.30ns) (out node of the LUT)   --->   "%select_ln879_4 = select i1 %and_ln879_1, i10 %trunc_ln708_13, i10 %select_ln879_3" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:282]   --->   Operation 59 'select' 'select_ln879_4' <Predicate = true> <Delay = 0.30> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 60 [1/1] (0.72ns)   --->   "%sub_ln703 = sub i10 0, %p_Val2_49" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:292]   --->   Operation 60 'sub' 'sub_ln703' <Predicate = (!sign0_V)> <Delay = 0.72> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 61 [1/1] (0.30ns)   --->   "%p_Val2_50 = select i1 %sign0_V, i10 %p_Val2_49, i10 %sub_ln703" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:291]   --->   Operation 61 'select' 'p_Val2_50' <Predicate = true> <Delay = 0.30> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 62 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i10, i10 } undef, i10 %p_Val2_50, 0" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:293]   --->   Operation 62 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 63 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i10, i10 } %mrv, i10 %select_ln879_4, 1" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:293]   --->   Operation 63 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 64 [1/1] (0.00ns)   --->   "ret { i10, i10 } %mrv_1" [/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:293]   --->   Operation 64 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.64ns
+The critical path consists of the following:
+	wire read on port 'in_V' (/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:230) [2]  (0 ns)
+	'sub' operation ('inabs.V', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:237) [4]  (0.765 ns)
+	'select' operation ('__Val2__', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:234) [5]  (0.342 ns)
+	'mul' operation of DSP[7] ('r.V', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:64->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243) [7]  (2.53 ns)
+
+ <State 2>: 3.61ns
+The critical path consists of the following:
+	'mul' operation of DSP[15] ('r.V', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243) [11]  (0.494 ns)
+	'sub' operation of DSP[15] ('ret.V', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:68->/data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:243) [15]  (2.04 ns)
+	'sub' operation ('ret.V', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:254) [21]  (0.785 ns)
+	'select' operation ('z.V', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251) [25]  (0.292 ns)
+
+ <State 3>: 4.35ns
+The critical path consists of the following:
+	'call' operation ('call_ret', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266) to 'cordic_circ_apfixed<16, 3, 0>' [26]  (4.35 ns)
+
+ <State 4>: 4.35ns
+The critical path consists of the following:
+	'call' operation ('call_ret', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266) to 'cordic_circ_apfixed<16, 3, 0>' [26]  (4.35 ns)
+
+ <State 5>: 4.35ns
+The critical path consists of the following:
+	'call' operation ('call_ret', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266) to 'cordic_circ_apfixed<16, 3, 0>' [26]  (4.35 ns)
+
+ <State 6>: 4.35ns
+The critical path consists of the following:
+	'call' operation ('call_ret', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266) to 'cordic_circ_apfixed<16, 3, 0>' [26]  (4.35 ns)
+
+ <State 7>: 3.9ns
+The critical path consists of the following:
+	'call' operation ('call_ret', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:266) to 'cordic_circ_apfixed<16, 3, 0>' [26]  (3.9 ns)
+
+ <State 8>: 2.41ns
+The critical path consists of the following:
+	'sub' operation ('r.V', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:283) [36]  (0.775 ns)
+	'select' operation ('select_ln879', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:274) [38]  (0 ns)
+	'select' operation ('select_ln879_1', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:251) [41]  (0.303 ns)
+	'select' operation ('__Val2__', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:282) [45]  (0.303 ns)
+	'sub' operation ('sub_ln703', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:292) [49]  (0.725 ns)
+	'select' operation ('__Val2__', /data/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/hls_cordic_apfixed.h:291) [50]  (0.303 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

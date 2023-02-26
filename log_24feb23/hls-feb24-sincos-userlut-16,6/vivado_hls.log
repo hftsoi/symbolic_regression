@@ -1,0 +1,146 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /data/tools/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/data/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'htsoi' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Sun Feb 26 11:26:11 EST 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-16,6'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-10] Creating and opening project '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-16,6/myproject_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Creating and opening solution '/afs/cern.ch/work/h/htsoi/sr/hls-feb24-sincos-userlut-16,6/myproject_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+***** C/RTL SYNTHESIS *****
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38856 ; free virtual = 82986
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38856 ; free virtual = 82986
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38680 ; free virtual = 82816
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38648 ; free virtual = 82799
+INFO: [XFORM 203-131] Reshaping array 'x.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'y.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_types.h:54:22) to (firmware/nnet_utils/nnet_types.h:57:9) in function 'nnet::lookup_table<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::sin<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_types.h:54:22) to (firmware/nnet_utils/nnet_types.h:57:9) in function 'nnet::lookup_table<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::cos<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()'... converting 5 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38574 ; free virtual = 82718
+WARNING: [XFORM 203-631] Renaming function 'nnet::lookup_table<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::sin<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()' to 'operator()' (firmware/nnet_utils/nnet_types.h:54:9)
+WARNING: [XFORM 203-631] Renaming function 'nnet::lookup_table<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024u, &(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> nnet::cos<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>))>::operator()' to 'operator().1' (firmware/nnet_utils/nnet_types.h:54:9)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:19 ; elapsed = 00:01:25 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38533 ; free virtual = 82683
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'operator().1' to 'operator_1'.
+WARNING: [SYN 201-103] Legalizing function name 'operator()' to 'operator_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'operator().1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 84.9 seconds; current allocated memory: 430.919 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 431.060 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'operator()'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 431.157 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 431.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.77 seconds; current allocated memory: 432.089 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.7 seconds; current allocated memory: 433.112 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 433.732 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 434.545 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_2_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_3_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/y_4_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'myproject_ama_addmuladd_16s_16s_10ns_20ns_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_ama_addmuladd_22s_23s_11s_35s_36_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_ama_submuladd_16s_9s_8ns_19s_23_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_mul_sub_9s_17s_21s_25_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_11s_16s_26s_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_11s_24s_36s_37_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_13ns_16s_19ns_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_13ns_16s_21ns_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_13ns_16s_24ns_28_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_14ns_16s_26ns_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_muladd_16s_9s_26s_27_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mac_mulsub_18s_18s_26ns_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_18s_69s_85_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_22s_69s_76_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_10ns_10ns_20_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_10ns_16s_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_11ns_16s_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_11s_11s_22_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_11s_16s_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_12s_12s_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_16s_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_28s_36_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_18s_18s_36_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_18s_20ns_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_7ns_16s_22_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_8ns_11s_19_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_9ns_17s_25_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 437.623 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 229.97 MHz
+INFO: [RTMG 210-279] Implementing memory 'operator_1_cos_lut_samples_V_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'operator_s_sin_lut_samples_V_rom' using auto ROMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'myproject_mul_22s_69s_76_2_1_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'myproject_mul_18s_69s_85_2_1_MulnS_1'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:24 ; elapsed = 00:02:09 . Memory (MB): peak = 1653.012 ; gain = 1227.961 ; free physical = 38505 ; free virtual = 82668
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
+***** C/RTL SYNTHESIS COMPLETED IN 0h2m6s *****
+INFO: [HLS 200-112] Total elapsed time: 128.92 seconds; peak allocated memory: 437.623 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Feb 26 11:28:19 2023...

@@ -1,0 +1,299 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject'
+================================================================
+* Date:           Sun Feb 26 10:50:49 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.339 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        9|        9| 45.000 ns | 45.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |                                         |                              |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+        |                 Instance                |            Module            |   min   |   max   |    min    |    max    | min | max |   Type   |
+        +-----------------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_205  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_210  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_215  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_220  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_225  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_230  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_235  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_240  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_245  |cos_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_250  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_255  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_260  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_265  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_270  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_275  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_280  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_285  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_290  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_295  |sin_lut_ap_fixed_8_6_5_3_0_s  |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        +-----------------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|     11|        -|        -|    -|
+|Expression           |        -|      0|        0|      724|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|     19|     9386|    20368|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|       36|    -|
+|Register             |        0|      -|      790|      160|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|     30|    10176|    21288|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|      1|        1|        5|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|   ~0  |    ~0   |        1|    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------+------------------------------+---------+-------+-----+------+-----+
+    |                 Instance                |            Module            | BRAM_18K| DSP48E|  FF |  LUT | URAM|
+    +-----------------------------------------+------------------------------+---------+-------+-----+------+-----+
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_205  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_210  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_215  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_220  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_225  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_230  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_235  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_240  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_245  |cos_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_250  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_255  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_260  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_265  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_270  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_275  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_280  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_285  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_290  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_295  |sin_lut_ap_fixed_8_6_5_3_0_s  |        0|      1|  494|  1072|    0|
+    +-----------------------------------------+------------------------------+---------+-------+-----+------+-----+
+    |Total                                    |                              |        0|     19| 9386| 20368|    0|
+    +-----------------------------------------+------------------------------+---------+-------+-----+------+-----+
+
+    * DSP48E: 
+    +---------------------------------------------------+-----------------------------------------------+----------------------------+
+    |                      Instance                     |                     Module                    |         Expression         |
+    +---------------------------------------------------+-----------------------------------------------+----------------------------+
+    |myproject_am_addmul_8s_7s_12s_20_1_1_U17           |myproject_am_addmul_8s_7s_12s_20_1_1           |       (i0 + i1) * i2       |
+    |myproject_ama_addmuladd_11s_9s_8s_12ns_12_1_1_U15  |myproject_ama_addmuladd_11s_9s_8s_12ns_12_1_1  |     i0 * (i1 + i2) + i3    |
+    |myproject_ama_addmulsub_3ns_9s_10ns_10_1_1_U14     |myproject_ama_addmulsub_3ns_9s_10ns_10_1_1     | i0 - (i1 + i2) * (i1 + i2) |
+    |myproject_mac_mul_sub_4s_9s_6s_12_1_1_U16          |myproject_mac_mul_sub_4s_9s_6s_12_1_1          |        i0 * i1 - i2        |
+    |myproject_mac_muladd_4s_20s_15s_20_1_1_U23         |myproject_mac_muladd_4s_20s_15s_20_1_1         |        i0 + i1 * i2        |
+    |myproject_mac_muladd_6ns_8s_10ns_10_1_1_U13        |myproject_mac_muladd_6ns_8s_10ns_10_1_1        |        i0 * i1 + i2        |
+    |myproject_mac_muladd_8s_22s_17s_22_1_1_U22         |myproject_mac_muladd_8s_22s_17s_22_1_1         |        i0 + i1 * i2        |
+    |myproject_mac_muladd_8s_24s_19s_24_1_1_U21         |myproject_mac_muladd_8s_24s_19s_24_1_1         |        i0 + i1 * i2        |
+    |myproject_mul_mul_8s_14s_23_1_1_U18                |myproject_mul_mul_8s_14s_23_1_1                |           i0 * i1          |
+    |myproject_mul_mul_8s_18s_22_1_1_U20                |myproject_mul_mul_8s_18s_22_1_1                |           i0 * i1          |
+    |myproject_mul_mul_8s_22s_24_1_1_U19                |myproject_mul_mul_8s_22s_24_1_1                |           i0 * i1          |
+    +---------------------------------------------------+-----------------------------------------------+----------------------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+    |                  Variable Name                  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+    |mul_ln1192_1_fu_813_p2                           |     *    |      0|  0|  10|           4|          20|
+    |mul_ln1192_2_fu_866_p2                           |     *    |      0|  0|  10|           4|          20|
+    |r_V_10_fu_794_p2                                 |     *    |      0|  0|  17|           5|           5|
+    |r_V_11_fu_804_p2                                 |     *    |      0|  0|  11|           4|           4|
+    |r_V_12_fu_840_p2                                 |     *    |      0|  0|  62|           8|          10|
+    |r_V_14_fu_849_p2                                 |     *    |      0|  0|  11|           4|           4|
+    |r_V_15_fu_896_p2                                 |     *    |      0|  0|  11|           4|           4|
+    |r_V_18_fu_958_p2                                 |     *    |      0|  0|  11|           4|           4|
+    |r_V_21_fu_703_p2                                 |     *    |      0|  0|  11|           4|           4|
+    |r_V_22_fu_545_p2                                 |     *    |      0|  0|  40|           4|           8|
+    |r_V_7_fu_731_p2                                  |     *    |      0|  0|  17|           5|           5|
+    |r_V_8_fu_824_p2                                  |     *    |      0|  0|  11|           4|           4|
+    |r_V_9_fu_874_p2                                  |     *    |      0|  0|  11|           4|           4|
+    |add_ln1192_10_fu_482_p2                          |     +    |      0|  0|  22|          10|          10|
+    |add_ln1192_12_fu_516_p2                          |     +    |      0|  0|  16|           7|           9|
+    |add_ln1192_17_fu_562_p2                          |     +    |      0|  0|  16|           3|           9|
+    |add_ln1192_8_fu_572_p2                           |     +    |      0|  0|  17|          10|          10|
+    |add_ln1192_fu_767_p2                             |     +    |      0|  0|  22|           7|          14|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_205_input_V  |     +    |      0|  0|  15|           8|           8|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_250_input_V  |     +    |      0|  0|  15|           3|           8|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_265_input_V  |     +    |      0|  0|  22|           1|           8|
+    |grp_sin_lut_ap_fixed_8_6_5_3_0_s_fu_275_input_V  |     +    |      0|  0|  15|           2|           8|
+    |ret_V_10_fu_680_p2                               |     +    |      0|  0|  15|           1|           5|
+    |ret_V_15_fu_784_p2                               |     +    |      0|  0|  15|           1|           5|
+    |ret_V_18_fu_617_p2                               |     +    |      0|  0|  22|           4|          10|
+    |ret_V_19_fu_976_p2                               |     +    |      0|  0|  18|          11|          11|
+    |ret_V_25_fu_488_p2                               |     +    |      0|  0|  22|           4|          10|
+    |ret_V_fu_652_p2                                  |     +    |      0|  0|  22|           4|           9|
+    |grp_cos_lut_ap_fixed_8_6_5_3_0_s_fu_215_input_V  |     -    |      0|  0|  15|           8|           8|
+    |r_V_16_fu_686_p2                                 |     -    |      0|  0|  17|           1|          10|
+    |r_V_19_fu_637_p2                                 |     -    |      0|  0|  16|           1|           9|
+    |r_V_20_fu_694_p2                                 |     -    |      0|  0|  15|           1|           5|
+    |ret_V_20_fu_646_p2                               |     -    |      0|  0|  22|           9|           9|
+    |ret_V_22_fu_446_p2                               |     -    |      0|  0|  16|           9|           9|
+    |ret_V_24_fu_761_p2                               |     -    |      0|  0|  22|          14|          14|
+    |sub_ln1192_fu_611_p2                             |     -    |      0|  0|  22|          10|          10|
+    |sub_ln700_1_fu_945_p2                            |     -    |      0|  0|  22|           9|           9|
+    |sub_ln700_fu_927_p2                              |     -    |      0|  0|  22|           1|           9|
+    |sub_ln703_fu_423_p2                              |     -    |      0|  0|  22|           8|           8|
+    |ap_block_pp0_stage0_01001                        |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0                 |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                                    |    xor   |      0|  0|   2|           1|           2|
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                            |          |      0|  0| 724|         208|         334|
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |x_V_ap_vld_in_sig  |   9|          2|    1|          2|
+    |x_V_ap_vld_preg    |   9|          2|    1|          2|
+    |x_V_blk_n          |   9|          2|    1|          2|
+    |x_V_in_sig         |   9|          2|  128|        256|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              |  36|          8|  131|        262|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+-----+----+-----+-----------+
+    |               Name              |  FF | LUT| Bits| Const Bits|
+    +---------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8          |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9          |    1|   0|    1|          0|
+    |mul_ln1192_1_reg_1304            |   20|   0|   20|          0|
+    |mul_ln1192_2_reg_1329            |   20|   0|   20|          0|
+    |mul_ln1192_4_reg_1274            |   23|   0|   23|          0|
+    |mul_ln1192_5_reg_1314            |   24|   0|   24|          0|
+    |mul_ln1192_7_reg_1324            |   22|   0|   22|          0|
+    |mul_ln1192_reg_1259              |   20|   0|   20|          0|
+    |p_10_reg_1299                    |    4|   0|    4|          0|
+    |p_10_reg_1299_pp0_iter7_reg      |    4|   0|    4|          0|
+    |p_1_reg_1254                     |    4|   0|    4|          0|
+    |p_2_reg_1279                     |    4|   0|    4|          0|
+    |p_3_reg_1213                     |    4|   0|    4|          0|
+    |p_4_reg_1319                     |    4|   0|    4|          0|
+    |p_6_reg_1294                     |    4|   0|    4|          0|
+    |p_7_reg_1264                     |    4|   0|    4|          0|
+    |p_8_reg_1269                     |    4|   0|    4|          0|
+    |p_8_reg_1269_pp0_iter7_reg       |    4|   0|    4|          0|
+    |p_9_reg_1334                     |    4|   0|    4|          0|
+    |p_Val2_2_reg_1122                |    8|   0|    8|          0|
+    |p_Val2_3_reg_1243                |    4|   0|    4|          0|
+    |p_Val2_4_reg_1218                |    4|   0|    4|          0|
+    |p_Val2_5_reg_1223                |    4|   0|    4|          0|
+    |p_Val2_5_reg_1223_pp0_iter5_reg  |    4|   0|    4|          0|
+    |p_Val2_6_reg_1152                |    8|   0|    8|          0|
+    |p_Val2_7_reg_1309                |    4|   0|    4|          0|
+    |p_Val2_7_reg_1309_pp0_iter8_reg  |    4|   0|    4|          0|
+    |p_Val2_9_reg_1101                |    8|   0|    8|          0|
+    |p_Val2_s_26_reg_1208             |    4|   0|    4|          0|
+    |p_Val2_s_reg_1110                |    8|   0|    8|          0|
+    |r_V_10_reg_1284                  |   10|   0|   10|          0|
+    |r_V_11_reg_1289                  |    8|   0|    8|          0|
+    |ret_V_10_reg_1249                |    5|   0|    5|          0|
+    |ret_V_4_reg_1238                 |   12|   0|   12|          0|
+    |sext_ln1118_1_reg_1228           |    9|   0|   10|          1|
+    |tmp_s_reg_1163                   |    7|   0|    7|          0|
+    |tmp_s_reg_1163_pp0_iter1_reg     |    7|   0|    7|          0|
+    |trunc_ln708_1_reg_1344           |    8|   0|    8|          0|
+    |trunc_ln708_4_reg_1183           |    8|   0|    8|          0|
+    |trunc_ln708_6_reg_1193           |    8|   0|    8|          0|
+    |trunc_ln708_7_reg_1339           |    8|   0|    8|          0|
+    |trunc_ln708_8_reg_1168           |    8|   0|    8|          0|
+    |x_V_ap_vld_preg                  |    1|   0|    1|          0|
+    |x_V_preg                         |  128|   0|  128|          0|
+    |p_1_reg_1254                     |   64|  32|    4|          0|
+    |p_Val2_2_reg_1122                |   64|  32|    8|          0|
+    |p_Val2_6_reg_1152                |   64|  32|    8|          0|
+    |p_Val2_9_reg_1101                |   64|  32|    8|          0|
+    |p_Val2_s_reg_1110                |   64|  32|    8|          0|
+    +---------------------------------+-----+----+-----+-----------+
+    |Total                            |  790| 160|  507|          1|
+    +---------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------+-----+-----+------------+--------------+--------------+
+|ap_clk        |  in |    1| ap_ctrl_hs |   myproject  | return value |
+|ap_rst        |  in |    1| ap_ctrl_hs |   myproject  | return value |
+|ap_start      |  in |    1| ap_ctrl_hs |   myproject  | return value |
+|ap_done       | out |    1| ap_ctrl_hs |   myproject  | return value |
+|ap_idle       | out |    1| ap_ctrl_hs |   myproject  | return value |
+|ap_ready      | out |    1| ap_ctrl_hs |   myproject  | return value |
+|x_V_ap_vld    |  in |    1|   ap_vld   |      x_V     |    pointer   |
+|x_V           |  in |  128|   ap_vld   |      x_V     |    pointer   |
+|y_0_V         | out |    8|   ap_vld   |     y_0_V    |    pointer   |
+|y_0_V_ap_vld  | out |    1|   ap_vld   |     y_0_V    |    pointer   |
+|y_1_V         | out |    8|   ap_vld   |     y_1_V    |    pointer   |
+|y_1_V_ap_vld  | out |    1|   ap_vld   |     y_1_V    |    pointer   |
+|y_2_V         | out |    8|   ap_vld   |     y_2_V    |    pointer   |
+|y_2_V_ap_vld  | out |    1|   ap_vld   |     y_2_V    |    pointer   |
+|y_3_V         | out |    8|   ap_vld   |     y_3_V    |    pointer   |
+|y_3_V_ap_vld  | out |    1|   ap_vld   |     y_3_V    |    pointer   |
+|y_4_V         | out |    8|   ap_vld   |     y_4_V    |    pointer   |
+|y_4_V_ap_vld  | out |    1|   ap_vld   |     y_4_V    |    pointer   |
++--------------+-----+-----+------------+--------------+--------------+
+

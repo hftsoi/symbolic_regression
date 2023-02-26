@@ -1,0 +1,17 @@
+Backend: SymbolicExpression
+ClockPeriod: 5
+Compiler: vivado_hls
+HLSConfig:
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+HLSIncludePath: /data/tools/Xilinx/Vivado/2020.1/include
+HLSLibsPath: /data/tools/Xilinx/Vivado/2020.1/lnx64
+IOType: io_parallel
+InputData: null
+NSymbols: 16
+OutputDir: hls-feb24-sincos-userlut-16,6
+OutputPredictions: null
+Part: xcvu9p-flga2577-2-e
+ProjectName: myproject
+Stamp: 03c13801
